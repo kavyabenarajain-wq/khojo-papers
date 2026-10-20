@@ -1,0 +1,499 @@
+{
+  "chapter": "quadratic-equations",
+  "questions": [
+    {
+      "code": "M10-QE-001",
+      "topics": [
+        "qe-factorisation"
+      ],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "easy",
+      "content": {
+        "stem": "Solve the following equation by factorisation: \\[2x(3x - 1) = 5(x + 4)\\]"
+      },
+      "answerKey": null,
+      "hints": [
+        "First expand both sides and bring every term to one side so the equation is in the form \\(ax^2 + bx + c = 0\\).",
+        "Look for two numbers whose product is \\(6 \\times (-20) = -120\\) and whose sum is \\(-7\\)."
+      ],
+      "solution": {
+        "modelAnswer": "\\(6x^2 - 2x = 5x + 20 \\Rightarrow 6x^2 - 7x - 20 = 0 \\Rightarrow 6x^2 - 15x + 8x - 20 = 0 \\Rightarrow 3x(2x - 5) + 4(2x - 5) = 0 \\Rightarrow (2x - 5)(3x + 4) = 0\\), so \\(x = \\tfrac{5}{2}\\) or \\(x = -\\tfrac{4}{3}\\).",
+        "finalAnswer": "\\(x = \\tfrac{5}{2}\\) or \\(x = -\\tfrac{4}{3}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Write in standard form",
+            "expression": "6x^2 - 2x = 5x + 20 \\;\\Rightarrow\\; 6x^2 - 7x - 20 = 0",
+            "explanation": "Expand both brackets, then move all the terms to the left-hand side.",
+            "reason": "Factorisation only works when one side of the equation is zero.",
+            "result": "6x^2 - 7x - 20 = 0"
+          },
+          {
+            "n": 2,
+            "title": "Split the middle term",
+            "expression": "6x^2 - 15x + 8x - 20 = 0",
+            "explanation": "We need two numbers with product \\(6 \\times (-20) = -120\\) and sum \\(-7\\). These are \\(-15\\) and \\(8\\).",
+            "rule": "For \\(ax^2 + bx + c\\), split \\(bx\\) into two terms whose coefficients multiply to \\(ac\\)."
+          },
+          {
+            "n": 3,
+            "title": "Group and factorise",
+            "expression": "3x(2x - 5) + 4(2x - 5) = 0 \\;\\Rightarrow\\; (2x - 5)(3x + 4) = 0",
+            "explanation": "Take out the common factor from each pair, then take out the common bracket \\((2x - 5)\\).",
+            "result": "(2x - 5)(3x + 4) = 0"
+          },
+          {
+            "n": 4,
+            "title": "Solve",
+            "expression": "2x - 5 = 0 \\text{ or } 3x + 4 = 0",
+            "explanation": "If a product is zero, at least one factor is zero. Check: for \\(x = \\tfrac{5}{2}\\), both sides equal \\(32.5\\); for \\(x = -\\tfrac{4}{3}\\), both sides equal \\(\\tfrac{40}{3}\\).",
+            "rule": "Zero-product property",
+            "result": "x = \\tfrac{5}{2} \\text{ or } x = -\\tfrac{4}{3}",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Sign slip when moving terms across: writing \\(6x^2 + 3x - 20 = 0\\) instead of \\(6x^2 - 7x - 20 = 0\\).",
+          "Splitting the middle term as \\(+15x - 8x\\), which gives the roots with the wrong signs (\\(x = -\\tfrac{5}{2}\\) or \\(x = \\tfrac{4}{3}\\)).",
+          "Writing \\(x = 5\\) and \\(x = -4\\) from the factors, forgetting to divide by the coefficients of \\(x\\)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "standard_form",
+            "description": "Rearranges to the correct standard form",
+            "marks": 1,
+            "expectedEvidence": "6x² − 7x − 20 = 0 (or an equivalent multiple, e.g. −6x² + 7x + 20 = 0)",
+            "acceptedAlternatives": [
+              "20 + 7x − 6x² = 0"
+            ],
+            "commonErrors": [
+              "6x² + 3x − 20 = 0 (sign error)",
+              "6x² − 7x + 20 = 0"
+            ]
+          },
+          {
+            "key": "factorise",
+            "description": "Correct factorisation",
+            "marks": 1,
+            "expectedEvidence": "(2x − 5)(3x + 4) = 0, shown by splitting the middle term or grouping",
+            "acceptedAlternatives": [
+              "(5 − 2x)(3x + 4) = 0",
+              "−(2x − 5)(3x + 4) = 0"
+            ],
+            "partialCreditRules": "Award follow-through if a slip in the standard form still leads to a correct factorisation of the student's own quadratic, provided it factorises.",
+            "commonErrors": []
+          },
+          {
+            "key": "roots",
+            "description": "Both roots correct",
+            "marks": 1,
+            "expectedEvidence": "x = 5/2 and x = −4/3",
+            "acceptedAlternatives": [
+              "x = 2.5 or x = −1⅓"
+            ],
+            "commonErrors": [
+              "x = 5, −4",
+              "Only one root given"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "The question says 'by factorisation', so a solution using only the quadratic formula should not receive the factorisation mark (a reviewer may wish to relax this)."
+    },
+    {
+      "code": "M10-QE-002",
+      "topics": [
+        "qe-formula"
+      ],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Solve the equation \\(3x^2 = 5x + 4\\) using the quadratic formula. Give your answers correct to two decimal places."
+      },
+      "answerKey": null,
+      "hints": [
+        "Rewrite the equation as \\(ax^2 + bx + c = 0\\) and read off \\(a\\), \\(b\\) and \\(c\\) carefully, including their signs.",
+        "Work out \\(b^2 - 4ac\\) first, then find its square root to at least four decimal places before rounding."
+      ],
+      "solution": {
+        "modelAnswer": "\\(3x^2 - 5x - 4 = 0\\), so \\(a = 3,\\ b = -5,\\ c = -4\\). \\(b^2 - 4ac = 25 + 48 = 73\\). \\(x = \\dfrac{5 \\pm \\sqrt{73}}{6} = \\dfrac{5 \\pm 8.5440}{6}\\), so \\(x = 2.26\\) or \\(x = -0.59\\) (to 2 d.p.).",
+        "finalAnswer": "\\(x = 2.26\\) or \\(x = -0.59\\) (correct to 2 decimal places)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Standard form",
+            "expression": "3x^2 - 5x - 4 = 0",
+            "explanation": "Move all terms to the left-hand side, so \\(a = 3\\), \\(b = -5\\), \\(c = -4\\).",
+            "result": "a = 3,\\; b = -5,\\; c = -4"
+          },
+          {
+            "n": 2,
+            "title": "Discriminant",
+            "expression": "b^2 - 4ac = (-5)^2 - 4(3)(-4) = 25 + 48",
+            "explanation": "Since \\(c\\) is negative, \\(-4ac\\) is positive.",
+            "result": "b^2 - 4ac = 73"
+          },
+          {
+            "n": 3,
+            "title": "Apply the formula",
+            "expression": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{5 \\pm \\sqrt{73}}{6}",
+            "explanation": "Substitute the values. Note that \\(-b = -(-5) = 5\\).",
+            "rule": "Quadratic formula: \\(x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)"
+          },
+          {
+            "n": 4,
+            "title": "Evaluate and round",
+            "expression": "x = \\frac{5 + 8.5440}{6} = 2.2573\\ldots \\quad\\text{or}\\quad x = \\frac{5 - 8.5440}{6} = -0.5907\\ldots",
+            "explanation": "\\(\\sqrt{73} = 8.5440\\ldots\\). Keep four decimal places until the end, then round each root to two decimal places.",
+            "result": "x = 2.26 \\text{ or } x = -0.59",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Taking \\(b = 5\\) instead of \\(b = -5\\), which gives the roots \\(0.59\\) and \\(-2.26\\) (signs reversed).",
+          "Computing \\(b^2 - 4ac = 25 - 48 = -23\\) by ignoring the sign of \\(c\\), and wrongly concluding there are no real roots.",
+          "Rounding \\(\\sqrt{73}\\) to \\(8.5\\) too early, which gives \\(2.25\\) instead of \\(2.26\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Check with sum and product of roots",
+            "description": "The roots should add to \\(\\tfrac{5}{3} \\approx 1.67\\) and multiply to \\(-\\tfrac{4}{3} \\approx -1.33\\). Indeed \\(2.26 + (-0.59) = 1.67\\) and \\(2.26 \\times (-0.59) \\approx -1.33\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "discriminant",
+            "description": "Correct standard form and discriminant",
+            "marks": 1,
+            "expectedEvidence": "3x² − 5x − 4 = 0 and b² − 4ac = 73",
+            "acceptedAlternatives": [
+              "√73 seen directly in the formula"
+            ],
+            "commonErrors": [
+              "b² − 4ac = −23",
+              "b² − 4ac = 25 − 48"
+            ]
+          },
+          {
+            "key": "formula",
+            "description": "Correct substitution into the quadratic formula",
+            "marks": 1,
+            "expectedEvidence": "x = (5 ± √73)/6",
+            "acceptedAlternatives": [
+              "x = (−(−5) ± √(25 + 48))/(2 × 3)"
+            ],
+            "partialCreditRules": "Award if the substitution is correct for the student's own (incorrect) values of a, b, c, provided the formula itself is correctly quoted.",
+            "commonErrors": []
+          },
+          {
+            "key": "roots",
+            "description": "Both roots correct to 2 decimal places",
+            "marks": 1,
+            "expectedEvidence": "x = 2.26 and x = −0.59",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "2.25 (premature rounding)",
+              "Answers left as surds only",
+              "Roots with signs reversed"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "√73 = 8.54400…; roots are 2.25733… and −0.59067…, verified by substitution."
+    },
+    {
+      "code": "M10-QE-003",
+      "topics": [
+        "qe-nature-of-roots"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "The quadratic equation \\(kx^2 - 12x + 9 = 0\\) has two equal real roots. The value of \\(k\\) is:",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\(16\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\(-4\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\(4\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\(\\tfrac{1}{3}\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "c"
+      },
+      "hints": [
+        "For equal roots, the discriminant \\(b^2 - 4ac\\) must be zero."
+      ],
+      "solution": {
+        "modelAnswer": "For equal roots, \\(b^2 - 4ac = 0\\): \\((-12)^2 - 4(k)(9) = 0 \\Rightarrow 144 - 36k = 0 \\Rightarrow k = 4\\). Option (c).",
+        "finalAnswer": "(c) \\(k = 4\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Condition for equal roots",
+            "expression": "b^2 - 4ac = 0",
+            "explanation": "Here \\(a = k\\), \\(b = -12\\), \\(c = 9\\).",
+            "rule": "Equal real roots \\(\\iff b^2 - 4ac = 0\\)"
+          },
+          {
+            "n": 2,
+            "title": "Substitute and solve",
+            "expression": "(-12)^2 - 4(k)(9) = 0 \\;\\Rightarrow\\; 144 - 36k = 0",
+            "explanation": "Solve the linear equation for \\(k\\). As a check, \\(4x^2 - 12x + 9 = (2x - 3)^2\\), which has the repeated root \\(x = \\tfrac{3}{2}\\).",
+            "result": "k = 4",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Using \\(b^2 = ac\\) (forgetting the 4): \\(144 = 9k\\) gives \\(k = 16\\), option (a).",
+          "Sign error in \\(-4ac\\): writing \\(144 + 36k = 0\\) gives \\(k = -4\\), option (b).",
+          "Using \\(b\\) instead of \\(b^2\\): \\(12 - 36k = 0\\) gives \\(k = \\tfrac{1}{3}\\), option (d)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (c), k = 4",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(a) 16",
+              "(b) −4",
+              "(d) 1/3"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "k = 4 is non-zero, so the equation is genuinely quadratic."
+    },
+    {
+      "code": "M10-QE-004",
+      "topics": [
+        "qe-word-problems",
+        "qe-factorisation"
+      ],
+      "answerFormat": "structured",
+      "marks": 6,
+      "difficulty": "medium",
+      "content": {
+        "stem": "A group of friends agreed to share the cost of a ₹2400 gift equally. Later, 4 of them dropped out, and the remaining friends shared the same cost equally. As a result, each remaining friend paid ₹50 more than originally planned.",
+        "parts": [
+          {
+            "key": "a",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Taking \\(x\\) as the original number of friends, form an equation in \\(x\\) and show that it simplifies to \\(x^2 - 4x - 192 = 0\\)."
+          },
+          {
+            "key": "b",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Solve the equation \\(x^2 - 4x - 192 = 0\\)."
+          },
+          {
+            "key": "c",
+            "marks": 1,
+            "format": "short_answer",
+            "prompt": "State which root must be rejected, giving a reason, and hence write the original number of friends."
+          },
+          {
+            "key": "d",
+            "marks": 1,
+            "format": "numerical",
+            "prompt": "Find the amount each remaining friend actually paid.",
+            "numeric": {
+              "unit": "₹",
+              "answerLabel": "Amount paid by each remaining friend"
+            }
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "parts",
+        "parts": {
+          "d": {
+            "type": "numeric",
+            "value": 200,
+            "tolerance": 0,
+            "unit": "₹",
+            "acceptedUnits": [
+              "Rs",
+              "rupees"
+            ]
+          }
+        }
+      },
+      "hints": [
+        "The original share was \\(\\tfrac{2400}{x}\\). How many friends paid in the end, and what was the new share?",
+        "New share \\(-\\) original share \\(= 50\\)."
+      ],
+      "solution": {
+        "modelAnswer": "(a) \\(\\dfrac{2400}{x - 4} - \\dfrac{2400}{x} = 50 \\Rightarrow 2400 \\times 4 = 50x(x - 4) \\Rightarrow x^2 - 4x - 192 = 0\\). (b) \\((x - 16)(x + 12) = 0\\), so \\(x = 16\\) or \\(x = -12\\). (c) Reject \\(x = -12\\) because the number of friends cannot be negative; there were 16 friends originally. (d) 12 friends paid, each paying \\(\\tfrac{2400}{12} = ₹200\\).",
+        "finalAnswer": "(b) \\(x = 16\\) or \\(x = -12\\); (c) 16 friends originally (\\(x = -12\\) rejected); (d) ₹200 each",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Express both shares",
+            "expression": "\\text{Original share} = \\frac{2400}{x}, \\qquad \\text{new share} = \\frac{2400}{x - 4}",
+            "explanation": "After 4 friends drop out, \\(x - 4\\) friends share the same ₹2400."
+          },
+          {
+            "n": 2,
+            "partKey": "a",
+            "title": "Form and simplify the equation",
+            "expression": "\\frac{2400}{x - 4} - \\frac{2400}{x} = 50 \\;\\Rightarrow\\; \\frac{2400\\,[x - (x - 4)]}{x(x - 4)} = 50 \\;\\Rightarrow\\; 9600 = 50x(x - 4)",
+            "explanation": "The new share is ₹50 more than the old one. Combine the fractions, then divide both sides by 50: \\(192 = x^2 - 4x\\).",
+            "result": "x^2 - 4x - 192 = 0",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Factorise",
+            "expression": "x^2 - 16x + 12x - 192 = 0 \\;\\Rightarrow\\; x(x - 16) + 12(x - 16) = 0 \\;\\Rightarrow\\; (x - 16)(x + 12) = 0",
+            "explanation": "We need two numbers with product \\(-192\\) and sum \\(-4\\): these are \\(-16\\) and \\(12\\)."
+          },
+          {
+            "n": 4,
+            "partKey": "b",
+            "title": "Roots",
+            "expression": "x - 16 = 0 \\text{ or } x + 12 = 0",
+            "explanation": "Set each factor equal to zero.",
+            "result": "x = 16 \\text{ or } x = -12",
+            "isFinal": true
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Interpret",
+            "explanation": "The number of friends cannot be negative, so \\(x = -12\\) is rejected. There were 16 friends originally.",
+            "result": "x = 16",
+            "isFinal": true
+          },
+          {
+            "n": 6,
+            "partKey": "d",
+            "title": "Actual share",
+            "expression": "\\frac{2400}{16 - 4} = \\frac{2400}{12} = 200",
+            "explanation": "Check: the planned share was \\(\\tfrac{2400}{16} = ₹150\\), and \\(200 - 150 = 50\\), as required.",
+            "result": "₹200",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Writing the equation the wrong way round, \\(\\tfrac{2400}{x} - \\tfrac{2400}{x - 4} = 50\\), which leads to \\(x^2 - 4x + 192 = 0\\) (no real roots).",
+          "Giving the planned share ₹150 in part (d) instead of the amount actually paid, ₹200.",
+          "Rejecting the negative root without stating a reason."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Quadratic formula for part (b)",
+            "description": "\\(x = \\dfrac{4 \\pm \\sqrt{16 + 768}}{2} = \\dfrac{4 \\pm 28}{2}\\), giving \\(x = 16\\) or \\(x = -12\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "a_equation",
+            "description": "Correct equation formed from the information",
+            "marks": 1,
+            "expectedEvidence": "2400/(x − 4) − 2400/x = 50",
+            "acceptedAlternatives": [
+              "2400/x + 50 = 2400/(x − 4)",
+              "Letting y = number who paid and forming an equivalent equation"
+            ],
+            "partKey": "a",
+            "commonErrors": [
+              "2400/x − 2400/(x − 4) = 50"
+            ]
+          },
+          {
+            "key": "a_simplify",
+            "description": "Correct simplification to the given quadratic",
+            "marks": 1,
+            "expectedEvidence": "Clears fractions correctly (e.g. 9600 = 50x(x − 4)) and reaches x² − 4x − 192 = 0",
+            "acceptedAlternatives": [],
+            "partKey": "a",
+            "partialCreditRules": "As the result is given, the mark needs convincing intermediate working, not just the final line.",
+            "commonErrors": []
+          },
+          {
+            "key": "b_factorise",
+            "description": "Correct factorisation or correct use of the formula",
+            "marks": 1,
+            "expectedEvidence": "(x − 16)(x + 12) = 0",
+            "acceptedAlternatives": [
+              "x = (4 ± 28)/2"
+            ],
+            "partKey": "b",
+            "commonErrors": []
+          },
+          {
+            "key": "b_roots",
+            "description": "Both roots",
+            "marks": 1,
+            "expectedEvidence": "x = 16 or x = −12",
+            "acceptedAlternatives": [],
+            "partKey": "b",
+            "commonErrors": [
+              "Only x = 16 given in part (b) without showing the other root"
+            ]
+          },
+          {
+            "key": "c_reject",
+            "description": "Rejects the negative root with a reason and states 16 friends",
+            "marks": 1,
+            "expectedEvidence": "x = −12 rejected because a number of people cannot be negative; 16 friends originally",
+            "acceptedAlternatives": [
+              "x must be a positive whole number"
+            ],
+            "partKey": "c",
+            "commonErrors": [
+              "Rejects without a reason"
+            ]
+          },
+          {
+            "key": "d_amount",
+            "description": "Correct amount actually paid",
+            "marks": 1,
+            "expectedEvidence": "₹200",
+            "acceptedAlternatives": [
+              "Rs 200"
+            ],
+            "partKey": "d",
+            "partialCreditRules": "Follow-through from the student's value of x in part (c) if their working is otherwise correct.",
+            "commonErrors": [
+              "₹150 (the planned share)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Context and numbers are original. Part (d) asks for the amount actually paid (₹200), not the planned share (₹150); reviewer may wish to confirm the wording makes this clear."
+    }
+  ]
+}

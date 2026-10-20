@@ -1,0 +1,801 @@
+{
+  "chapter": "linear-inequations",
+  "questions": [
+    {
+      "code": "M10-LIN-001",
+      "topics": [
+        "inequations-solution-sets"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Solve the following inequation and represent the solution set on a number line:\n\\[ -\\tfrac{1}{2} \\le \\frac{3 - x}{4} < 1, \\quad x \\in R \\]\nwhere \\(R\\) is the set of real numbers. Hence write down the smallest and the largest integers that satisfy the inequation.",
+        "diagrams": [
+          {
+            "id": "nl1",
+            "alt": "A number line with arrows at both ends, marked with integers from −2 to 6.",
+            "solutionAlt": "The solution set is drawn: an open (hollow) circle at −1, a filled dot at 5, and the part of the line between −1 and 5 highlighted, showing all real numbers greater than −1 and less than or equal to 5.",
+            "caption": "Number line",
+            "viewBox": {
+              "xMin": -2.8,
+              "xMax": 6.8,
+              "yMin": -1,
+              "yMax": 0.9
+            },
+            "elements": [
+              {
+                "kind": "segment",
+                "from": [
+                  2,
+                  0
+                ],
+                "to": [
+                  -2.6,
+                  0
+                ],
+                "arrow": true
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  2,
+                  0
+                ],
+                "to": [
+                  6.6,
+                  0
+                ],
+                "arrow": true
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -2,
+                  -0.12
+                ],
+                "to": [
+                  -2,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -1,
+                  -0.12
+                ],
+                "to": [
+                  -1,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  0,
+                  -0.12
+                ],
+                "to": [
+                  0,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  1,
+                  -0.12
+                ],
+                "to": [
+                  1,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  2,
+                  -0.12
+                ],
+                "to": [
+                  2,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  3,
+                  -0.12
+                ],
+                "to": [
+                  3,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  4,
+                  -0.12
+                ],
+                "to": [
+                  4,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  5,
+                  -0.12
+                ],
+                "to": [
+                  5,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  6,
+                  -0.12
+                ],
+                "to": [
+                  6,
+                  0.12
+                ]
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -2,
+                  -0.65
+                ],
+                "text": "−2"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -1,
+                  -0.65
+                ],
+                "text": "−1"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  0,
+                  -0.65
+                ],
+                "text": "0"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  1,
+                  -0.65
+                ],
+                "text": "1"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  2,
+                  -0.65
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  3,
+                  -0.65
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  4,
+                  -0.65
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  5,
+                  -0.65
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  6,
+                  -0.65
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -0.88,
+                  0
+                ],
+                "to": [
+                  5,
+                  0
+                ],
+                "emphasis": true,
+                "step": 4
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  -1,
+                  0
+                ],
+                "r": 0.12,
+                "emphasis": true,
+                "step": 4
+              },
+              {
+                "kind": "point",
+                "id": "E",
+                "x": 5,
+                "y": 0,
+                "emphasis": true,
+                "step": 4
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "Treat the two inequalities together: do the same operation on all three parts.",
+        "What happens to the inequality signs when you multiply or divide by a negative number?"
+      ],
+      "solution": {
+        "modelAnswer": "Multiplying throughout by 4: \\(-2 \\le 3 - x < 4\\). Subtracting 3: \\(-5 \\le -x < 1\\). Multiplying by \\(-1\\) and reversing the signs: \\(5 \\ge x > -1\\), i.e. \\(-1 < x \\le 5\\), \\(x \\in R\\). On the number line: open circle at \\(-1\\), filled dot at 5, the segment between them darkened. Smallest integer \\(= 0\\), largest integer \\(= 5\\).",
+        "finalAnswer": "Solution set \\(\\{x : -1 < x \\le 5,\\ x \\in R\\}\\); smallest integer 0, largest integer 5.",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Clear the fraction",
+            "expression": "-\\tfrac{1}{2} \\times 4 \\le 3 - x < 1 \\times 4 \\;\\Rightarrow\\; -2 \\le 3 - x < 4",
+            "explanation": "Multiply every part by 4. Since 4 is positive, the signs do not change."
+          },
+          {
+            "n": 2,
+            "title": "Isolate the x-term",
+            "expression": "-2 - 3 \\le -x < 4 - 3 \\;\\Rightarrow\\; -5 \\le -x < 1",
+            "explanation": "Subtract 3 from every part."
+          },
+          {
+            "n": 3,
+            "title": "Divide by −1",
+            "expression": "5 \\ge x > -1",
+            "result": "-1 < x \\le 5",
+            "explanation": "Multiplying by \\(-1\\) reverses both inequality signs. Read from left to right, \\(x\\) is greater than \\(-1\\) and at most 5.",
+            "rule": "Multiplying or dividing an inequation by a negative number reverses the sign."
+          },
+          {
+            "n": 4,
+            "title": "Number line",
+            "explanation": "Draw an open circle at \\(-1\\) (not included, because \\(x > -1\\)) and a filled dot at 5 (included, because \\(x \\le 5\\)), and darken the line between them.",
+            "diagramId": "nl1"
+          },
+          {
+            "n": 5,
+            "title": "Integers in the set",
+            "expression": "x \\in \\{0, 1, 2, 3, 4, 5\\}",
+            "result": "\\text{smallest} = 0, \\ \\text{largest} = 5",
+            "explanation": "\\(-1\\) is excluded, so the smallest integer is 0; 5 is included, so the largest integer is 5.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Not reversing the signs when multiplying by \\(-1\\), giving \\(-5 \\le x < 1\\).",
+          "Swapping open and filled circles on the number line (filling \\(-1\\) or leaving 5 open).",
+          "Giving \\(-1\\) as the smallest integer even though \\(x > -1\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Solve the two parts separately",
+            "description": "\\(-\\tfrac{1}{2} \\le \\tfrac{3-x}{4} \\Rightarrow -2 \\le 3 - x \\Rightarrow x \\le 5\\), and \\(\\tfrac{3-x}{4} < 1 \\Rightarrow 3 - x < 4 \\Rightarrow x > -1\\). Combining: \\(-1 < x \\le 5\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "simplify",
+            "description": "Clears the fraction and isolates the x-term correctly",
+            "marks": 1,
+            "expectedEvidence": "−2 ≤ 3 − x < 4 and −5 ≤ −x < 1 (or the two separate inequations x ≤ 5 and x > −1)",
+            "acceptedAlternatives": [
+              "Solving the two parts separately"
+            ],
+            "commonErrors": []
+          },
+          {
+            "key": "solution",
+            "description": "Correct solution with the signs reversed",
+            "marks": 1,
+            "expectedEvidence": "−1 < x ≤ 5, x ∈ R",
+            "acceptedAlternatives": [
+              "{x : −1 < x ≤ 5, x ∈ R}",
+              "5 ≥ x > −1"
+            ],
+            "commonErrors": [
+              "−5 ≤ x < 1 (signs not reversed)"
+            ]
+          },
+          {
+            "key": "number-line",
+            "description": "Correct number line",
+            "marks": 1,
+            "expectedEvidence": "Open circle at −1, filled dot at 5, segment between them darkened",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through: award if the number line correctly represents the student's own (incorrect) interval with correct open/filled ends.",
+            "commonErrors": [
+              "Filled dot at −1",
+              "Open circle at 5",
+              "Only integer points marked"
+            ]
+          },
+          {
+            "key": "integers",
+            "description": "Smallest and largest integers",
+            "marks": 1,
+            "expectedEvidence": "Smallest 0, largest 5",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from the student's interval.",
+            "commonErrors": [
+              "Smallest −1"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "The renderer has no 'open point' element, so the open circle at −1 is drawn as a small circle (r = 0.12) and the solution segment starts at its edge (x = −0.88). The axis, ticks and labels are always shown; the solution circle, dot and highlighted segment carry step 4 so they appear only on the whiteboard. If the stem view draws the diagram with all steps visible, or exposes the alt text, it would reveal the solution: please check how the question view handles step-tagged elements before publishing."
+    },
+    {
+      "code": "M10-LIN-002",
+      "topics": [
+        "inequations-solution-sets"
+      ],
+      "answerFormat": "structured",
+      "marks": 6,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Let \\(I\\) denote the set of integers, and let\n\\[ A = \\{x : 4 - 3x < 2(x + 7),\\ x \\in I\\}, \\qquad B = \\left\\{x : \\frac{x + 5}{3} \\ge x - \\frac{1}{3},\\ x \\in I\\right\\}. \\]",
+        "diagrams": [
+          {
+            "id": "nl2",
+            "alt": "A number line with arrows at both ends, marked with integers from −3 to 5.",
+            "solutionAlt": "Filled dots are placed at −1, 0, 1, 2 and 3 only, representing A ∩ B = {−1, 0, 1, 2, 3}; no other points are marked.",
+            "caption": "Number line",
+            "viewBox": {
+              "xMin": -3.8,
+              "xMax": 5.8,
+              "yMin": -1,
+              "yMax": 0.9
+            },
+            "elements": [
+              {
+                "kind": "segment",
+                "from": [
+                  1,
+                  0
+                ],
+                "to": [
+                  -3.6,
+                  0
+                ],
+                "arrow": true
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  1,
+                  0
+                ],
+                "to": [
+                  5.6,
+                  0
+                ],
+                "arrow": true
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -3,
+                  -0.12
+                ],
+                "to": [
+                  -3,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -2,
+                  -0.12
+                ],
+                "to": [
+                  -2,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  -1,
+                  -0.12
+                ],
+                "to": [
+                  -1,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  0,
+                  -0.12
+                ],
+                "to": [
+                  0,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  1,
+                  -0.12
+                ],
+                "to": [
+                  1,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  2,
+                  -0.12
+                ],
+                "to": [
+                  2,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  3,
+                  -0.12
+                ],
+                "to": [
+                  3,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  4,
+                  -0.12
+                ],
+                "to": [
+                  4,
+                  0.12
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  5,
+                  -0.12
+                ],
+                "to": [
+                  5,
+                  0.12
+                ]
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -3,
+                  -0.65
+                ],
+                "text": "−3"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -2,
+                  -0.65
+                ],
+                "text": "−2"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -1,
+                  -0.65
+                ],
+                "text": "−1"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  0,
+                  -0.65
+                ],
+                "text": "0"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  1,
+                  -0.65
+                ],
+                "text": "1"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  2,
+                  -0.65
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  3,
+                  -0.65
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  4,
+                  -0.65
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  5,
+                  -0.65
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "point",
+                "id": "P1",
+                "x": -1,
+                "y": 0,
+                "emphasis": true,
+                "step": 6
+              },
+              {
+                "kind": "point",
+                "id": "P2",
+                "x": 0,
+                "y": 0,
+                "emphasis": true,
+                "step": 6
+              },
+              {
+                "kind": "point",
+                "id": "P3",
+                "x": 1,
+                "y": 0,
+                "emphasis": true,
+                "step": 6
+              },
+              {
+                "kind": "point",
+                "id": "P4",
+                "x": 2,
+                "y": 0,
+                "emphasis": true,
+                "step": 6
+              },
+              {
+                "kind": "point",
+                "id": "P5",
+                "x": 3,
+                "y": 0,
+                "emphasis": true,
+                "step": 6
+              }
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "key": "a",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Solve the inequation defining \\(A\\) and list the set \\(A\\)."
+          },
+          {
+            "key": "b",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Solve the inequation defining \\(B\\) and list the set \\(B\\)."
+          },
+          {
+            "key": "c",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Write \\(A \\cap B\\) in roster form and represent it on a number line.",
+            "diagramIds": [
+              "nl2"
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "Expand the bracket in \\(A\\) and collect the \\(x\\)-terms on the side where the coefficient stays positive.",
+        "Both sets contain integers only, so the number line should show separate dots, not a shaded segment."
+      ],
+      "solution": {
+        "modelAnswer": "(a) \\(4 - 3x < 2x + 14 \\Rightarrow -10 < 5x \\Rightarrow x > -2\\). \\(A = \\{-1, 0, 1, 2, \\ldots\\}\\).\n\n(b) \\(x + 5 \\ge 3x - 1 \\Rightarrow 6 \\ge 2x \\Rightarrow x \\le 3\\). \\(B = \\{\\ldots, 1, 2, 3\\}\\).\n\n(c) \\(A \\cap B = \\{-1, 0, 1, 2, 3\\}\\), shown as five filled dots at \\(-1, 0, 1, 2, 3\\) on a number line.",
+        "finalAnswer": "\\(A = \\{-1, 0, 1, 2, \\ldots\\}\\), \\(B = \\{\\ldots, 1, 2, 3\\}\\), \\(A \\cap B = \\{-1, 0, 1, 2, 3\\}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Expand and collect",
+            "expression": "4 - 3x < 2x + 14 \\;\\Rightarrow\\; 4 - 14 < 2x + 3x \\;\\Rightarrow\\; -10 < 5x",
+            "explanation": "Expand the bracket, then move the \\(x\\)-terms to the right and the numbers to the left."
+          },
+          {
+            "n": 2,
+            "partKey": "a",
+            "title": "Solve and list A",
+            "expression": "x > -2, \\quad x \\in I",
+            "result": "A = \\{-1, 0, 1, 2, \\ldots\\}",
+            "explanation": "Divide by 5 (positive, so no change of sign). The integers greater than \\(-2\\) start at \\(-1\\).",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Clear the fractions",
+            "expression": "3 \\times \\frac{x + 5}{3} \\ge 3x - 3 \\times \\frac{1}{3} \\;\\Rightarrow\\; x + 5 \\ge 3x - 1",
+            "explanation": "Multiply both sides by 3."
+          },
+          {
+            "n": 4,
+            "partKey": "b",
+            "title": "Solve and list B",
+            "expression": "6 \\ge 2x \\;\\Rightarrow\\; x \\le 3, \\quad x \\in I",
+            "result": "B = \\{\\ldots, 1, 2, 3\\}",
+            "explanation": "Collect terms and divide by 2. The integers less than or equal to 3 end at 3.",
+            "isFinal": true
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Intersection",
+            "expression": "A \\cap B = \\{x : -2 < x \\le 3,\\ x \\in I\\}",
+            "result": "A \\cap B = \\{-1, 0, 1, 2, 3\\}",
+            "explanation": "Take the integers that are in both sets: greater than \\(-2\\) and at most 3."
+          },
+          {
+            "n": 6,
+            "partKey": "c",
+            "title": "Number line",
+            "explanation": "Since \\(x\\) is an integer, mark separate filled dots at \\(-1, 0, 1, 2\\) and 3 only.",
+            "diagramId": "nl2",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Including \\(-2\\) in \\(A\\), although the inequality \\(x > -2\\) is strict.",
+          "Shading a continuous segment from \\(-2\\) to 3, which represents real numbers rather than integers.",
+          "Multiplying only the fraction (not the whole right-hand side) by 3 in \\(B\\), e.g. writing \\(x + 5 \\ge x - 1\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Keep the x-terms on the left in A",
+            "description": "\\(4 - 3x < 2x + 14 \\Rightarrow -5x < 10 \\Rightarrow x > -2\\), remembering to reverse the sign when dividing by \\(-5\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "notes": "Allow follow-through in (c) from incorrect sets in (a) or (b).",
+        "criteria": [
+          {
+            "key": "a-solve",
+            "partKey": "a",
+            "description": "Solves the inequation for A",
+            "marks": 1,
+            "expectedEvidence": "x > −2",
+            "acceptedAlternatives": [
+              "−2 < x",
+              "−5x < 10 ⇒ x > −2"
+            ],
+            "commonErrors": [
+              "x < −2 (sign not reversed after dividing by −5)"
+            ]
+          },
+          {
+            "key": "a-set",
+            "partKey": "a",
+            "description": "Lists A correctly",
+            "marks": 1,
+            "expectedEvidence": "A = {−1, 0, 1, 2, …}",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "Including −2"
+            ]
+          },
+          {
+            "key": "b-solve",
+            "partKey": "b",
+            "description": "Solves the inequation for B",
+            "marks": 1,
+            "expectedEvidence": "x + 5 ≥ 3x − 1 leading to x ≤ 3",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "x ≥ 3"
+            ]
+          },
+          {
+            "key": "b-set",
+            "partKey": "b",
+            "description": "Lists B correctly",
+            "marks": 1,
+            "expectedEvidence": "B = {…, 1, 2, 3}",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "Excluding 3"
+            ]
+          },
+          {
+            "key": "c-set",
+            "partKey": "c",
+            "description": "Correct A ∩ B in roster form",
+            "marks": 1,
+            "expectedEvidence": "{−1, 0, 1, 2, 3}",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from the student's A and B.",
+            "commonErrors": [
+              "{−2, −1, 0, 1, 2, 3}"
+            ]
+          },
+          {
+            "key": "c-graph",
+            "partKey": "c",
+            "description": "Correct number line with discrete dots",
+            "marks": 1,
+            "expectedEvidence": "Filled dots at −1, 0, 1, 2, 3 only",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from the student's A ∩ B.",
+            "commonErrors": [
+              "Continuous shaded segment",
+              "Open circles"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Uses I for the set of integers (stated in the stem). The axis, ticks and labels are always shown; the five solution dots carry step 6 so they appear only on the whiteboard. As with M10-LIN-001, check that the question view hides step-tagged elements and does not expose the solution-describing alt text in the stem."
+    }
+  ]
+}

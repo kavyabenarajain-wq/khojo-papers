@@ -1,0 +1,188 @@
+{
+  "chapter": "trigonometric-identities",
+  "questions": [
+    {
+      "code": "M10-TRI-001",
+      "topics": [
+        "proving-identities"
+      ],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Prove that \\[\\frac{\\tan^2\\theta}{\\sec\\theta - 1} - \\frac{\\cot^2\\theta}{\\operatorname{cosec}\\theta + 1} = \\sec\\theta - \\operatorname{cosec}\\theta + 2,\\] where \\(\\theta\\) is an acute angle."
+      },
+      "answerKey": null,
+      "hints": [
+        "Each numerator can be rewritten using an identity involving the denominator's function: think of \\(\\sec^2\\theta - \\tan^2\\theta = 1\\) and \\(\\operatorname{cosec}^2\\theta - \\cot^2\\theta = 1\\).",
+        "After rewriting, look for a difference of two squares that cancels with the denominator."
+      ],
+      "solution": {
+        "modelAnswer": "\\(\\dfrac{\\tan^2\\theta}{\\sec\\theta - 1} = \\dfrac{\\sec^2\\theta - 1}{\\sec\\theta - 1} = \\dfrac{(\\sec\\theta - 1)(\\sec\\theta + 1)}{\\sec\\theta - 1} = \\sec\\theta + 1\\). \\(\\dfrac{\\cot^2\\theta}{\\operatorname{cosec}\\theta + 1} = \\dfrac{(\\operatorname{cosec}\\theta - 1)(\\operatorname{cosec}\\theta + 1)}{\\operatorname{cosec}\\theta + 1} = \\operatorname{cosec}\\theta - 1\\). LHS \\(= (\\sec\\theta + 1) - (\\operatorname{cosec}\\theta - 1) = \\sec\\theta - \\operatorname{cosec}\\theta + 2 =\\) RHS.",
+        "finalAnswer": "LHS \\(= \\sec\\theta - \\operatorname{cosec}\\theta + 2 =\\) RHS, hence proved.",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Simplify the first term",
+            "expression": "\\frac{\\tan^2\\theta}{\\sec\\theta - 1} = \\frac{\\sec^2\\theta - 1}{\\sec\\theta - 1} = \\frac{(\\sec\\theta - 1)(\\sec\\theta + 1)}{\\sec\\theta - 1}",
+            "result": "\\sec\\theta + 1",
+            "explanation": "Replace \\(\\tan^2\\theta\\) by \\(\\sec^2\\theta - 1\\), factorise as a difference of squares and cancel \\((\\sec\\theta - 1)\\), which is non-zero for an acute angle.",
+            "rule": "\\(1 + \\tan^2\\theta = \\sec^2\\theta\\)"
+          },
+          {
+            "n": 2,
+            "title": "Simplify the second term",
+            "expression": "\\frac{\\cot^2\\theta}{\\operatorname{cosec}\\theta + 1} = \\frac{\\operatorname{cosec}^2\\theta - 1}{\\operatorname{cosec}\\theta + 1} = \\frac{(\\operatorname{cosec}\\theta - 1)(\\operatorname{cosec}\\theta + 1)}{\\operatorname{cosec}\\theta + 1}",
+            "result": "\\operatorname{cosec}\\theta - 1",
+            "explanation": "In the same way, replace \\(\\cot^2\\theta\\) by \\(\\operatorname{cosec}^2\\theta - 1\\), factorise and cancel \\((\\operatorname{cosec}\\theta + 1)\\).",
+            "rule": "\\(1 + \\cot^2\\theta = \\operatorname{cosec}^2\\theta\\)"
+          },
+          {
+            "n": 3,
+            "title": "Combine",
+            "expression": "\\text{LHS} = (\\sec\\theta + 1) - (\\operatorname{cosec}\\theta - 1) = \\sec\\theta - \\operatorname{cosec}\\theta + 2",
+            "result": "\\text{LHS} = \\text{RHS}",
+            "explanation": "Subtract carefully: the minus sign in front of the bracket turns \\(-1\\) into \\(+1\\), which together with the other \\(+1\\) gives \\(+2\\).",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Writing \\(\\tan^2\\theta = 1 - \\sec^2\\theta\\) (wrong sign), which makes the cancellation fail.",
+          "Dropping the bracket in step 3 and writing \\(\\sec\\theta + 1 - \\operatorname{cosec}\\theta - 1 = \\sec\\theta - \\operatorname{cosec}\\theta\\).",
+          "Working on both sides at once and 'meeting in the middle' without showing that LHS reduces to RHS."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Convert to sines and cosines",
+            "description": "\\(\\dfrac{\\tan^2\\theta}{\\sec\\theta - 1} = \\dfrac{\\sin^2\\theta/\\cos^2\\theta}{(1 - \\cos\\theta)/\\cos\\theta} = \\dfrac{1 - \\cos^2\\theta}{\\cos\\theta(1 - \\cos\\theta)} = \\dfrac{1 + \\cos\\theta}{\\cos\\theta} = \\sec\\theta + 1\\), and similarly the second term equals \\(\\dfrac{1 - \\sin\\theta}{\\sin\\theta} = \\operatorname{cosec}\\theta - 1\\). Then subtract as before."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "first-term",
+            "description": "Reduces the first term to sec θ + 1",
+            "marks": 1,
+            "expectedEvidence": "Uses tan²θ = sec²θ − 1, factorises (secθ − 1)(secθ + 1) and cancels",
+            "acceptedAlternatives": [
+              "Equivalent sin/cos working reaching (1 + cos θ)/cos θ"
+            ],
+            "commonErrors": [
+              "tan²θ = 1 − sec²θ"
+            ]
+          },
+          {
+            "key": "second-term",
+            "description": "Reduces the second term to cosec θ − 1",
+            "marks": 1,
+            "expectedEvidence": "Uses cot²θ = cosec²θ − 1, factorises and cancels",
+            "acceptedAlternatives": [
+              "Equivalent sin/cos working reaching (1 − sin θ)/sin θ"
+            ],
+            "commonErrors": [
+              "cot²θ = 1 − cosec²θ"
+            ]
+          },
+          {
+            "key": "conclusion",
+            "description": "Combines with correct signs and concludes LHS = RHS",
+            "marks": 1,
+            "expectedEvidence": "(secθ + 1) − (cosecθ − 1) = secθ − cosecθ + 2 = RHS",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Not awarded if the +2 appears without the sign working being shown, or if the student works on both sides without a valid chain.",
+            "commonErrors": [
+              "Sign error giving secθ − cosecθ"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Restricting \\(\\theta\\) to an acute angle keeps \\(\\sec\\theta - 1 \\neq 0\\) so the cancellation is valid. Identity checked numerically at several angles."
+    },
+    {
+      "code": "M10-TRI-002",
+      "topics": [
+        "proving-identities"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "If \\(\\sec\\theta + \\tan\\theta = \\tfrac{5}{2}\\), then the value of \\(\\sec\\theta - \\tan\\theta\\) is",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\(\\tfrac{5}{2}\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\(-\\tfrac{2}{5}\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\(\\tfrac{2}{5}\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\(\\tfrac{3}{2}\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "c"
+      },
+      "hints": [
+        "Multiply \\((\\sec\\theta + \\tan\\theta)\\) by \\((\\sec\\theta - \\tan\\theta)\\). Which identity does the product remind you of?"
+      ],
+      "solution": {
+        "modelAnswer": "\\((\\sec\\theta + \\tan\\theta)(\\sec\\theta - \\tan\\theta) = \\sec^2\\theta - \\tan^2\\theta = 1\\), so \\(\\sec\\theta - \\tan\\theta = 1 \\div \\tfrac{5}{2} = \\tfrac{2}{5}\\). Option (c).",
+        "finalAnswer": "(c) \\(\\tfrac{2}{5}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Use the identity",
+            "expression": "(\\sec\\theta + \\tan\\theta)(\\sec\\theta - \\tan\\theta) = \\sec^2\\theta - \\tan^2\\theta = 1",
+            "explanation": "The product of the sum and the difference is a difference of squares, which equals 1.",
+            "rule": "\\(\\sec^2\\theta - \\tan^2\\theta = 1\\)"
+          },
+          {
+            "n": 2,
+            "title": "Divide",
+            "expression": "\\sec\\theta - \\tan\\theta = \\frac{1}{\\tfrac{5}{2}}",
+            "result": "\\frac{2}{5}",
+            "explanation": "Divide 1 by the given value of the sum.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "(b) comes from using \\(\\sec^2\\theta - \\tan^2\\theta = -1\\) (the identity with the sign reversed).",
+          "(d) comes from subtracting 1 from the sum instead of dividing 1 by it.",
+          "(a) assumes the difference equals the sum."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Find each value",
+            "description": "Adding \\(\\sec\\theta + \\tan\\theta = \\tfrac{5}{2}\\) and \\(\\sec\\theta - \\tan\\theta = \\tfrac{2}{5}\\) gives \\(\\sec\\theta = \\tfrac{29}{20}\\), \\(\\tan\\theta = \\tfrac{21}{20}\\); check: \\(\\tfrac{841 - 441}{400} = 1\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (c) 2/5",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(b) sign error in the identity",
+              "(d) subtracted 1"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Consistent with an acute angle: \\(\\sec\\theta = \\tfrac{29}{20}\\), \\(\\tan\\theta = \\tfrac{21}{20}\\), both positive and \\(\\sec^2\\theta - \\tan^2\\theta = 1\\)."
+    }
+  ]
+}

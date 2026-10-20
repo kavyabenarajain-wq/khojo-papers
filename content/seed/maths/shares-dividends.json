@@ -1,0 +1,83 @@
+{
+  "chapter": "shares-dividends",
+  "questions": [
+    {
+      "code": "M10-SHR-001",
+      "topics": ["shares-dividend-income"],
+      "answerFormat": "numerical",
+      "marks": 2,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A company whose shares have a face value of ₹40 each declares a dividend of 15%. Tanvi buys some of these shares in the market at ₹48 each. Find the percentage return on her investment.",
+        "numeric": { "unit": "%", "answerLabel": "Rate of return" }
+      },
+      "answerKey": { "type": "numeric", "value": 12.5, "tolerance": 0, "unit": "%" },
+      "hints": ["The dividend is a percentage of the face value, but the return is measured against the price Tanvi actually paid."],
+      "solution": {
+        "modelAnswer": "Dividend per share \\(= 15\\% \\text{ of } ₹40 = ₹6\\). Return \\(= \\tfrac{6}{48} \\times 100\\% = 12.5\\%\\).",
+        "finalAnswer": "12.5%",
+        "steps": [
+          { "n": 1, "title": "Dividend per share", "expression": "\\tfrac{15}{100} \\times 40", "result": "6", "explanation": "The dividend is always calculated on the face value: ₹6 per share.", "rule": "Dividend = rate of dividend × face value" },
+          { "n": 2, "title": "Rate of return", "expression": "\\frac{6}{48} \\times 100\\%", "result": "12.5\\%", "explanation": "Tanvi earns ₹6 for every ₹48 she invests, so her return is 12.5%.", "rule": "Return % = (income ÷ investment) × 100", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Quoting the dividend rate (15%) as the rate of return.",
+          "Calculating the dividend on the market price: \\(15\\% \\text{ of } 48 = ₹7.20\\)."
+        ],
+        "alternativeMethods": [
+          { "title": "Proportion", "description": "Return % \\(= \\text{dividend \\%} \\times \\tfrac{\\text{face value}}{\\text{market value}} = 15 \\times \\tfrac{40}{48} = 12.5\\)." }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "dividend", "description": "Dividend per share on face value", "marks": 1, "expectedEvidence": "15% of ₹40 = ₹6", "acceptedAlternatives": ["15 × 40/48 set up directly"], "commonErrors": ["15% of ₹48"] },
+          { "key": "answer", "description": "Correct rate of return", "marks": 1, "expectedEvidence": "12.5%", "acceptedAlternatives": ["12½%"], "commonErrors": ["15%"] }
+        ]
+      },
+      "authorNotes": "Marked by the answer key alone (numerical); the rubric is provided for the AI Examiner if working is submitted."
+    },
+    {
+      "code": "M10-SHR-002",
+      "topics": ["shares-buying-selling", "shares-dividend-income"],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Arjun owns 600 shares of ₹100 each in Company A, which pays a dividend of 9%. He sells all these shares at ₹135 each and invests the entire proceeds in ₹20 shares of Company B available at a premium of ₹7 each. Company B pays a dividend of 12%.\n\nFind:\n(i) the number of shares of Company B that Arjun buys;\n(ii) the change in his annual dividend income, stating whether it is an increase or a decrease."
+      },
+      "answerKey": { "type": "numeric", "value": 1800, "tolerance": 0, "unit": "₹" },
+      "hints": [
+        "A premium of ₹7 on a ₹20 share means its market value is ₹27.",
+        "Compare the old income (from Company A) with the new income (from Company B), both calculated on face value."
+      ],
+      "solution": {
+        "modelAnswer": "Proceeds \\(= 600 \\times 135 = ₹81{,}000\\). Market value of a B share \\(= 20 + 7 = ₹27\\). (i) Number of B shares \\(= \\tfrac{81000}{27} = 3000\\). (ii) Old income \\(= 600 \\times 9\\% \\text{ of } 100 = ₹5{,}400\\); new income \\(= 3000 \\times 12\\% \\text{ of } 20 = ₹7{,}200\\). Change \\(= 7200 - 5400 = ₹1{,}800\\), an increase.",
+        "finalAnswer": "(i) 3,000 shares; (ii) annual income increases by ₹1,800",
+        "steps": [
+          { "n": 1, "title": "Sale proceeds", "expression": "600 \\times 135", "result": "81000", "explanation": "Arjun receives ₹81,000 from selling his Company A shares at the market price." },
+          { "n": 2, "title": "Number of B shares", "expression": "\\text{MV} = 20 + 7 = 27, \\quad \\frac{81000}{27}", "result": "3000 \\text{ shares}", "explanation": "Each Company B share costs its face value plus the premium, ₹27.", "rule": "Number of shares = investment ÷ market value of one share" },
+          { "n": 3, "title": "Old income", "expression": "600 \\times \\tfrac{9}{100} \\times 100", "result": "5400", "explanation": "Dividend from Company A is 9% of the face value ₹100 = ₹9 per share." },
+          { "n": 4, "title": "New income", "expression": "3000 \\times \\tfrac{12}{100} \\times 20 = 3000 \\times 2.40", "result": "7200", "explanation": "Dividend from Company B is 12% of the face value ₹20 = ₹2.40 per share.", "rule": "Dividend = number of shares × rate × face value" },
+          { "n": 5, "title": "Change in income", "expression": "7200 - 5400", "result": "1800", "explanation": "His annual income increases by ₹1,800.", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Using the face value ₹20 (or the premium ₹7) instead of the market value ₹27 to find the number of shares.",
+          "Calculating dividend on the market value instead of on the face value.",
+          "Using the face value ₹100 instead of the selling price ₹135 for the sale proceeds."
+        ],
+        "alternativeMethods": [
+          { "title": "Compare returns", "description": "Return on the money at the time of the switch: Company A gives \\(\\tfrac{9}{135} \\times 100 = 6\\tfrac{2}{3}\\%\\) and Company B gives \\(\\tfrac{2.40}{27} \\times 100 = 8\\tfrac{8}{9}\\%\\). On ₹81,000 these give incomes of ₹5,400 and ₹7,200, so the income rises by ₹1,800." }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "proceeds", "description": "Sale proceeds from Company A shares", "marks": 1, "expectedEvidence": "600 × 135 = ₹81,000", "acceptedAlternatives": [], "commonErrors": ["600 × 100 = ₹60,000"] },
+          { "key": "shares", "description": "Number of Company B shares using market value ₹27", "marks": 1, "expectedEvidence": "81000 ÷ 27 = 3000", "acceptedAlternatives": [], "partialCreditRules": "Follow-through from an incorrect proceeds figure if ₹27 is used.", "commonErrors": ["81000 ÷ 20 = 4050"] },
+          { "key": "incomes", "description": "Both annual incomes calculated on face value", "marks": 1, "expectedEvidence": "Old income ₹5,400 and new income ₹7,200", "acceptedAlternatives": [], "partialCreditRules": "Follow-through from an incorrect number of shares.", "commonErrors": ["Dividend on market value"] },
+          { "key": "change", "description": "Correct change stated as an increase", "marks": 1, "expectedEvidence": "Increase of ₹1,800", "acceptedAlternatives": ["Income rises by ₹1,800"], "commonErrors": ["₹1,800 without saying increase or decrease"] }
+        ]
+      },
+      "authorNotes": "Brokerage is ignored (not mentioned in the stem). The numeric answer key checks only part (ii), the change of ₹1,800; part (i) is assessed from the working."
+    }
+  ]
+}

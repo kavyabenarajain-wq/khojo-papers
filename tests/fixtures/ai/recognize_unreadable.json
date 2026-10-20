@@ -1,0 +1,15 @@
+{
+ "legibility": "unreadable",
+ "relatesToQuestion": "unsure",
+ "segments": [
+  {
+   "kind": "text",
+   "content": "[?]",
+   "uncertain": true,
+   "note": "Blurred"
+  }
+ ],
+ "transcript": "[?]",
+ "containsPersonalInfo": false,
+ "notes": "Photo is blurred"
+}

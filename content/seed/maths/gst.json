@@ -1,0 +1,110 @@
+{
+  "chapter": "gst",
+  "questions": [
+    {
+      "code": "M10-GST-001",
+      "topics": ["gst-computation"],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A shopkeeper in Jaipur sells a printer marked at ₹3,200 to a customer in the same city, allowing a discount of 15% on the marked price. GST on the printer is charged at 18%. The amount of SGST charged on the bill is:",
+        "options": [
+          { "key": "a", "text": "₹288.00" },
+          { "key": "b", "text": "₹244.80" },
+          { "key": "c", "text": "₹489.60" },
+          { "key": "d", "text": "₹122.40" }
+        ]
+      },
+      "answerKey": { "type": "mcq", "correct": "b" },
+      "hints": [
+        "GST is charged on the price after the discount, not on the marked price.",
+        "For a sale within one state, the GST rate is split equally between CGST and SGST."
+      ],
+      "solution": {
+        "modelAnswer": "Selling price \\(= 3200 - 15\\% \\text{ of } 3200 = ₹2{,}720\\). The sale is intra-state, so SGST rate \\(= \\tfrac{18\\%}{2} = 9\\%\\). SGST \\(= 9\\% \\text{ of } 2720 = ₹244.80\\). Option (b).",
+        "finalAnswer": "(b) ₹244.80",
+        "steps": [
+          { "n": 1, "title": "Price after discount", "expression": "3200 - \\tfrac{15}{100} \\times 3200 = 3200 - 480", "result": "\\text{Taxable value} = 2720", "explanation": "GST is charged on the actual selling price, which is the marked price less the discount.", "rule": "Taxable value = marked price − discount" },
+          { "n": 2, "title": "SGST rate", "expression": "\\text{SGST rate} = \\tfrac{18\\%}{2}", "result": "9\\%", "explanation": "Seller and buyer are in the same state, so the GST of 18% is shared equally as CGST 9% and SGST 9%.", "reason": "Intra-state supply: GST = CGST + SGST, each half of the GST rate." },
+          { "n": 3, "title": "Calculate SGST", "expression": "\\tfrac{9}{100} \\times 2720", "result": "\\text{SGST} = 244.80", "explanation": "SGST is ₹244.80, which is option (b).", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Charging the tax on the marked price: \\(9\\% \\text{ of } 3200 = ₹288\\), option (a).",
+          "Giving the total GST \\(18\\% \\text{ of } 2720 = ₹489.60\\) instead of the SGST alone, option (c).",
+          "Halving the SGST rate again (using 4.5%), which gives ₹122.40, option (d)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "answer", "description": "Selects the correct option", "marks": 1, "expectedEvidence": "Option (b) ₹244.80", "acceptedAlternatives": [], "commonErrors": ["(a) tax on marked price", "(c) total GST", "(d) rate halved twice"] }
+        ]
+      },
+      "authorNotes": "Assumes a single intra-state sale with GST split equally into CGST and SGST; all rates are stated in the stem."
+    },
+    {
+      "code": "M10-GST-002",
+      "topics": ["gst-input-tax-credit", "gst-computation"],
+      "answerFormat": "structured",
+      "marks": 7,
+      "difficulty": "hard",
+      "content": {
+        "stem": "A manufacturer M in Pune (Maharashtra) sells a consignment of water purifiers to a wholesaler W in Indore (Madhya Pradesh) for ₹20,000. W sells the consignment to a retailer R in Bhopal (Madhya Pradesh) at a profit of ₹4,000. R then sells it to a consumer in Bhopal for ₹27,500.\n\nThe rate of GST is 12% at every stage. All prices are exclusive of GST, M has no input tax credit, and every dealer claims full input tax credit.",
+        "table": {
+          "caption": "Supply chain",
+          "headers": ["Sale", "Seller (state)", "Buyer (state)", "Price before GST"],
+          "rows": [
+            ["1", "M (Maharashtra)", "W (Madhya Pradesh)", "₹20,000"],
+            ["2", "W (Madhya Pradesh)", "R (Madhya Pradesh)", "₹20,000 + ₹4,000 profit"],
+            ["3", "R (Madhya Pradesh)", "Consumer (Madhya Pradesh)", "₹27,500"]
+          ]
+        },
+        "parts": [
+          { "key": "a", "marks": 2, "format": "math_working", "prompt": "State the type(s) of GST charged in sale 1 and in sale 2, and find the amount of each tax charged in these two sales." },
+          { "key": "b", "marks": 2, "format": "numerical", "prompt": "Find the net GST payable by W to the government.", "numeric": { "unit": "₹", "answerLabel": "Net GST payable by W" } },
+          { "key": "c", "marks": 3, "format": "math_working", "prompt": "Find the CGST and SGST payable by R to the government. Hence show that the total GST received by the government from M, W and R equals the GST paid by the consumer." }
+        ]
+      },
+      "answerKey": { "type": "parts", "parts": { "b": { "type": "numeric", "value": 480, "tolerance": 0, "unit": "₹" } } },
+      "hints": [
+        "A sale between two different states attracts IGST; a sale within one state attracts CGST and SGST in equal halves.",
+        "A dealer pays only (tax collected on sales) − (tax paid on purchases)."
+      ],
+      "solution": {
+        "modelAnswer": "(a) Sale 1 is inter-state: IGST \\(= 12\\% \\text{ of } 20000 = ₹2{,}400\\). Sale 2 is intra-state at \\(₹24{,}000\\): CGST \\(= 6\\% \\text{ of } 24000 = ₹1{,}440\\) and SGST \\(= ₹1{,}440\\).\n\n(b) W's output tax \\(= 1440 + 1440 = ₹2{,}880\\); input tax credit (IGST paid) \\(= ₹2{,}400\\). Net GST payable \\(= 2880 - 2400 = ₹480\\).\n\n(c) Sale 3 is intra-state: CGST \\(=\\) SGST \\(= 6\\% \\text{ of } 27500 = ₹1{,}650\\). R pays CGST \\(1650 - 1440 = ₹210\\) and SGST \\(1650 - 1440 = ₹210\\). Government receives \\(2400 + 480 + 420 = ₹3{,}300\\), and the consumer pays GST \\(= 12\\% \\text{ of } 27500 = ₹3{,}300\\). The two are equal.",
+        "finalAnswer": "(a) Sale 1: IGST ₹2,400; sale 2: CGST ₹1,440 and SGST ₹1,440. (b) ₹480. (c) CGST ₹210 and SGST ₹210; total GST received by the government = ₹3,300 = GST paid by the consumer.",
+        "steps": [
+          { "n": 1, "partKey": "a", "title": "Sale 1: inter-state", "expression": "\\text{IGST} = \\tfrac{12}{100} \\times 20000", "result": "\\text{IGST} = 2400", "explanation": "M (Maharashtra) and W (Madhya Pradesh) are in different states, so the whole 12% is charged as IGST.", "rule": "Inter-state supply: IGST at the full GST rate." },
+          { "n": 2, "partKey": "a", "title": "Sale 2: intra-state", "expression": "\\text{CGST} = \\text{SGST} = \\tfrac{6}{100} \\times (20000 + 4000) = \\tfrac{6}{100} \\times 24000", "result": "\\text{CGST} = \\text{SGST} = 1440", "explanation": "W and R are both in Madhya Pradesh, so the 12% is split into CGST 6% and SGST 6% on W's selling price of ₹24,000.", "rule": "Intra-state supply: CGST = SGST = half the GST rate.", "isFinal": true },
+          { "n": 3, "partKey": "b", "title": "W's output and input tax", "expression": "\\text{Output tax} = 1440 + 1440 = 2880, \\quad \\text{Input tax credit} = 2400", "explanation": "W collects ₹2,880 from R and has already paid ₹2,400 IGST to M, which W can claim as input tax credit." },
+          { "n": 4, "partKey": "b", "title": "Net GST payable by W", "expression": "2880 - 2400", "result": "480", "explanation": "W pays the government only the difference: ₹480.", "rule": "GST payable = output tax − input tax credit", "isFinal": true },
+          { "n": 5, "partKey": "c", "title": "Tax on sale 3", "expression": "\\text{CGST} = \\text{SGST} = \\tfrac{6}{100} \\times 27500", "result": "1650 \\text{ each}", "explanation": "R and the consumer are both in Madhya Pradesh, so CGST and SGST of 6% each are charged on ₹27,500." },
+          { "n": 6, "partKey": "c", "title": "R's payable tax", "expression": "\\text{CGST payable} = 1650 - 1440 = 210, \\quad \\text{SGST payable} = 1650 - 1440 = 210", "result": "\\text{CGST} = 210, \\ \\text{SGST} = 210", "explanation": "R paid CGST ₹1,440 and SGST ₹1,440 to W; these are claimed as credit against the same heads." },
+          { "n": 7, "partKey": "c", "title": "Verify the total", "expression": "2400 + 480 + (210 + 210) = 3300 = \\tfrac{12}{100} \\times 27500", "result": "3300", "explanation": "The government receives ₹2,400 from M, ₹480 from W and ₹420 from R, a total of ₹3,300. This equals the GST of 12% on the final price paid by the consumer, ₹3,300. With input tax credit, tax is collected only on the value added at each stage.", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Charging CGST and SGST on sale 1 even though M and W are in different states.",
+          "Charging tax on the profit only (₹4,000) instead of on W's full selling price of ₹24,000.",
+          "Forgetting input tax credit and saying W pays ₹2,880 to the government."
+        ],
+        "alternativeMethods": [
+          { "title": "Tax on value added", "description": "With full input tax credit, each dealer's GST payable is 12% of the value it adds: W adds \\(₹4{,}000\\), so it pays \\(12\\% \\text{ of } 4000 = ₹480\\); R adds \\(27500 - 24000 = ₹3{,}500\\), so it pays \\(12\\% \\text{ of } 3500 = ₹420\\), split equally as CGST ₹210 and SGST ₹210." }
+        ]
+      },
+      "rubric": {
+        "notes": "Allow follow-through in (b) and (c) from an incorrect value in (a), provided the method is correct.",
+        "criteria": [
+          { "key": "a-igst", "partKey": "a", "description": "Identifies sale 1 as inter-state and finds IGST", "marks": 1, "expectedEvidence": "IGST = 12% of 20000 = ₹2,400", "acceptedAlternatives": [], "commonErrors": ["CGST ₹1,200 + SGST ₹1,200 for sale 1"] },
+          { "key": "a-cgst-sgst", "partKey": "a", "description": "Identifies sale 2 as intra-state and finds CGST and SGST on ₹24,000", "marks": 1, "expectedEvidence": "CGST = SGST = 6% of 24000 = ₹1,440 each", "acceptedAlternatives": ["Total GST ₹2,880 split equally"], "commonErrors": ["Tax on ₹4,000 only", "IGST ₹2,880"] },
+          { "key": "b-method", "partKey": "b", "description": "Uses output tax − input tax credit for W", "marks": 1, "expectedEvidence": "2880 − 2400", "acceptedAlternatives": ["12% of the value added (₹4,000)"], "partialCreditRules": "Award with follow-through figures from (a)." },
+          { "key": "b-answer", "partKey": "b", "description": "Correct net GST payable by W", "marks": 1, "expectedEvidence": "₹480", "acceptedAlternatives": [], "commonErrors": ["₹2,880 (no input tax credit)"] },
+          { "key": "c-tax", "partKey": "c", "description": "Finds CGST and SGST on sale 3", "marks": 1, "expectedEvidence": "6% of 27500 = ₹1,650 each", "acceptedAlternatives": ["Total GST on sale 3 = ₹3,300"], "commonErrors": [] },
+          { "key": "c-payable", "partKey": "c", "description": "Finds R's CGST and SGST payable", "marks": 1, "expectedEvidence": "CGST ₹210 and SGST ₹210", "acceptedAlternatives": ["12% of ₹3,500 = ₹420, split equally"], "partialCreditRules": "Award with follow-through from (a).", "commonErrors": ["₹420 each"] },
+          { "key": "c-verify", "partKey": "c", "description": "Shows total GST received by the government equals GST paid by the consumer", "marks": 1, "expectedEvidence": "2400 + 480 + 420 = ₹3,300 = 12% of 27500", "acceptedAlternatives": [], "commonErrors": ["Adds the tax charged at every stage (2400 + 2880 + 3300) instead of the tax paid"] }
+        ]
+      },
+      "authorNotes": "Follows the usual textbook treatment: IGST on an inter-state sale, equal CGST/SGST on an intra-state sale, and full input tax credit. Part (b) asks only for W's total net GST because splitting an IGST credit between CGST and SGST depends on credit-utilisation rules that are outside the scope of the question; a reviewer may wish to keep it that way. Place names are used only to show which sales are inter-state."
+    }
+  ]
+}

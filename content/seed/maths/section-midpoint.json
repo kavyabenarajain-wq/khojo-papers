@@ -1,0 +1,241 @@
+{
+  "chapter": "section-midpoint",
+  "questions": [
+    {
+      "code": "M10-SEC-001",
+      "topics": [
+        "section-formula"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "The line segment joining \\(A(-2, 5)\\) and \\(B(6, -3)\\) is cut by the y-axis at the point \\(P\\). Find:\n\n(i) the ratio in which \\(P\\) divides \\(AB\\);\n\n(ii) the coordinates of \\(P\\).",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "Coordinate axes with the x-axis from -3 to 7 and the y-axis from -4 to 6, on a 1-unit grid. Point A is at (-2, 5), to the left of the y-axis, and point B is at (6, -3), to the right of the y-axis and below the x-axis. The segment AB is drawn and crosses the y-axis.",
+            "solutionAlt": "In step 3 the point P where AB crosses the y-axis is marked at (0, 3); it divides AB in the ratio 1 : 3.",
+            "viewBox": {
+              "xMin": -3,
+              "xMax": 7,
+              "yMin": -4,
+              "yMax": 6
+            },
+            "grid": false,
+            "axes": {
+              "x": "x",
+              "y": "y"
+            },
+            "notToScale": false,
+            "elements": [
+              {
+                "kind": "point",
+                "id": "A",
+                "x": -2,
+                "y": 5,
+                "label": "A(−2, 5)",
+                "labelPos": "ne"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 6,
+                "y": -3,
+                "label": "B(6, −3)",
+                "labelPos": "sw"
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "B"
+              },
+              {
+                "kind": "point",
+                "id": "P",
+                "x": 0,
+                "y": 3,
+                "label": "P",
+                "labelPos": "ne",
+                "step": 3,
+                "emphasis": true
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "Every point on the y-axis has x-coordinate 0.",
+        "Let the ratio be \\(k : 1\\) and use the x-coordinate in the section formula."
+      ],
+      "solution": {
+        "modelAnswer": "Let \\(P\\) divide \\(AB\\) in the ratio \\(k : 1\\). Since \\(P\\) is on the y-axis, its x-coordinate is 0: \\(\\frac{6k - 2}{k + 1} = 0 \\Rightarrow k = \\tfrac{1}{3}\\). So \\(AP : PB = 1 : 3\\). Then \\(y = \\frac{1(-3) + 3(5)}{1 + 3} = \\frac{12}{4} = 3\\), so \\(P = (0, 3)\\).",
+        "finalAnswer": "(i) \\(AP : PB = 1 : 3\\); (ii) \\(P(0, 3)\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Set up the section formula",
+            "expression": "P = \\left(\\frac{6k + (-2)}{k + 1},\\ \\frac{-3k + 5}{k + 1}\\right)",
+            "explanation": "Let \\(P\\) divide \\(AB\\) in the ratio \\(k : 1\\), with \\(A(-2, 5)\\) as the first point and \\(B(6, -3)\\) as the second.",
+            "rule": "Section formula: \\(\\left(\\frac{m x_2 + n x_1}{m + n}, \\frac{m y_2 + n y_1}{m + n}\\right)\\)",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Use x = 0 on the y-axis",
+            "expression": "\\frac{6k - 2}{k + 1} = 0 \\Rightarrow 6k - 2 = 0 \\Rightarrow k = \\frac{1}{3}",
+            "result": "AP : PB = 1 : 3",
+            "explanation": "\\(P\\) lies on the y-axis, so its x-coordinate is 0. Solving gives \\(k = \\tfrac{1}{3}\\), so the ratio \\(k : 1 = \\tfrac{1}{3} : 1 = 1 : 3\\).",
+            "reason": "The ratio is found from the coordinate whose value we know.",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "title": "Find the y-coordinate",
+            "expression": "y = \\frac{1 \\times (-3) + 3 \\times 5}{1 + 3} = \\frac{12}{4} = 3",
+            "result": "P(0, 3)",
+            "explanation": "Substitute \\(m : n = 1 : 3\\) into the y-part of the section formula. The x-coordinate is 0 as already used.",
+            "diagramId": "fig1",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Setting the y-coordinate equal to 0 (that is the condition for the x-axis, not the y-axis).",
+          "Swapping the weights: computing \\(\\frac{1 \\times 5 + 3 \\times (-3)}{4} = -1\\) instead of \\(\\frac{1 \\times (-3) + 3 \\times 5}{4}\\).",
+          "Writing the ratio as \\(3 : 1\\) after finding \\(k = \\tfrac{1}{3}\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Equation of the line",
+            "description": "The slope of \\(AB\\) is \\(\\frac{-3 - 5}{6 - (-2)} = -1\\), so the line is \\(y = -x + 3\\). It meets the y-axis at \\((0, 3)\\). Then the ratio is \\(AP : PB = (0 - (-2)) : (6 - 0) = 2 : 6 = 1 : 3\\), using the x-distances."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "setup",
+            "description": "Uses the section formula with the condition x = 0",
+            "marks": 1,
+            "expectedEvidence": "(6k − 2)/(k + 1) = 0, or (6m − 2n)/(m + n) = 0",
+            "acceptedAlternatives": [
+              "Equation of AB found and x = 0 substituted"
+            ],
+            "commonErrors": [
+              "Uses y = 0"
+            ]
+          },
+          {
+            "key": "ratio",
+            "description": "Correct ratio",
+            "marks": 1,
+            "expectedEvidence": "AP : PB = 1 : 3",
+            "acceptedAlternatives": [
+              "k = 1/3 with ratio stated as 1 : 3"
+            ],
+            "commonErrors": [
+              "3 : 1"
+            ]
+          },
+          {
+            "key": "y-sub",
+            "description": "Correct substitution for the y-coordinate",
+            "marks": 1,
+            "expectedEvidence": "(1 × (−3) + 3 × 5)/(1 + 3)",
+            "acceptedAlternatives": [
+              "Substitution of x = 0 into y = −x + 3"
+            ],
+            "partialCreditRules": "Follow-through from an incorrect ratio if the substitution is carried out correctly."
+          },
+          {
+            "key": "point",
+            "description": "Correct coordinates of P",
+            "marks": 1,
+            "expectedEvidence": "P(0, 3)",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(0, −1) from swapped weights"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Diagram drawn to scale on a 1-unit grid; AB lies on y = 3 − x. Answer key is null because the answer is a ratio and a point. Figure has no grid or axis ticks, so the crossing point cannot be read off the figure; it is drawn to scale."
+    },
+    {
+      "code": "M10-SEC-002",
+      "topics": [
+        "midpoint-centroid"
+      ],
+      "answerFormat": "numerical",
+      "marks": 2,
+      "difficulty": "easy",
+      "content": {
+        "stem": "The vertices of triangle \\(PQR\\) are \\(P(5, -1)\\), \\(Q(-3, 4)\\) and \\(R(k, 3)\\). The centroid of triangle \\(PQR\\) lies on the y-axis. Find the value of \\(k\\).",
+        "numeric": {
+          "answerLabel": "k ="
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": -2,
+        "tolerance": 0
+      },
+      "hints": [
+        "What is the x-coordinate of any point on the y-axis?"
+      ],
+      "solution": {
+        "modelAnswer": "The x-coordinate of the centroid is \\(\\frac{5 + (-3) + k}{3} = \\frac{2 + k}{3}\\). It lies on the y-axis, so \\(\\frac{2 + k}{3} = 0\\), giving \\(k = -2\\).",
+        "finalAnswer": "\\(k = -2\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "x-coordinate of the centroid",
+            "expression": "x_G = \\frac{5 + (-3) + k}{3} = \\frac{2 + k}{3}",
+            "explanation": "The centroid's x-coordinate is the average of the three x-coordinates.",
+            "rule": "Centroid \\(G = \\left(\\frac{x_1 + x_2 + x_3}{3}, \\frac{y_1 + y_2 + y_3}{3}\\right)\\)"
+          },
+          {
+            "n": 2,
+            "title": "Use the y-axis condition",
+            "expression": "\\frac{2 + k}{3} = 0 \\Rightarrow k = -2",
+            "result": "k = -2",
+            "explanation": "Points on the y-axis have x-coordinate 0. (As a check, the centroid is then \\((0, 2)\\).)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Setting the y-coordinate of the centroid to 0 (the x-axis condition).",
+          "Dividing by 2 instead of 3, as if finding a mid-point."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "method",
+            "description": "Writes the centroid x-coordinate and equates it to 0",
+            "marks": 1,
+            "expectedEvidence": "(5 − 3 + k)/3 = 0",
+            "acceptedAlternatives": [
+              "5 − 3 + k = 0"
+            ],
+            "commonErrors": [
+              "(−1 + 4 + 3)/3 = 0"
+            ]
+          },
+          {
+            "key": "answer",
+            "description": "Correct value of k",
+            "marks": 1,
+            "expectedEvidence": "k = −2",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "k = 2 (sign error)"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

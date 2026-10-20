@@ -1,0 +1,27 @@
+{
+ "legibility": "good",
+ "relatesToQuestion": "yes",
+ "segments": [
+  {
+   "kind": "text",
+   "content": "angle at centre is double the angle at the circumference",
+   "uncertain": false,
+   "note": null
+  },
+  {
+   "kind": "math",
+   "content": "angle ACB = 110/2",
+   "uncertain": false,
+   "note": null
+  },
+  {
+   "kind": "final_answer",
+   "content": "55°",
+   "uncertain": false,
+   "note": null
+  }
+ ],
+ "transcript": "angle at centre is double the angle at the circumference\nangle ACB = 110/2\n= 55°",
+ "containsPersonalInfo": false,
+ "notes": null
+}

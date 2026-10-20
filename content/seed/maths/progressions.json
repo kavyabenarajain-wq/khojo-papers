@@ -1,0 +1,382 @@
+{
+  "chapter": "progressions",
+  "questions": [
+    {
+      "code": "M10-PRG-001",
+      "topics": [
+        "ap-nth-term-sum"
+      ],
+      "answerFormat": "structured",
+      "marks": 7,
+      "difficulty": "hard",
+      "content": {
+        "stem": "The 4th term of an arithmetic progression (AP) is 11, and the sum of its 6th and 10th terms is 46.",
+        "parts": [
+          {
+            "key": "a",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Find the first term \\(a\\) and the common difference \\(d\\) of the AP."
+          },
+          {
+            "key": "b",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Which term of the AP is 128?",
+            "numeric": {
+              "answerLabel": "n"
+            }
+          },
+          {
+            "key": "c",
+            "marks": 3,
+            "format": "math_working",
+            "prompt": "How many terms of the AP must be added to give a sum of 610?",
+            "numeric": {
+              "answerLabel": "Number of terms"
+            }
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "parts",
+        "parts": {
+          "b": {
+            "type": "numeric",
+            "value": 43,
+            "tolerance": 0
+          },
+          "c": {
+            "type": "numeric",
+            "value": 20,
+            "tolerance": 0
+          }
+        }
+      },
+      "hints": [
+        "Write each given term as \\(a + (n - 1)d\\) to get two equations in \\(a\\) and \\(d\\).",
+        "For part (c), \\(S_n = \\tfrac{n}{2}[2a + (n - 1)d]\\) gives a quadratic equation in \\(n\\); \\(n\\) must be a positive integer."
+      ],
+      "solution": {
+        "modelAnswer": "(a) \\(a + 3d = 11\\) and \\((a + 5d) + (a + 9d) = 46 \\Rightarrow a + 7d = 23\\). Subtracting, \\(4d = 12\\), so \\(d = 3\\), \\(a = 2\\). (b) \\(2 + (n - 1)3 = 128 \\Rightarrow n = 43\\); 128 is the 43rd term. (c) \\(\\tfrac{n}{2}[4 + 3(n - 1)] = 610 \\Rightarrow 3n^2 + n - 1220 = 0 \\Rightarrow (n - 20)(3n + 61) = 0\\), so \\(n = 20\\) (\\(n = -\\tfrac{61}{3}\\) is rejected). 20 terms are needed.",
+        "finalAnswer": "(a) \\(a = 2,\\ d = 3\\); (b) the 43rd term; (c) 20 terms",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Form two equations",
+            "expression": "a + 3d = 11, \\qquad (a + 5d) + (a + 9d) = 46",
+            "explanation": "Use \\(t_n = a + (n - 1)d\\) for \\(t_4\\), \\(t_6\\) and \\(t_{10}\\). The second equation simplifies to \\(2a + 14d = 46\\), that is \\(a + 7d = 23\\).",
+            "rule": "\\(t_n = a + (n - 1)d\\)"
+          },
+          {
+            "n": 2,
+            "partKey": "a",
+            "title": "Solve",
+            "expression": "(a + 7d) - (a + 3d) = 23 - 11 \\;\\Rightarrow\\; 4d = 12",
+            "explanation": "So \\(d = 3\\), and \\(a = 11 - 3d = 2\\). The AP is \\(2, 5, 8, 11, \\ldots\\)",
+            "result": "a = 2,\\; d = 3",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Set the nth term equal to 128",
+            "expression": "2 + (n - 1)(3) = 128 \\;\\Rightarrow\\; (n - 1)(3) = 126 \\;\\Rightarrow\\; n - 1 = 42",
+            "explanation": "Since \\(n = 43\\) is a positive integer, 128 is a term of the AP.",
+            "result": "n = 43",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "partKey": "c",
+            "title": "Use the sum formula",
+            "expression": "\\frac{n}{2}\\left[2(2) + (n - 1)(3)\\right] = 610 \\;\\Rightarrow\\; \\frac{n(3n + 1)}{2} = 610",
+            "explanation": "Simplify the bracket: \\(4 + 3n - 3 = 3n + 1\\). Multiplying by 2 gives \\(3n^2 + n = 1220\\).",
+            "rule": "\\(S_n = \\tfrac{n}{2}[2a + (n - 1)d]\\)",
+            "result": "3n^2 + n - 1220 = 0"
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Solve the quadratic",
+            "expression": "3n^2 - 60n + 61n - 1220 = 0 \\;\\Rightarrow\\; 3n(n - 20) + 61(n - 20) = 0 \\;\\Rightarrow\\; (n - 20)(3n + 61) = 0",
+            "explanation": "Two numbers with product \\(3 \\times (-1220) = -3660\\) and sum \\(1\\) are \\(61\\) and \\(-60\\)."
+          },
+          {
+            "n": 6,
+            "partKey": "c",
+            "title": "Interpret",
+            "expression": "n = 20 \\quad\\text{or}\\quad n = -\\tfrac{61}{3}",
+            "explanation": "The number of terms must be a positive integer, so \\(n = -\\tfrac{61}{3}\\) is rejected. Check: \\(S_{20} = \\tfrac{20}{2}(2 + 59) = 10 \\times 61 = 610\\).",
+            "result": "n = 20",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Writing the 6th term as \\(a + 6d\\) instead of \\(a + 5d\\) (and similarly for the others).",
+          "In part (b), solving \\(2 + 3n = 128\\) (forgetting the \\(n - 1\\)), which gives \\(n = 42\\) instead of \\(43\\).",
+          "In part (c), not rejecting the negative, non-integer root, or making an error in the factorisation of \\(3n^2 + n - 1220\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Quadratic formula in part (c)",
+            "description": "\\(n = \\dfrac{-1 \\pm \\sqrt{1 + 14640}}{6} = \\dfrac{-1 \\pm 121}{6}\\), giving \\(n = 20\\) or \\(n = -\\tfrac{61}{3}\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "a_equations",
+            "description": "Forms two correct equations in a and d",
+            "marks": 1,
+            "expectedEvidence": "a + 3d = 11 and 2a + 14d = 46 (or a + 7d = 23)",
+            "acceptedAlternatives": [],
+            "partKey": "a",
+            "commonErrors": [
+              "a + 4d = 11"
+            ]
+          },
+          {
+            "key": "a_values",
+            "description": "Correct a and d",
+            "marks": 1,
+            "expectedEvidence": "a = 2, d = 3",
+            "acceptedAlternatives": [],
+            "partKey": "a",
+            "commonErrors": []
+          },
+          {
+            "key": "b_setup",
+            "description": "Correct use of the nth-term formula",
+            "marks": 1,
+            "expectedEvidence": "2 + (n − 1)3 = 128",
+            "acceptedAlternatives": [],
+            "partKey": "b",
+            "partialCreditRules": "Follow-through from the student's a and d.",
+            "commonErrors": []
+          },
+          {
+            "key": "b_answer",
+            "description": "Correct term number",
+            "marks": 1,
+            "expectedEvidence": "n = 43 (the 43rd term)",
+            "acceptedAlternatives": [],
+            "partKey": "b",
+            "commonErrors": []
+          },
+          {
+            "key": "c_equation",
+            "description": "Forms the quadratic in n from the sum formula",
+            "marks": 1,
+            "expectedEvidence": "n/2[4 + 3(n − 1)] = 610 leading to 3n² + n − 1220 = 0",
+            "acceptedAlternatives": [],
+            "partKey": "c",
+            "partialCreditRules": "Follow-through from the student's a and d.",
+            "commonErrors": []
+          },
+          {
+            "key": "c_solve",
+            "description": "Solves the quadratic",
+            "marks": 1,
+            "expectedEvidence": "(n − 20)(3n + 61) = 0 or n = (−1 ± 121)/6",
+            "acceptedAlternatives": [],
+            "partKey": "c",
+            "commonErrors": []
+          },
+          {
+            "key": "c_answer",
+            "description": "Correct number of terms with the other root rejected",
+            "marks": 1,
+            "expectedEvidence": "n = 20, with n = −61/3 rejected (not a positive integer)",
+            "acceptedAlternatives": [],
+            "partKey": "c",
+            "commonErrors": [
+              "Gives both roots as answers"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Part (c) deliberately links to quadratic equations. All values verified: t4 = 11, t6 + t10 = 17 + 29 = 46, t43 = 128, S20 = 610."
+    },
+    {
+      "code": "M10-PRG-002",
+      "topics": [
+        "gp-nth-term-sum"
+      ],
+      "answerFormat": "numerical",
+      "marks": 3,
+      "difficulty": "medium",
+      "content": {
+        "stem": "The 3rd term of a geometric progression (GP) is 12 and its 6th term is 96. All its terms are real. Find the sum of the first 8 terms of the GP.",
+        "numeric": {
+          "answerLabel": "Sum of the first 8 terms"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 765,
+        "tolerance": 0
+      },
+      "hints": [
+        "Write \\(ar^2 = 12\\) and \\(ar^5 = 96\\). Dividing one by the other eliminates \\(a\\).",
+        "Once you have \\(a\\) and \\(r\\), use \\(S_n = \\dfrac{a(r^n - 1)}{r - 1}\\)."
+      ],
+      "solution": {
+        "modelAnswer": "\\(ar^2 = 12\\), \\(ar^5 = 96\\). Dividing, \\(r^3 = 8\\), so \\(r = 2\\) and \\(a = 3\\). \\(S_8 = \\dfrac{3(2^8 - 1)}{2 - 1} = 3 \\times 255 = 765\\).",
+        "finalAnswer": "\\(S_8 = 765\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Write the terms",
+            "expression": "t_3 = ar^2 = 12, \\qquad t_6 = ar^5 = 96",
+            "explanation": "Use the general term of a GP.",
+            "rule": "\\(t_n = ar^{n-1}\\)"
+          },
+          {
+            "n": 2,
+            "title": "Find r and a",
+            "expression": "\\frac{ar^5}{ar^2} = \\frac{96}{12} \\;\\Rightarrow\\; r^3 = 8",
+            "explanation": "The only real cube root of 8 is 2, so \\(r = 2\\), and \\(a = \\tfrac{12}{r^2} = \\tfrac{12}{4} = 3\\). The GP is \\(3, 6, 12, 24, 48, 96, \\ldots\\)",
+            "result": "a = 3,\\; r = 2"
+          },
+          {
+            "n": 3,
+            "title": "Sum of 8 terms",
+            "expression": "S_8 = \\frac{3(2^8 - 1)}{2 - 1} = 3 \\times 255",
+            "explanation": "Since \\(r > 1\\), use the form \\(\\dfrac{a(r^n - 1)}{r - 1}\\).",
+            "rule": "\\(S_n = \\dfrac{a(r^n - 1)}{r - 1},\\ r \\ne 1\\)",
+            "result": "S_8 = 765",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Taking \\(t_6 = ar^6\\) instead of \\(ar^5\\), which leads to \\(r^4 = 8\\) and a non-integer ratio.",
+          "Dividing to get \\(r^3 = 96 - 12 = 84\\) (subtracting instead of dividing).",
+          "Using \\(2^7\\) instead of \\(2^8\\) in the sum formula, giving \\(3 \\times 127 = 381\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Add the terms directly",
+            "description": "\\(3 + 6 + 12 + 24 + 48 + 96 + 192 + 384 = 765\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "ratio",
+            "description": "Finds the common ratio",
+            "marks": 1,
+            "expectedEvidence": "r³ = 8, so r = 2",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          },
+          {
+            "key": "first_term",
+            "description": "Finds the first term",
+            "marks": 1,
+            "expectedEvidence": "a = 3",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          },
+          {
+            "key": "sum",
+            "description": "Correct sum of 8 terms",
+            "marks": 1,
+            "expectedEvidence": "S₈ = 765",
+            "acceptedAlternatives": [
+              "Direct addition of the eight terms"
+            ],
+            "commonErrors": [
+              "381 (using 2⁷ instead of 2⁸)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "The stem says all terms are real so that r = 2 is the only possible common ratio. As a numerical question it is marked by the key alone; the rubric is for teacher reference."
+    },
+    {
+      "code": "M10-PRG-003",
+      "topics": [
+        "ap-nth-term-sum"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "If \\(k - 1\\), \\(2k + 1\\) and \\(4k + 1\\) are three consecutive terms of an arithmetic progression, then the value of \\(k\\) is:",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\(-\\tfrac{2}{7}\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\(2\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\(\\tfrac{1}{3}\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\(0\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "b"
+      },
+      "hints": [
+        "In an AP, the middle one of three consecutive terms is the average of the other two."
+      ],
+      "solution": {
+        "modelAnswer": "\\(2(2k + 1) = (k - 1) + (4k + 1) \\Rightarrow 4k + 2 = 5k \\Rightarrow k = 2\\). The terms are \\(1, 5, 9\\). Option (b).",
+        "finalAnswer": "(b) \\(k = 2\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Condition for an AP",
+            "expression": "2(2k + 1) = (k - 1) + (4k + 1)",
+            "explanation": "For consecutive terms \\(p, q, r\\) of an AP, \\(q - p = r - q\\), that is \\(2q = p + r\\).",
+            "rule": "\\(2b = a + c\\) for three consecutive terms \\(a, b, c\\) of an AP"
+          },
+          {
+            "n": 2,
+            "title": "Solve",
+            "expression": "4k + 2 = 5k",
+            "explanation": "Check: with \\(k = 2\\) the terms are \\(1, 5, 9\\), with common difference 4.",
+            "result": "k = 2",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Using the GP condition \\(b^2 = ac\\): \\((2k + 1)^2 = (k - 1)(4k + 1)\\) gives \\(k = -\\tfrac{2}{7}\\), option (a).",
+          "Forgetting the factor 2: \\(2k + 1 = (k - 1) + (4k + 1)\\) gives \\(k = \\tfrac{1}{3}\\), option (c).",
+          "Writing \\(2b = c - a\\): \\(4k + 2 = 3k + 2\\) gives \\(k = 0\\), option (d)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (b), k = 2",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(a) −2/7",
+              "(c) 1/3",
+              "(d) 0"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Distractor values verified: (a) from the GP condition, (c) from omitting the factor 2, (d) from 2b = c − a."
+    }
+  ]
+}

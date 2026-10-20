@@ -1,0 +1,84 @@
+{
+  "chapter": "ratio-proportion",
+  "questions": [
+    {
+      "code": "M10-RAT-001",
+      "topics": ["ratio-proportion-properties"],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "If 4, 10 and \\(x\\) are in continued proportion, then the value of \\(x\\) is:",
+        "options": [
+          { "key": "a", "text": "\\(1.6\\)" },
+          { "key": "b", "text": "\\(2\\sqrt{10}\\)" },
+          { "key": "c", "text": "\\(16\\)" },
+          { "key": "d", "text": "\\(25\\)" }
+        ]
+      },
+      "answerKey": { "type": "mcq", "correct": "d" },
+      "hints": ["Continued proportion means \\(4 : 10 = 10 : x\\)."],
+      "solution": {
+        "modelAnswer": "\\(4 : 10 = 10 : x \\Rightarrow 4x = 100 \\Rightarrow x = 25\\). Option (d).",
+        "finalAnswer": "(d) 25",
+        "steps": [
+          { "n": 1, "title": "Write the proportion", "expression": "\\frac{4}{10} = \\frac{10}{x}", "explanation": "In a continued proportion \\(a : b = b : c\\), so \\(x\\) is the third proportional to 4 and 10.", "rule": "If \\(a, b, c\\) are in continued proportion, \\(b^2 = ac\\)." },
+          { "n": 2, "title": "Solve", "expression": "4x = 10^2 = 100", "result": "x = 25", "explanation": "Cross-multiplying gives \\(x = 25\\), option (d).", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Writing the proportion the wrong way round, \\(x = \\tfrac{4^2}{10} = 1.6\\), option (a).",
+          "Finding the mean proportional \\(\\sqrt{4 \\times 10} = 2\\sqrt{10}\\) instead of the third proportional, option (b).",
+          "Treating the numbers as an arithmetic progression (adding 6 each time) to get 16, option (c)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "answer", "description": "Selects the correct option", "marks": 1, "expectedEvidence": "Option (d) 25", "acceptedAlternatives": [], "commonErrors": ["(a)", "(b)", "(c)"] }
+        ]
+      },
+      "authorNotes": "Distractors correspond to the three errors listed in commonMistakes."
+    },
+    {
+      "code": "M10-RAT-002",
+      "topics": ["componendo-dividendo"],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Using the property of componendo and dividendo, solve for \\(x\\):\n\\[ \\frac{\\sqrt{x + 1} + \\sqrt{x - 4}}{\\sqrt{x + 1} - \\sqrt{x - 4}} = 5 \\]"
+      },
+      "answerKey": { "type": "numeric", "value": 8, "tolerance": 0 },
+      "hints": [
+        "If \\(\\frac{a}{b} = \\frac{c}{d}\\), then \\(\\frac{a + b}{a - b} = \\frac{c + d}{c - d}\\). Write 5 as \\(\\frac{5}{1}\\).",
+        "After applying the property, the expression simplifies to \\(\\frac{\\sqrt{x+1}}{\\sqrt{x-4}}\\). Square both sides."
+      ],
+      "solution": {
+        "modelAnswer": "By componendo and dividendo, \\(\\dfrac{2\\sqrt{x+1}}{2\\sqrt{x-4}} = \\dfrac{5 + 1}{5 - 1} = \\dfrac{3}{2}\\). Squaring, \\(\\dfrac{x + 1}{x - 4} = \\dfrac{9}{4}\\), so \\(4x + 4 = 9x - 36\\), \\(5x = 40\\), \\(x = 8\\). Check: \\(\\dfrac{3 + 2}{3 - 2} = 5\\).",
+        "finalAnswer": "\\(x = 8\\)",
+        "steps": [
+          { "n": 1, "title": "Apply componendo and dividendo", "expression": "\\frac{(\\sqrt{x+1} + \\sqrt{x-4}) + (\\sqrt{x+1} - \\sqrt{x-4})}{(\\sqrt{x+1} + \\sqrt{x-4}) - (\\sqrt{x+1} - \\sqrt{x-4})} = \\frac{5 + 1}{5 - 1}", "explanation": "Write the right-hand side as \\(\\frac{5}{1}\\) and apply the property to both sides.", "rule": "If \\(\\frac{a}{b} = \\frac{c}{d}\\), then \\(\\frac{a + b}{a - b} = \\frac{c + d}{c - d}\\)." },
+          { "n": 2, "title": "Simplify", "expression": "\\frac{2\\sqrt{x+1}}{2\\sqrt{x-4}} = \\frac{6}{4}", "result": "\\frac{\\sqrt{x+1}}{\\sqrt{x-4}} = \\frac{3}{2}", "explanation": "The \\(\\sqrt{x-4}\\) terms cancel in the numerator and the \\(\\sqrt{x+1}\\) terms cancel in the denominator." },
+          { "n": 3, "title": "Square both sides", "expression": "\\frac{x + 1}{x - 4} = \\frac{9}{4} \\;\\Rightarrow\\; 4x + 4 = 9x - 36", "explanation": "Squaring removes the square roots; then cross-multiply." },
+          { "n": 4, "title": "Solve and check", "expression": "5x = 40", "result": "x = 8", "explanation": "Check: \\(\\sqrt{9} = 3\\) and \\(\\sqrt{4} = 2\\), so the left-hand side is \\(\\frac{3 + 2}{3 - 2} = 5\\). The value satisfies the equation.", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Forgetting to write 5 as \\(\\tfrac{5}{1}\\) and computing \\(\\tfrac{5+5}{5-5}\\) or similar.",
+          "Not squaring both sides fully, e.g. writing \\(\\tfrac{x+1}{x-4} = \\tfrac{3}{2}\\).",
+          "Sign errors when cross-multiplying: \\(4(x + 1) = 9(x - 4)\\) gives \\(4x + 4 = 9x - 36\\), not \\(9x + 36\\)."
+        ],
+        "alternativeMethods": [
+          { "title": "Componendo and dividendo twice", "description": "From \\(\\frac{x+1}{x-4} = \\frac{9}{4}\\), apply the property again: \\(\\frac{(x+1) + (x-4)}{(x+1) - (x-4)} = \\frac{9 + 4}{9 - 4}\\), i.e. \\(\\frac{2x - 3}{5} = \\frac{13}{5}\\), so \\(2x - 3 = 13\\) and \\(x = 8\\)." }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "cd", "description": "Correct use of componendo and dividendo", "marks": 1, "expectedEvidence": "√(x+1)/√(x−4) = 6/4 = 3/2", "acceptedAlternatives": ["2√(x+1) / 2√(x−4) = 6/4"], "commonErrors": ["Applying the property to one side only"] },
+          { "key": "square", "description": "Squares and forms a linear equation", "marks": 1, "expectedEvidence": "(x+1)/(x−4) = 9/4, leading to 4x + 4 = 9x − 36", "acceptedAlternatives": ["Second application of componendo and dividendo: (2x − 3)/5 = 13/5"], "partialCreditRules": "Award if the squaring is correct following an arithmetic slip in the ratio.", "commonErrors": ["(x+1)/(x−4) = 3/2"] },
+          { "key": "answer", "description": "Correct value of x", "marks": 1, "expectedEvidence": "x = 8", "acceptedAlternatives": [], "commonErrors": [] }
+        ]
+      },
+      "authorNotes": "The question instructs students to use componendo and dividendo; a student who solves by cross-multiplying and rationalising may need the reviewer to decide whether to award the method mark. x = 8 lies in the domain (x ≥ 4) and was checked by substitution."
+    }
+  ]
+}

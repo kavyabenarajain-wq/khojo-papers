@@ -1,0 +1,540 @@
+{
+  "chapter": "circles",
+  "questions": [
+    {
+      "code": "M10-CIR-001",
+      "topics": [
+        "angle-properties"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "In the figure, \\(O\\) is the centre of the circle and \\(AB\\) is a diameter. \\(ABCD\\) is a cyclic quadrilateral with \\(C\\) and \\(D\\) on the same side of \\(AB\\), and \\(\\angle ADC = 125^\\circ\\). Find, giving reasons:\n\n(i) \\(\\angle ABC\\)\n\n(ii) \\(\\angle ACB\\)\n\n(iii) \\(\\angle BAC\\)",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "A circle with centre O. AB is a horizontal diameter through O, with A on the left and B on the right. Points C and D lie on the upper half of the circle, C nearer to B and D nearer to A, so that going round the circle the order is A, B, C, D. The sides AB, BC, CD and DA of the cyclic quadrilateral are drawn, together with the diagonal AC. Angle ADC is marked 125 degrees.",
+            "solutionAlt": "The solution marks, in turn, angle ABC as 55 degrees, the right angle ACB (angle in a semicircle), and angle BAC as 35 degrees.",
+            "viewBox": {
+              "xMin": -4,
+              "xMax": 4,
+              "yMin": -4,
+              "yMax": 4
+            },
+            "notToScale": false,
+            "elements": [
+              {
+                "kind": "circle",
+                "center": "O",
+                "r": 3
+              },
+              {
+                "kind": "point",
+                "id": "O",
+                "x": 0,
+                "y": 0,
+                "label": "O",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "A",
+                "x": -3,
+                "y": 0,
+                "label": "A",
+                "labelPos": "w"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 3,
+                "y": 0,
+                "label": "B",
+                "labelPos": "e"
+              },
+              {
+                "kind": "point",
+                "id": "C",
+                "x": 1.026,
+                "y": 2.819,
+                "label": "C",
+                "labelPos": "ne"
+              },
+              {
+                "kind": "point",
+                "id": "D",
+                "x": -1.928,
+                "y": 2.298,
+                "label": "D",
+                "labelPos": "nw"
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "B"
+              },
+              {
+                "kind": "segment",
+                "from": "B",
+                "to": "C"
+              },
+              {
+                "kind": "segment",
+                "from": "C",
+                "to": "D"
+              },
+              {
+                "kind": "segment",
+                "from": "D",
+                "to": "A"
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "C"
+              },
+              {
+                "kind": "angle",
+                "vertex": "D",
+                "from": "A",
+                "to": "C",
+                "label": "125°"
+              },
+              {
+                "kind": "angle",
+                "vertex": "B",
+                "from": "C",
+                "to": "A",
+                "label": "55°",
+                "step": 1,
+                "emphasis": true
+              },
+              {
+                "kind": "angle",
+                "vertex": "C",
+                "from": "A",
+                "to": "B",
+                "right": true,
+                "step": 2,
+                "emphasis": true
+              },
+              {
+                "kind": "angle",
+                "vertex": "A",
+                "from": "B",
+                "to": "C",
+                "label": "35°",
+                "step": 3,
+                "emphasis": true
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "What do the opposite angles of a cyclic quadrilateral add up to?",
+        "\\(\\angle ACB\\) stands on the diameter \\(AB\\)."
+      ],
+      "solution": {
+        "modelAnswer": "(i) \\(\\angle ABC = 180^\\circ - \\angle ADC = 180^\\circ - 125^\\circ = 55^\\circ\\) (opposite angles of a cyclic quadrilateral are supplementary).\n\n(ii) \\(\\angle ACB = 90^\\circ\\) (angle in a semicircle).\n\n(iii) In \\(\\triangle ABC\\), \\(\\angle BAC = 180^\\circ - 90^\\circ - 55^\\circ = 35^\\circ\\) (angle sum of a triangle).",
+        "finalAnswer": "(i) \\(55^\\circ\\); (ii) \\(90^\\circ\\); (iii) \\(35^\\circ\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Opposite angles of the cyclic quadrilateral",
+            "expression": "\\angle ABC + \\angle ADC = 180^\\circ \\Rightarrow \\angle ABC = 180^\\circ - 125^\\circ",
+            "result": "\\angle ABC = 55^\\circ",
+            "explanation": "\\(\\angle ABC\\) and \\(\\angle ADC\\) are opposite angles of the cyclic quadrilateral \\(ABCD\\).",
+            "rule": "Opposite angles of a cyclic quadrilateral are supplementary.",
+            "diagramId": "fig1",
+            "isFinal": true
+          },
+          {
+            "n": 2,
+            "title": "Angle in a semicircle",
+            "expression": "\\angle ACB = 90^\\circ",
+            "result": "\\angle ACB = 90^\\circ",
+            "explanation": "\\(AB\\) is a diameter and \\(C\\) is on the circle, so the angle \\(ACB\\) subtended by the diameter is a right angle.",
+            "rule": "The angle in a semicircle is a right angle.",
+            "diagramId": "fig1",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "title": "Angle sum in triangle ABC",
+            "expression": "\\angle BAC = 180^\\circ - (\\angle ACB + \\angle ABC) = 180^\\circ - (90^\\circ + 55^\\circ)",
+            "result": "\\angle BAC = 35^\\circ",
+            "explanation": "The three angles of \\(\\triangle ABC\\) add up to \\(180^\\circ\\).",
+            "rule": "Angle sum property of a triangle.",
+            "diagramId": "fig1",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Taking \\(\\angle ABC = \\angle ADC = 125^\\circ\\), as if opposite angles were equal.",
+          "Not recognising \\(\\angle ACB\\) as an angle in a semicircle, and trying to find it from the quadrilateral instead.",
+          "Giving correct values without stating the reasons, which loses the reasoning credit."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Using arcs",
+            "description": "\\(\\angle ADC = 125^\\circ\\) means the arc \\(ABC\\) not containing \\(D\\) is \\(250^\\circ\\). Since arc \\(AB\\) (the semicircle) is \\(180^\\circ\\), arc \\(BC = 70^\\circ\\), so \\(\\angle BAC = \\tfrac{1}{2} \\times 70^\\circ = 35^\\circ\\) (angle at the circumference is half the arc)."
+          }
+        ]
+      },
+      "rubric": {
+        "notes": "Reasons are required: a correct value with no reason earns the answer mark but not the reason mark in (i).",
+        "criteria": [
+          {
+            "key": "abc-reason",
+            "description": "Uses the cyclic quadrilateral property for ∠ABC",
+            "marks": 1,
+            "expectedEvidence": "∠ABC + ∠ADC = 180° with the reason 'opposite angles of a cyclic quadrilateral are supplementary'",
+            "acceptedAlternatives": [
+              "Opposite angles of a cyclic quadrilateral add up to 180°"
+            ],
+            "commonErrors": [
+              "Opposite angles are equal"
+            ]
+          },
+          {
+            "key": "abc",
+            "description": "Correct ∠ABC",
+            "marks": 1,
+            "expectedEvidence": "∠ABC = 55°",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "125°"
+            ]
+          },
+          {
+            "key": "acb",
+            "description": "∠ACB = 90° with reason",
+            "marks": 1,
+            "expectedEvidence": "∠ACB = 90° (angle in a semicircle)",
+            "acceptedAlternatives": [
+              "Angle subtended by a diameter at the circumference is 90°"
+            ],
+            "commonErrors": [
+              "Value given without any reason"
+            ]
+          },
+          {
+            "key": "bac",
+            "description": "Correct ∠BAC",
+            "marks": 1,
+            "expectedEvidence": "∠BAC = 180° − 90° − 55° = 35°",
+            "acceptedAlternatives": [
+              "Half of arc BC = ½ × 70° = 35°"
+            ],
+            "partialCreditRules": "Follow-through from the student's ∠ABC if the angle-sum working is correct."
+          }
+        ]
+      },
+      "authorNotes": "Diagram is to scale (radius 3): A at 180°, B at 0°, C at 70°, D at 130° on the circle, so ∠ADC = 125°, ∠ABC = 55° and ∠BAC = 35° as drawn. D's exact position is not determined by the data; any point on the minor arc CA gives ∠ADC = 125°."
+    },
+    {
+      "code": "M10-CIR-002",
+      "topics": [
+        "tangent-properties"
+      ],
+      "answerFormat": "structured",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "In the figure, \\(PA\\) and \\(PB\\) are tangents from an external point \\(P\\) to a circle with centre \\(O\\), touching it at \\(A\\) and \\(B\\). The radius of the circle is 5 cm and \\(OP = 13\\) cm.",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "A circle with centre O and radius 5 cm. P is a point outside the circle to the right of O, with OP = 13 cm drawn as a horizontal segment. Tangents PA and PB are drawn from P, touching the circle at A (upper) and B (lower). Radii OA and OB are drawn; OA is labelled 5 cm.",
+            "solutionAlt": "Step 1 marks the right angles OAP and OBP (radius perpendicular to tangent at the point of contact). In part (b) the quadrilateral OAPB is shaded; it is made up of the two congruent right triangles OAP and OBP.",
+            "viewBox": {
+              "xMin": -6,
+              "xMax": 14.5,
+              "yMin": -6.5,
+              "yMax": 6.5
+            },
+            "notToScale": false,
+            "elements": [
+              {
+                "kind": "circle",
+                "center": "O",
+                "r": 5
+              },
+              {
+                "kind": "point",
+                "id": "O",
+                "x": 0,
+                "y": 0,
+                "label": "O",
+                "labelPos": "w"
+              },
+              {
+                "kind": "point",
+                "id": "A",
+                "x": 1.923,
+                "y": 4.615,
+                "label": "A",
+                "labelPos": "n"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 1.923,
+                "y": -4.615,
+                "label": "B",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "P",
+                "x": 13,
+                "y": 0,
+                "label": "P",
+                "labelPos": "e"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  "O",
+                  "A",
+                  "P",
+                  "B"
+                ],
+                "shaded": true,
+                "step": 3
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "O",
+                "label": "5 cm"
+              },
+              {
+                "kind": "segment",
+                "from": "O",
+                "to": "B"
+              },
+              {
+                "kind": "segment",
+                "from": "P",
+                "to": "O",
+                "label": "13 cm"
+              },
+              {
+                "kind": "segment",
+                "from": "P",
+                "to": "A"
+              },
+              {
+                "kind": "segment",
+                "from": "P",
+                "to": "B"
+              },
+              {
+                "kind": "angle",
+                "vertex": "A",
+                "from": "O",
+                "to": "P",
+                "right": true,
+                "step": 1
+              },
+              {
+                "kind": "angle",
+                "vertex": "B",
+                "from": "P",
+                "to": "O",
+                "right": true,
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "key": "a",
+            "marks": 1,
+            "format": "numerical",
+            "prompt": "Find the length of the tangent \\(PA\\).",
+            "numeric": {
+              "unit": "cm",
+              "answerLabel": "PA"
+            },
+            "diagramIds": [
+              "fig1"
+            ]
+          },
+          {
+            "key": "b",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Find the area of the quadrilateral \\(OAPB\\).",
+            "diagramIds": [
+              "fig1"
+            ]
+          },
+          {
+            "key": "c",
+            "marks": 1,
+            "format": "mcq",
+            "prompt": "The value of \\(\\angle AOB + \\angle APB\\) is:",
+            "options": [
+              {
+                "key": "a",
+                "text": "\\(90^\\circ\\)"
+              },
+              {
+                "key": "b",
+                "text": "\\(180^\\circ\\)"
+              },
+              {
+                "key": "c",
+                "text": "\\(270^\\circ\\)"
+              },
+              {
+                "key": "d",
+                "text": "\\(360^\\circ\\)"
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "parts",
+        "parts": {
+          "a": {
+            "type": "numeric",
+            "value": 12,
+            "tolerance": 0,
+            "unit": "cm"
+          },
+          "c": {
+            "type": "mcq",
+            "correct": "b"
+          }
+        }
+      },
+      "hints": [
+        "What angle does a tangent make with the radius drawn to the point of contact?",
+        "\\(OP\\) splits \\(OAPB\\) into two congruent right triangles."
+      ],
+      "solution": {
+        "modelAnswer": "(a) \\(OA \\perp PA\\), so \\(PA^2 = OP^2 - OA^2 = 169 - 25 = 144\\), \\(PA = 12\\) cm.\n\n(b) \\(\\triangle OAP \\cong \\triangle OBP\\) (RHS), so area \\(OAPB = 2 \\times \\tfrac{1}{2} \\times 5 \\times 12 = 60\\) cm².\n\n(c) In \\(OAPB\\), \\(\\angle OAP = \\angle OBP = 90^\\circ\\), so \\(\\angle AOB + \\angle APB = 360^\\circ - 180^\\circ = 180^\\circ\\). Option (b).",
+        "finalAnswer": "(a) \\(12\\) cm; (b) \\(60\\) cm²; (c) (b) \\(180^\\circ\\)",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Right angle at the point of contact",
+            "expression": "\\angle OAP = 90^\\circ",
+            "explanation": "The tangent at any point of a circle is perpendicular to the radius through that point, so \\(\\triangle OAP\\) is right-angled at \\(A\\).",
+            "rule": "Tangent \\(\\perp\\) radius at the point of contact.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "partKey": "a",
+            "title": "Pythagoras' theorem",
+            "expression": "PA^2 = OP^2 - OA^2 = 13^2 - 5^2 = 169 - 25 = 144",
+            "result": "PA = 12 \\text{ cm}",
+            "explanation": "\\(OP\\) is the hypotenuse of \\(\\triangle OAP\\).",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Split the quadrilateral",
+            "expression": "\\triangle OAP \\cong \\triangle OBP \\;(\\text{RHS})",
+            "explanation": "\\(OA = OB\\) (radii), \\(OP\\) is common and \\(\\angle OAP = \\angle OBP = 90^\\circ\\). So the two triangles have equal areas (and \\(PB = PA = 12\\) cm).",
+            "rule": "Tangents from an external point are equal.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 4,
+            "partKey": "b",
+            "title": "Area",
+            "expression": "\\text{ar}(OAPB) = 2 \\times \\tfrac{1}{2} \\times OA \\times PA = 2 \\times \\tfrac{1}{2} \\times 5 \\times 12",
+            "result": "60 \\text{ cm}^2",
+            "explanation": "Each right triangle has legs 5 cm and 12 cm.",
+            "isFinal": true
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Angle sum of the quadrilateral",
+            "expression": "\\angle AOB + \\angle APB = 360^\\circ - (90^\\circ + 90^\\circ)",
+            "result": "180^\\circ",
+            "explanation": "The angles of quadrilateral \\(OAPB\\) add up to \\(360^\\circ\\), and two of them are right angles. So the answer is option (b).",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Adding instead of subtracting in Pythagoras' theorem: \\(PA = \\sqrt{169 + 25} \\approx 13.9\\) cm.",
+          "Finding only the area of \\(\\triangle OAP\\) (30 cm²) and forgetting the second triangle.",
+          "Treating \\(OAPB\\) as a rectangle or using \\(OA \\times OP\\) for its area."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Kite area from the diagonals",
+            "description": "\\(OAPB\\) is a kite with diagonals \\(OP = 13\\) cm and \\(AB\\). The height of \\(\\triangle OAP\\) from \\(A\\) to \\(OP\\) is \\(\\frac{5 \\times 12}{13} = \\frac{60}{13}\\) cm, so \\(AB = \\frac{120}{13}\\) cm and the area is \\(\\tfrac{1}{2} \\times 13 \\times \\frac{120}{13} = 60\\) cm²."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "a-pa",
+            "partKey": "a",
+            "description": "Correct length of PA using tangent ⊥ radius",
+            "marks": 1,
+            "expectedEvidence": "PA² = 13² − 5² = 144, PA = 12 cm",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "√194 cm"
+            ]
+          },
+          {
+            "key": "b-method",
+            "partKey": "b",
+            "description": "Splits OAPB into two right triangles (or equivalent) and uses legs 5 and 12",
+            "marks": 1,
+            "expectedEvidence": "2 × ½ × 5 × 12, or ½ × OP × AB with AB correct",
+            "acceptedAlternatives": [
+              "Kite area ½ × d₁ × d₂"
+            ],
+            "partialCreditRules": "Follow-through from the student's PA in (a).",
+            "commonErrors": [
+              "Only one triangle used"
+            ]
+          },
+          {
+            "key": "b-answer",
+            "partKey": "b",
+            "description": "Correct area",
+            "marks": 1,
+            "expectedEvidence": "60 cm²",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "30 cm²",
+              "65 cm²"
+            ]
+          },
+          {
+            "key": "c-mcq",
+            "partKey": "c",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (b), 180°",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(d) 360°"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Diagram is to scale: O(0, 0), r = 5, P(13, 0); the points of contact are (25/13, ±60/13). ∠APB ≈ 45.2° and ∠AOB ≈ 134.8° as drawn, but neither is asked for (they need trigonometry)."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+ "stem": "This ICSE board 2023 paper question: solve \\(x^2-5x+6=0\\).",
+ "options": null,
+ "parts": null,
+ "unit": null,
+ "answerKey": {
+  "type": "none",
+  "correctOption": null,
+  "value": null,
+  "tolerance": null,
+  "unit": null,
+  "parts": null
+ },
+ "hints": [
+  "Find two numbers whose product is 6 and sum is 5."
+ ],
+ "solution": {
+  "modelAnswer": "\\((x-2)(x-3)=0\\), so \\(x = 2\\) or \\(x = 3\\).",
+  "finalAnswer": "\\(x = 2\\) or \\(x = 3\\)",
+  "steps": [
+   {
+    "n": 1,
+    "partKey": null,
+    "title": "Factorise",
+    "expression": "(x-2)(x-3)=0",
+    "explanation": "Split the middle term: \\(-2\\) and \\(-3\\) multiply to \\(6\\) and add to \\(-5\\).",
+    "reason": null,
+    "rule": null,
+    "result": null,
+    "isFinal": false
+   },
+   {
+    "n": 2,
+    "partKey": null,
+    "title": "Solve",
+    "expression": "x = 2 \\text{ or } x = 3",
+    "explanation": "Set each factor to zero.",
+    "reason": "If a product is zero, one factor is zero.",
+    "rule": null,
+    "result": "x=2,\\ 3",
+    "isFinal": true
+   }
+  ],
+  "commonMistakes": [
+   "Getting the signs of the factors wrong."
+  ],
+  "alternativeMethods": []
+ },
+ "rubric": [
+  {
+   "key": "factorise",
+   "partKey": null,
+   "description": "Correct factorisation",
+   "marks": 2,
+   "expectedEvidence": "(x-2)(x-3)=0",
+   "acceptedAlternatives": [],
+   "partialCreditRules": null,
+   "commonErrors": []
+  },
+  {
+   "key": "roots",
+   "partKey": null,
+   "description": "Both roots",
+   "marks": 1,
+   "expectedEvidence": "x = 2, 3",
+   "acceptedAlternatives": [],
+   "partialCreditRules": null,
+   "commonErrors": []
+  }
+ ],
+ "arithmeticChecks": [
+  {
+   "expression": "2*3",
+   "expected": 6
+  },
+  {
+   "expression": "2+3",
+   "expected": 5
+  }
+ ],
+ "reviewerFlags": [
+  "None significant; check difficulty is appropriate."
+ ],
+ "alignmentNote": "Factorisation of a monic quadratic."
+}

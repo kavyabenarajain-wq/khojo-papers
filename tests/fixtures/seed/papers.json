@@ -1,0 +1,20 @@
+{
+ "papers": [
+  {
+   "slug": "test-set",
+   "title": "Test set",
+   "durationMinutes": 10,
+   "instructions": "Answer all.",
+   "sections": [
+    {
+     "label": "Section A",
+     "choiceRule": "all",
+     "questions": [
+      "M10-CIR-001",
+      "M10-CIR-002"
+     ]
+    }
+   ]
+  }
+ ]
+}

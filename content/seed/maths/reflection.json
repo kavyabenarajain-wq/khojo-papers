@@ -1,0 +1,312 @@
+{
+  "chapter": "reflection",
+  "questions": [
+    {
+      "code": "M10-REF-001",
+      "topics": [
+        "reflection-in-axes-and-lines"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "The points \\(A(1, 2)\\) and \\(B(4, 3)\\) are plotted on the grid.\n\n(i) \\(A\\) and \\(B\\) are reflected in the x-axis to \\(A'\\) and \\(B'\\) respectively. Write down the coordinates of \\(A'\\) and \\(B'\\).\n\n(ii) Name the figure \\(ABB'A'\\) and find its area.",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "A coordinate grid with the x-axis from -1 to 6 and the y-axis from -4 to 4, one unit per square. Point A is plotted at (1, 2) and point B at (4, 3), both above the x-axis.",
+            "solutionAlt": "A′ appears at (1, −2) joined to A by a dashed vertical line, then B′ appears at (4, −3) joined to B by a dashed vertical line, and finally the four-sided figure ABB′A′ (a trapezium) is shaded.",
+            "viewBox": {
+              "xMin": -1,
+              "xMax": 6,
+              "yMin": -4,
+              "yMax": 4
+            },
+            "grid": true,
+            "axes": {
+              "x": "x",
+              "y": "y",
+              "xStep": 1,
+              "yStep": 1
+            },
+            "notToScale": false,
+            "elements": [
+              {
+                "kind": "point",
+                "id": "A",
+                "x": 1,
+                "y": 2,
+                "label": "A",
+                "labelPos": "nw"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 4,
+                "y": 3,
+                "label": "B",
+                "labelPos": "ne"
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "A1",
+                "dashed": true,
+                "step": 2
+              },
+              {
+                "kind": "point",
+                "id": "A1",
+                "x": 1,
+                "y": -2,
+                "label": "A′",
+                "labelPos": "sw",
+                "step": 2,
+                "emphasis": true
+              },
+              {
+                "kind": "segment",
+                "from": "B",
+                "to": "B1",
+                "dashed": true,
+                "step": 3
+              },
+              {
+                "kind": "point",
+                "id": "B1",
+                "x": 4,
+                "y": -3,
+                "label": "B′",
+                "labelPos": "se",
+                "step": 3,
+                "emphasis": true
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  "A",
+                  "B",
+                  "B1",
+                  "A1"
+                ],
+                "shaded": true,
+                "step": 4
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0,
+        "unit": "sq. units"
+      },
+      "hints": [
+        "When a point is reflected in the x-axis, which coordinate stays the same and which changes sign?",
+        "Look at the sides \\(AA'\\) and \\(BB'\\): how are they placed relative to each other?"
+      ],
+      "solution": {
+        "modelAnswer": "(i) Reflection in the x-axis: \\((x, y) \\to (x, -y)\\), so \\(A'(1, -2)\\) and \\(B'(4, -3)\\).\n\n(ii) \\(AA'\\) and \\(BB'\\) are both vertical, so \\(AA' \\parallel BB'\\) and \\(ABB'A'\\) is a trapezium. \\(AA' = 4\\), \\(BB' = 6\\) and the distance between them is \\(4 - 1 = 3\\). Area \\(= \\tfrac{1}{2}(4 + 6) \\times 3 = 15\\) sq. units.",
+        "finalAnswer": "\\(A'(1, -2)\\), \\(B'(4, -3)\\); \\(ABB'A'\\) is a trapezium (isosceles trapezium) of area 15 sq. units.",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Rule for reflection in the x-axis",
+            "expression": "M_x : (x, y) \\to (x, -y)",
+            "explanation": "Reflecting in the x-axis keeps the x-coordinate and changes the sign of the y-coordinate. The image is the same distance below the axis as the point is above it.",
+            "rule": "Reflection in the x-axis: \\((x, y) \\to (x, -y)\\)",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Image of A",
+            "expression": "A(1, 2) \\to A'(1, -2)",
+            "result": "A'(1, -2)",
+            "explanation": "\\(A\\) is 2 units above the x-axis, so \\(A'\\) is 2 units below it, directly underneath.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 3,
+            "title": "Image of B",
+            "expression": "B(4, 3) \\to B'(4, -3)",
+            "result": "B'(4, -3)",
+            "explanation": "\\(B\\) is 3 units above the x-axis, so \\(B'\\) is 3 units below it.",
+            "diagramId": "fig1",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "title": "Name the figure",
+            "expression": "AA' \\parallel BB' \\;(\\text{both vertical})",
+            "explanation": "Both \\(AA'\\) and \\(BB'\\) are perpendicular to the x-axis, so they are parallel. \\(AB\\) and \\(A'B'\\) are not parallel (they slope in opposite directions), so \\(ABB'A'\\) is a trapezium. It is symmetric about the x-axis, so it is an isosceles trapezium.",
+            "reason": "A quadrilateral with exactly one pair of parallel sides is a trapezium.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 5,
+            "title": "Area of the trapezium",
+            "expression": "\\text{Area} = \\tfrac{1}{2}(AA' + BB') \\times h = \\tfrac{1}{2}(4 + 6) \\times 3",
+            "result": "15 \\text{ sq. units}",
+            "explanation": "\\(AA' = 2 - (-2) = 4\\) and \\(BB' = 3 - (-3) = 6\\). The perpendicular distance between the parallel sides is the difference of their x-coordinates, \\(4 - 1 = 3\\).",
+            "rule": "Area of a trapezium \\(= \\tfrac{1}{2} \\times (\\text{sum of parallel sides}) \\times \\text{height}\\)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Changing the sign of the x-coordinate instead, i.e. reflecting in the y-axis: writing \\(A'(-1, 2)\\).",
+          "Taking the height of the trapezium as 4 or 6 (a parallel side) instead of the horizontal distance 3 between the parallel sides.",
+          "Calling the figure a parallelogram or a rectangle; \\(AB\\) and \\(A'B'\\) are not parallel."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Coordinate (shoelace) formula",
+            "description": "With vertices \\(A(1, 2), B(4, 3), B'(4, -3), A'(1, -2)\\) taken in order, the area formula \\(\\tfrac{1}{2}\\left|\\sum (x_i y_{i+1} - x_{i+1} y_i)\\right|\\) also gives 15 sq. units."
+          },
+          {
+            "title": "Counting squares",
+            "description": "On graph paper the trapezium can be split into a \\(3 \\times 4\\) rectangle (area 12) and two right triangles each of area \\(\\tfrac{1}{2} \\times 3 \\times 1 = 1.5\\), giving \\(12 + 3 = 15\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "images",
+            "description": "Correct coordinates of both images",
+            "marks": 1,
+            "expectedEvidence": "A'(1, -2) and B'(4, -3)",
+            "acceptedAlternatives": [
+              "Points correctly plotted and labelled on the graph with coordinates stated"
+            ],
+            "partialCreditRules": "Both images must be correct for this mark.",
+            "commonErrors": [
+              "A'(-1, 2), B'(-4, 3) (reflected in the y-axis)"
+            ]
+          },
+          {
+            "key": "name",
+            "description": "Names the figure as a trapezium",
+            "marks": 1,
+            "expectedEvidence": "ABB'A' is a trapezium (isosceles trapezium accepted), ideally noting AA' ∥ BB'",
+            "acceptedAlternatives": [
+              "Isosceles trapezium"
+            ],
+            "commonErrors": [
+              "Parallelogram",
+              "Rectangle",
+              "Kite"
+            ]
+          },
+          {
+            "key": "method",
+            "description": "Correct method for the area",
+            "marks": 1,
+            "expectedEvidence": "Parallel sides 4 and 6 and height 3 substituted into ½(a + b)h, or an equivalent correct method",
+            "acceptedAlternatives": [
+              "Shoelace/coordinate formula",
+              "Splitting into a rectangle and triangles"
+            ],
+            "partialCreditRules": "Follow-through: award if the method is correct using the student's own (wrong) image coordinates, provided the figure is still a trapezium."
+          },
+          {
+            "key": "answer",
+            "description": "Correct area",
+            "marks": 1,
+            "expectedEvidence": "15 sq. units",
+            "acceptedAlternatives": [
+              "15 square units",
+              "15 units²"
+            ],
+            "commonErrors": [
+              "30 (forgot the ½)",
+              "20 or 24 (wrong height)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Diagram is to scale on a 1-unit grid. The figure is an isosceles trapezium (symmetric about the x-axis); 'trapezium' alone earns the naming mark. Numeric answer key refers to the area in part (ii)."
+    },
+    {
+      "code": "M10-REF-002",
+      "topics": [
+        "reflection-in-axes-and-lines"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "The point \\((-3, 5)\\) is reflected in the line \\(y = 2\\). The coordinates of its image are:",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\((-3, -5)\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\((-3, -1)\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\((7, 5)\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\((-3, -3)\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "b"
+      },
+      "hints": [
+        "The line \\(y = 2\\) is horizontal, so the x-coordinate does not change. How far is the point above the line?"
+      ],
+      "solution": {
+        "modelAnswer": "The point is \\(5 - 2 = 3\\) units above the line \\(y = 2\\), so its image is 3 units below it: \\(y = 2 - 3 = -1\\). The x-coordinate is unchanged. Image \\((-3, -1)\\), option (b).",
+        "finalAnswer": "(b) \\((-3, -1)\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Distance from the mirror line",
+            "expression": "5 - 2 = 3",
+            "explanation": "The line \\(y = 2\\) is horizontal. The point \\((-3, 5)\\) is 3 units above it.",
+            "reason": "In a reflection, the image is the same perpendicular distance from the mirror line, on the other side."
+          },
+          {
+            "n": 2,
+            "title": "Find the image",
+            "expression": "y' = 2 - 3 = -1 \\quad (\\text{or } y' = 2(2) - 5)",
+            "result": "(-3, -1)",
+            "explanation": "Go 3 units below the line. The x-coordinate stays \\(-3\\) because the mirror line is horizontal. This is option (b).",
+            "rule": "Reflection in \\(y = b\\): \\((x, y) \\to (x, 2b - y)\\)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Option (a): reflecting in the x-axis instead of the line \\(y = 2\\).",
+          "Option (c): reflecting in the line \\(x = 2\\), which changes the x-coordinate instead.",
+          "Option (d): using \\(y' = b - y = 2 - 5\\) instead of \\(y' = 2b - y\\)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct image",
+            "marks": 1,
+            "expectedEvidence": "Option (b), (-3, -1)",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(a) reflected in the x-axis",
+              "(c) reflected in x = 2",
+              "(d) used 2 − 5"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

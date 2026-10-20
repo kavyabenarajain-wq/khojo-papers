@@ -1,0 +1,352 @@
+{
+  "chapter": "similarity",
+  "questions": [
+    {
+      "code": "M10-SIM-001",
+      "topics": [
+        "similar-triangles",
+        "similarity-areas-maps"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "In the figure, \\(D\\) and \\(E\\) are points on the sides \\(AB\\) and \\(AC\\) of triangle \\(ABC\\) such that \\(DE \\parallel BC\\). \\(AD = 4\\) cm, \\(DB = 6\\) cm and \\(DE = 5\\) cm.\n\n(i) Show that \\(\\triangle ADE \\sim \\triangle ABC\\).\n\n(ii) Find the length of \\(BC\\).\n\n(iii) Find the ratio of the area of \\(\\triangle ADE\\) to the area of the trapezium \\(DBCE\\).",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "Triangle ABC with A at the top, B at the bottom left and C at the bottom right; BC is horizontal. D is a point on AB and E is a point on AC, and the segment DE is drawn parallel to BC. AD is labelled 4 cm, DB is labelled 6 cm and DE is labelled 5 cm. BC is not labelled.",
+            "solutionAlt": "In step 1 the common angle at A and the equal corresponding angles ADE and ABC are marked. In step 4 the trapezium DBCE is shaded.",
+            "viewBox": {
+              "xMin": -1.5,
+              "xMax": 14,
+              "yMin": -1.5,
+              "yMax": 11
+            },
+            "notToScale": false,
+            "elements": [
+              {
+                "kind": "point",
+                "id": "A",
+                "x": 3,
+                "y": 9.539,
+                "label": "A",
+                "labelPos": "n"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 0,
+                "y": 0,
+                "label": "B",
+                "labelPos": "sw"
+              },
+              {
+                "kind": "point",
+                "id": "C",
+                "x": 12.5,
+                "y": 0,
+                "label": "C",
+                "labelPos": "se"
+              },
+              {
+                "kind": "point",
+                "id": "D",
+                "x": 1.8,
+                "y": 5.724,
+                "label": "D",
+                "labelPos": "w"
+              },
+              {
+                "kind": "point",
+                "id": "E",
+                "x": 6.8,
+                "y": 5.724,
+                "label": "E",
+                "labelPos": "e"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  "D",
+                  "B",
+                  "C",
+                  "E"
+                ],
+                "shaded": true,
+                "step": 4
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "D",
+                "label": "4 cm"
+              },
+              {
+                "kind": "segment",
+                "from": "D",
+                "to": "B",
+                "label": "6 cm"
+              },
+              {
+                "kind": "segment",
+                "from": "A",
+                "to": "C"
+              },
+              {
+                "kind": "segment",
+                "from": "B",
+                "to": "C"
+              },
+              {
+                "kind": "segment",
+                "from": "E",
+                "to": "D",
+                "label": "5 cm"
+              },
+              {
+                "kind": "angle",
+                "vertex": "A",
+                "from": "D",
+                "to": "E",
+                "step": 1,
+                "emphasis": true
+              },
+              {
+                "kind": "angle",
+                "vertex": "D",
+                "from": "E",
+                "to": "A",
+                "step": 1
+              },
+              {
+                "kind": "angle",
+                "vertex": "B",
+                "from": "C",
+                "to": "A",
+                "step": 1
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "Since \\(DE \\parallel BC\\), look for pairs of corresponding angles.",
+        "The ratio of areas of similar triangles is the square of the ratio of corresponding sides. What is \\(AD : AB\\)?"
+      ],
+      "solution": {
+        "modelAnswer": "(i) In \\(\\triangle ADE\\) and \\(\\triangle ABC\\): \\(\\angle A\\) is common and \\(\\angle ADE = \\angle ABC\\) (corresponding angles, \\(DE \\parallel BC\\)). So \\(\\triangle ADE \\sim \\triangle ABC\\) (AA).\n\n(ii) \\(\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{4}{10}\\), so \\(BC = \\frac{5 \\times 10}{4} = 12.5\\) cm.\n\n(iii) \\(\\frac{\\text{ar}(\\triangle ADE)}{\\text{ar}(\\triangle ABC)} = \\left(\\frac{4}{10}\\right)^2 = \\frac{4}{25}\\). Trapezium \\(DBCE = 25 - 4 = 21\\) parts, so the required ratio is \\(4 : 21\\).",
+        "finalAnswer": "(ii) \\(BC = 12.5\\) cm; (iii) \\(4 : 21\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Prove the triangles similar",
+            "expression": "\\angle DAE = \\angle BAC,\\quad \\angle ADE = \\angle ABC \\;\\Rightarrow\\; \\triangle ADE \\sim \\triangle ABC",
+            "explanation": "\\(\\angle A\\) is common to both triangles. Because \\(DE \\parallel BC\\) and \\(AB\\) is a transversal, \\(\\angle ADE = \\angle ABC\\) (corresponding angles). Two pairs of equal angles give similarity.",
+            "rule": "AA (angle–angle) similarity",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Ratio of corresponding sides",
+            "expression": "AB = AD + DB = 4 + 6 = 10,\\qquad \\frac{AD}{AB} = \\frac{DE}{BC}",
+            "explanation": "In similar triangles, corresponding sides are proportional. \\(AD\\) corresponds to \\(AB\\), and \\(DE\\) corresponds to \\(BC\\).",
+            "reason": "Use the whole side \\(AB\\), not \\(DB\\)."
+          },
+          {
+            "n": 3,
+            "title": "Find BC",
+            "expression": "\\frac{4}{10} = \\frac{5}{BC} \\Rightarrow BC = \\frac{5 \\times 10}{4}",
+            "result": "BC = 12.5 \\text{ cm}",
+            "explanation": "Cross-multiply and solve.",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "title": "Ratio of areas",
+            "expression": "\\frac{\\text{ar}(\\triangle ADE)}{\\text{ar}(\\triangle ABC)} = \\left(\\frac{AD}{AB}\\right)^2 = \\left(\\frac{4}{10}\\right)^2 = \\frac{4}{25}",
+            "explanation": "Take \\(\\text{ar}(\\triangle ADE) = 4k\\) and \\(\\text{ar}(\\triangle ABC) = 25k\\). The trapezium \\(DBCE\\) is what remains: \\(25k - 4k = 21k\\).",
+            "rule": "Areas of similar triangles are in the ratio of the squares of corresponding sides.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 5,
+            "title": "Required ratio",
+            "expression": "\\text{ar}(\\triangle ADE) : \\text{ar}(DBCE) = 4k : 21k",
+            "result": "4 : 21",
+            "explanation": "The common factor \\(k\\) cancels.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Using \\(\\frac{AD}{DB} = \\frac{DE}{BC}\\), which gives \\(BC = 7.5\\) cm; \\(DE\\) corresponds to \\(BC\\) only through the whole sides \\(AD\\) and \\(AB\\).",
+          "Giving the ratio of areas as \\(4 : 10\\) or \\(2 : 5\\) (forgetting to square).",
+          "Answering \\(4 : 25\\) for part (iii), which compares \\(\\triangle ADE\\) with the whole triangle instead of the trapezium."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Using DE and BC",
+            "description": "Once \\(BC = 12.5\\) cm is known, the area ratio can also be found as \\(\\left(\\frac{DE}{BC}\\right)^2 = \\left(\\frac{5}{12.5}\\right)^2 = \\frac{4}{25}\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "notes": "Part (i) needs two pairs of equal angles with reasons for the mark.",
+        "criteria": [
+          {
+            "key": "similar",
+            "description": "Proves the triangles similar with reasons",
+            "marks": 1,
+            "expectedEvidence": "∠A common; ∠ADE = ∠ABC (corresponding angles, DE ∥ BC); hence similar by AA",
+            "acceptedAlternatives": [
+              "∠AED = ∠ACB (corresponding angles) as the second pair",
+              "Basic proportionality theorem followed by SAS similarity"
+            ],
+            "commonErrors": [
+              "States 'DE ∥ BC so the triangles are similar' with no angle pairs",
+              "Calls the angles alternate angles"
+            ]
+          },
+          {
+            "key": "bc",
+            "description": "Correct length of BC",
+            "marks": 1,
+            "expectedEvidence": "4/10 = 5/BC giving BC = 12.5 cm",
+            "acceptedAlternatives": [
+              "25/2 cm"
+            ],
+            "commonErrors": [
+              "7.5 cm (used AD/DB)"
+            ]
+          },
+          {
+            "key": "area-ratio",
+            "description": "Squares the ratio of sides for the areas",
+            "marks": 1,
+            "expectedEvidence": "ar(ADE) : ar(ABC) = 16 : 100 = 4 : 25",
+            "acceptedAlternatives": [
+              "(5/12.5)² = 4/25"
+            ],
+            "partialCreditRules": "Follow-through from an incorrect BC if the squaring is correct.",
+            "commonErrors": [
+              "2 : 5"
+            ]
+          },
+          {
+            "key": "trap-ratio",
+            "description": "Correct ratio of triangle ADE to trapezium DBCE",
+            "marks": 1,
+            "expectedEvidence": "4 : 21",
+            "acceptedAlternatives": [
+              "16 : 84"
+            ],
+            "commonErrors": [
+              "4 : 25 (compared with the whole triangle)",
+              "2 : 3 (used AD : DB without squaring)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Diagram is to scale: B(0, 0), C(12.5, 0), A(3, √91) so that AB = 10; D and E divide AB and AC in the ratio 2 : 3 from A, giving DE = 5 exactly. AC is not given in the question and is not needed."
+    },
+    {
+      "code": "M10-SIM-002",
+      "topics": [
+        "similarity-areas-maps"
+      ],
+      "answerFormat": "numerical",
+      "marks": 2,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A map is drawn to a scale of \\(1 : 20\\,000\\). A rectangular park is shown on the map as a rectangle measuring 4.5 cm by 3 cm. Find the actual area of the park in square kilometres.",
+        "numeric": {
+          "unit": "km²",
+          "answerLabel": "Actual area"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 0.54,
+        "tolerance": 0,
+        "unit": "km²",
+        "acceptedUnits": [
+          "sq km",
+          "km^2",
+          "square kilometres"
+        ]
+      },
+      "hints": [
+        "First convert each side on the map to its actual length in kilometres. How many centimetres are there in 1 km?"
+      ],
+      "solution": {
+        "modelAnswer": "1 cm on the map represents 20 000 cm \\(= 0.2\\) km. Actual sides: \\(4.5 \\times 0.2 = 0.9\\) km and \\(3 \\times 0.2 = 0.6\\) km. Area \\(= 0.9 \\times 0.6 = 0.54\\) km².",
+        "finalAnswer": "\\(0.54\\) km²",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Interpret the scale",
+            "expression": "1 \\text{ cm} \\to 20\\,000 \\text{ cm} = \\frac{20\\,000}{100\\,000} \\text{ km} = 0.2 \\text{ km}",
+            "explanation": "There are 100 000 cm in 1 km, so 1 cm on the map stands for 0.2 km on the ground.",
+            "rule": "Scale factor \\(k = \\frac{1}{20\\,000}\\); actual length \\(= \\text{map length} \\div k\\)."
+          },
+          {
+            "n": 2,
+            "title": "Actual lengths",
+            "expression": "4.5 \\times 0.2 = 0.9 \\text{ km},\\qquad 3 \\times 0.2 = 0.6 \\text{ km}",
+            "explanation": "Convert each side of the rectangle separately."
+          },
+          {
+            "n": 3,
+            "title": "Actual area",
+            "expression": "0.9 \\times 0.6",
+            "result": "0.54 \\text{ km}^2",
+            "explanation": "Multiply the actual length by the actual breadth.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Multiplying the map area \\(13.5\\) cm² by \\(20\\,000\\) instead of \\(20\\,000^2\\): areas scale by the square of the scale factor.",
+          "Unit slips: using 1 km \\(= 1000\\) cm or 10 000 cm, which gives an answer that is off by a power of 10."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Area scale factor",
+            "description": "Map area \\(= 4.5 \\times 3 = 13.5\\) cm². Area scale: 1 cm² represents \\(0.2^2 = 0.04\\) km². Actual area \\(= 13.5 \\times 0.04 = 0.54\\) km²."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "method",
+            "description": "Correctly converts using the scale (lengths, or area with the square of the scale)",
+            "marks": 1,
+            "expectedEvidence": "0.9 km and 0.6 km, or 13.5 × 0.04",
+            "acceptedAlternatives": [
+              "13.5 × (20 000)² cm² then converted to km²"
+            ],
+            "commonErrors": [
+              "13.5 × 20 000"
+            ]
+          },
+          {
+            "key": "answer",
+            "description": "Correct area in km²",
+            "marks": 1,
+            "expectedEvidence": "0.54 km²",
+            "acceptedAlternatives": [
+              "54 hectares only if also given as 0.54 km²"
+            ],
+            "commonErrors": [
+              "5.4 km²",
+              "0.054 km²",
+              "0.000027 km² (map area multiplied by 20 000 instead of 20 000²)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Tolerance is 0 because the answer is exact. 0.54 km² = 54 hectares, but the question asks for km²."
+    }
+  ]
+}

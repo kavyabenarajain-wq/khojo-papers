@@ -1,0 +1,462 @@
+{
+  "chapter": "mensuration",
+  "questions": [
+    {
+      "code": "M10-MEN-001",
+      "topics": [
+        "conversion-of-solids"
+      ],
+      "answerFormat": "numerical",
+      "marks": 2,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A solid metallic right circular cone has a base radius of 6 cm and a height of 24 cm. It is melted and recast into identical solid spheres, each of radius 1.5 cm. Assuming that no metal is wasted, find the number of spheres formed.",
+        "numeric": {
+          "answerLabel": "Number of spheres"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 64,
+        "tolerance": 0
+      },
+      "hints": [
+        "When a solid is melted and recast, which quantity stays the same: the surface area or the volume?",
+        "Write the number of spheres as (volume of the cone) \\(\\div\\) (volume of one sphere). You will find that \\(\\pi\\) cancels."
+      ],
+      "solution": {
+        "modelAnswer": "Volume of cone \\(= \\tfrac{1}{3}\\pi (6)^2(24) = 288\\pi\\) cm³. Volume of one sphere \\(= \\tfrac{4}{3}\\pi(1.5)^3 = \\tfrac{9}{2}\\pi\\) cm³. Number of spheres \\(= 288\\pi \\div \\tfrac{9}{2}\\pi = 64\\).",
+        "finalAnswer": "64 spheres",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Volume of the cone",
+            "expression": "V_{\\text{cone}} = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (6)^2 (24)",
+            "result": "288\\pi \\text{ cm}^3",
+            "explanation": "The whole cone is melted, so its volume is the total volume of metal available.",
+            "rule": "Volume of a cone \\(= \\tfrac{1}{3}\\pi r^2 h\\)"
+          },
+          {
+            "n": 2,
+            "title": "Volume of one sphere",
+            "expression": "V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (1.5)^3 = \\frac{4}{3}\\pi \\times \\frac{27}{8}",
+            "result": "\\frac{9}{2}\\pi \\text{ cm}^3",
+            "explanation": "Use the radius 1.5 cm (not the diameter). \\((1.5)^3 = 3.375 = \\tfrac{27}{8}\\).",
+            "rule": "Volume of a sphere \\(= \\tfrac{4}{3}\\pi R^3\\)"
+          },
+          {
+            "n": 3,
+            "title": "Number of spheres",
+            "expression": "n = \\frac{288\\pi}{\\tfrac{9}{2}\\pi} = \\frac{288 \\times 2}{9}",
+            "result": "n = 64",
+            "explanation": "Since no metal is wasted, \\(n \\times\\) (volume of one sphere) \\(=\\) volume of the cone. \\(\\pi\\) cancels, so no value of \\(\\pi\\) is needed.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Using the diameter 3 cm as the radius of a sphere: this gives each sphere a volume of \\(36\\pi\\) and the wrong answer 8.",
+          "Forgetting the \\(\\tfrac{1}{3}\\) in the volume of the cone (treating it as a cylinder), which gives 192.",
+          "Comparing surface areas instead of volumes."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Cancel before calculating",
+            "description": "\\(n = \\dfrac{\\tfrac{1}{3}\\pi r^2 h}{\\tfrac{4}{3}\\pi R^3} = \\dfrac{r^2 h}{4R^3} = \\dfrac{36 \\times 24}{4 \\times 3.375} = \\dfrac{864}{13.5} = 64\\)."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "method",
+            "description": "Equates the volume of the cone to n times the volume of one sphere, using correct formulas",
+            "marks": 1,
+            "expectedEvidence": "n × (4/3)π(1.5)³ = (1/3)π(6)²(24), or 288π ÷ (9/2)π",
+            "acceptedAlternatives": [
+              "n = r²h ÷ (4R³) after cancelling",
+              "Numerical volumes using any value of π, consistently"
+            ],
+            "partialCreditRules": "Award if the volume equation is correct even if the final arithmetic slips.",
+            "commonErrors": [
+              "Uses surface areas",
+              "Uses diameter 3 cm as the radius"
+            ]
+          },
+          {
+            "key": "answer",
+            "description": "Correct number of spheres",
+            "marks": 1,
+            "expectedEvidence": "n = 64 spheres",
+            "acceptedAlternatives": [
+              "64"
+            ],
+            "commonErrors": [
+              "8",
+              "192"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "π cancels, so the stem deliberately does not give a value of π. Answer is an exact integer, so tolerance is 0."
+    },
+    {
+      "code": "M10-MEN-002",
+      "topics": [
+        "conversion-of-solids",
+        "surface-area-volume"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "A solid wooden toy is made of a right circular cylinder of radius 7 cm and height 20 cm, with a right circular cone of the same radius and of height 24 cm fixed on top of it, so that the base of the cone exactly covers the top face of the cylinder (see the figure). Take \\(\\pi = \\tfrac{22}{7}\\).\n\nFind:\n(i) the total surface area of the toy;\n(ii) the volume of wood in the toy.",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "Front view of the toy. A rectangle 14 cm wide and 20 cm tall represents the cylinder, standing on its circular base. On top of it sits a triangle representing the cone, with apex V: its base is the 14 cm top edge of the rectangle and its apex is 24 cm above that edge, directly above the centre. A dashed vertical line from the centre of the cone's base to the apex is labelled 24 cm, with a right angle marked where it meets the base. An arrow below the cylinder from the centre of its base to its edge shows the radius, labelled 7 cm. The right side of the rectangle is labelled 20 cm.",
+            "solutionAlt": "In step 1 the sloping side of the cone is highlighted and labelled 'slant l', the slant height, which is found to be 25 cm.",
+            "viewBox": {
+              "xMin": -14,
+              "xMax": 16,
+              "yMin": -5,
+              "yMax": 47
+            },
+            "elements": [
+              {
+                "kind": "point",
+                "id": "O",
+                "x": 0,
+                "y": 0,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "B1",
+                "x": -7,
+                "y": 0,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "B2",
+                "x": 7,
+                "y": 0,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "C1",
+                "x": -7,
+                "y": 20,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "C2",
+                "x": 7,
+                "y": 20,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "M",
+                "x": 0,
+                "y": 20,
+                "hidden": true
+              },
+              {
+                "kind": "point",
+                "id": "V",
+                "x": 0,
+                "y": 44,
+                "label": "V",
+                "labelPos": "n"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  "B1",
+                  "B2",
+                  "C2",
+                  "C1"
+                ]
+              },
+              {
+                "kind": "segment",
+                "from": "C1",
+                "to": "V"
+              },
+              {
+                "kind": "segment",
+                "from": "C2",
+                "to": "V"
+              },
+              {
+                "kind": "segment",
+                "from": "M",
+                "to": "V",
+                "dashed": true
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -0.8,
+                  24.6
+                ],
+                "text": "24 cm",
+                "anchor": "end"
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  0,
+                  -2
+                ],
+                "to": [
+                  7,
+                  -2
+                ],
+                "arrow": true,
+                "label": "7 cm"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  8,
+                  9.5
+                ],
+                "text": "20 cm",
+                "anchor": "start"
+              },
+              {
+                "kind": "angle",
+                "vertex": "M",
+                "from": "C2",
+                "to": "V",
+                "right": true
+              },
+              {
+                "kind": "segment",
+                "from": "C2",
+                "to": "V",
+                "emphasis": true,
+                "step": 1
+              },
+              {
+                "kind": "text",
+                "at": [
+                  4.6,
+                  33
+                ],
+                "text": "slant l",
+                "anchor": "start",
+                "step": 1
+              }
+            ]
+          }
+        ]
+      },
+      "answerKey": null,
+      "hints": [
+        "Which faces are hidden where the cone sits on the cylinder? Those must not be counted in the surface area.",
+        "You will need the slant height of the cone: use Pythagoras' theorem."
+      ],
+      "solution": {
+        "modelAnswer": "\\(l = \\sqrt{7^2 + 24^2} = 25\\) cm. TSA \\(= \\pi r^2 + 2\\pi r H + \\pi r l = 154 + 880 + 550 = 1584\\) cm². Volume \\(= \\pi r^2 H + \\tfrac{1}{3}\\pi r^2 h = 3080 + 1232 = 4312\\) cm³.",
+        "finalAnswer": "(i) 1584 cm²  (ii) 4312 cm³",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Slant height of the cone",
+            "expression": "l = \\sqrt{r^2 + h^2} = \\sqrt{7^2 + 24^2} = \\sqrt{625}",
+            "result": "l = 25 \\text{ cm}",
+            "explanation": "The radius, height and slant height of a cone form a right-angled triangle.",
+            "rule": "Pythagoras' theorem",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Identify the exposed surfaces",
+            "expression": "\\text{TSA} = \\pi r^2 + 2\\pi r H + \\pi r l",
+            "explanation": "The outside of the toy is made up of the circular base of the cylinder, the curved surface of the cylinder and the curved surface of the cone. The top face of the cylinder and the base of the cone are glued together, so neither is on the outside.",
+            "reason": "Only surfaces that can be touched from outside count towards the surface area of a combined solid."
+          },
+          {
+            "n": 3,
+            "title": "Total surface area",
+            "expression": "\\tfrac{22}{7}(7)^2 + 2 \\times \\tfrac{22}{7} \\times 7 \\times 20 + \\tfrac{22}{7} \\times 7 \\times 25 = 154 + 880 + 550",
+            "result": "1584 \\text{ cm}^2",
+            "explanation": "Substitute \\(r = 7\\), \\(H = 20\\), \\(l = 25\\) and \\(\\pi = \\tfrac{22}{7}\\).",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "title": "Volumes of the two parts",
+            "expression": "\\pi r^2 H = \\tfrac{22}{7} \\times 49 \\times 20 = 3080, \\quad \\tfrac{1}{3}\\pi r^2 h = \\tfrac{1}{3} \\times \\tfrac{22}{7} \\times 49 \\times 24 = 1232",
+            "explanation": "Volume of the cylinder is \\(\\pi r^2 H\\) and volume of the cone is \\(\\tfrac{1}{3}\\pi r^2 h\\). Use the vertical height 24 cm for the cone, not the slant height.",
+            "rule": "\\(V_{\\text{cyl}} = \\pi r^2 H\\), \\(V_{\\text{cone}} = \\tfrac{1}{3}\\pi r^2 h\\)"
+          },
+          {
+            "n": 5,
+            "title": "Volume of the toy",
+            "expression": "3080 + 1232",
+            "result": "4312 \\text{ cm}^3",
+            "explanation": "The volume of the combined solid is the sum of the volumes of its parts.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Adding the total surface areas of the cylinder and the cone separately (\\(1188 + 704 = 1892\\) cm²), which wrongly includes the two hidden circular faces.",
+          "Using the vertical height 24 cm instead of the slant height in \\(\\pi r l\\) (giving 528 cm² for the cone).",
+          "Leaving out the circular base of the cylinder, which is part of the outside of the toy."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Factorise before substituting",
+            "description": "TSA \\(= \\pi r(r + 2H + l) = \\tfrac{22}{7} \\times 7 \\times (7 + 40 + 25) = 22 \\times 72 = 1584\\) cm². Volume \\(= \\pi r^2\\left(H + \\tfrac{h}{3}\\right) = 154 \\times 28 = 4312\\) cm³."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "slant",
+            "description": "Finds the slant height of the cone",
+            "marks": 1,
+            "expectedEvidence": "l = √(7² + 24²) = 25 cm",
+            "acceptedAlternatives": [
+              "l² = 625"
+            ],
+            "commonErrors": [
+              "Uses l = 24",
+              "l = 7 + 24"
+            ]
+          },
+          {
+            "key": "tsa-method",
+            "description": "Correct expression for the total surface area of the combined solid",
+            "marks": 1,
+            "expectedEvidence": "πr² + 2πrH + πrl (base + curved surface of cylinder + curved surface of cone), excluding the hidden faces",
+            "acceptedAlternatives": [
+              "πr(r + 2H + l)"
+            ],
+            "partialCreditRules": "Award if the correct three surfaces are identified, even with a wrong slant height carried forward.",
+            "commonErrors": [
+              "Includes the top of the cylinder or the base of the cone",
+              "Omits the base of the cylinder"
+            ]
+          },
+          {
+            "key": "tsa-answer",
+            "description": "Correct total surface area",
+            "marks": 1,
+            "expectedEvidence": "1584 cm²",
+            "acceptedAlternatives": [
+              "1584 sq cm"
+            ],
+            "partialCreditRules": "Follow-through from a wrong slant height is not given this accuracy mark.",
+            "commonErrors": [
+              "1892 cm²",
+              "1430 cm²"
+            ]
+          },
+          {
+            "key": "volume",
+            "description": "Correct volume with working",
+            "marks": 1,
+            "expectedEvidence": "πr²H + ⅓πr²h = 3080 + 1232 = 4312 cm³",
+            "acceptedAlternatives": [
+              "154 × 28 = 4312 cm³"
+            ],
+            "commonErrors": [
+              "Uses slant height 25 in the cone volume",
+              "Omits ⅓ for the cone (gives 6776 cm³)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Two final values, so answerKey is null and marking is by rubric. The figure is a front view drawn to scale (cylinder 14 × 20, cone height 24); the renderer has no ellipse primitive, so circular faces appear as straight edges. Rubric splits TSA 3 marks / volume 1 mark; a reviewer may prefer 2 + 2."
+    },
+    {
+      "code": "M10-MEN-003",
+      "topics": [
+        "surface-area-volume"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A solid hemisphere has a diameter of 14 cm. Taking \\(\\pi = \\tfrac{22}{7}\\), its total surface area is",
+        "options": [
+          {
+            "key": "a",
+            "text": "308 cm²"
+          },
+          {
+            "key": "b",
+            "text": "462 cm²"
+          },
+          {
+            "key": "c",
+            "text": "616 cm²"
+          },
+          {
+            "key": "d",
+            "text": "1848 cm²"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "b"
+      },
+      "hints": [
+        "A solid hemisphere has a curved surface and a flat circular face. Count both."
+      ],
+      "solution": {
+        "modelAnswer": "\\(r = 7\\) cm. TSA \\(= 2\\pi r^2 + \\pi r^2 = 3\\pi r^2 = 3 \\times \\tfrac{22}{7} \\times 49 = 462\\) cm². Option (b).",
+        "finalAnswer": "(b) 462 cm²",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Radius",
+            "expression": "r = \\frac{14}{2} = 7 \\text{ cm}",
+            "explanation": "The question gives the diameter; halve it to get the radius."
+          },
+          {
+            "n": 2,
+            "title": "Total surface area",
+            "expression": "\\text{TSA} = 2\\pi r^2 + \\pi r^2 = 3\\pi r^2 = 3 \\times \\frac{22}{7} \\times 49",
+            "result": "462 \\text{ cm}^2",
+            "explanation": "Curved surface \\(2\\pi r^2\\) plus the flat circular face \\(\\pi r^2\\).",
+            "rule": "TSA of a solid hemisphere \\(= 3\\pi r^2\\)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "(a) 308 cm² is only the curved surface area \\(2\\pi r^2\\); the flat face has been left out.",
+          "(c) 616 cm² is \\(4\\pi r^2\\), the surface area of a whole sphere.",
+          "(d) 1848 cm² comes from using the diameter 14 cm as the radius in \\(3\\pi r^2\\)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (b) 462 cm²",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(a) curved surface only",
+              "(c) whole sphere",
+              "(d) diameter used as radius"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Distractors map to specific misconceptions listed in commonMistakes."
+    }
+  ]
+}

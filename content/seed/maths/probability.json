@@ -1,0 +1,270 @@
+{
+  "chapter": "probability",
+  "questions": [
+    {
+      "code": "M10-PRB-001",
+      "topics": [
+        "probability-single-events"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "content": {
+        "stem": "A card is drawn at random from a well-shuffled pack of 52 playing cards. The probability that the card drawn is neither a heart nor a king is",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\(\\tfrac{3}{4}\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\(\\tfrac{35}{52}\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\(\\tfrac{9}{13}\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\(\\tfrac{12}{13}\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "c"
+      },
+      "hints": [
+        "Count the cards that are a heart or a king, being careful not to count any card twice."
+      ],
+      "solution": {
+        "modelAnswer": "Hearts or kings: 13 hearts + 3 other kings = 16 cards. Favourable cards: \\(52 - 16 = 36\\). Probability \\(= \\tfrac{36}{52} = \\tfrac{9}{13}\\). Option (c).",
+        "finalAnswer": "(c) \\(\\tfrac{9}{13}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Count hearts or kings",
+            "expression": "13 \\text{ hearts} + 3 \\text{ kings of other suits} = 16",
+            "explanation": "The king of hearts is already counted among the 13 hearts, so only 3 more kings are added."
+          },
+          {
+            "n": 2,
+            "title": "Probability",
+            "expression": "P = \\frac{52 - 16}{52} = \\frac{36}{52}",
+            "result": "\\frac{9}{13}",
+            "explanation": "Cards that are neither a heart nor a king: 36 out of 52 equally likely outcomes.",
+            "rule": "\\(P(E) = \\dfrac{\\text{favourable outcomes}}{\\text{total outcomes}}\\)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "(b) \\(\\tfrac{35}{52}\\): counting the king of hearts twice (13 + 4 = 17).",
+          "(a) \\(\\tfrac{3}{4}\\): removing only the hearts and forgetting the kings.",
+          "(d) \\(\\tfrac{12}{13}\\): removing only the kings and forgetting the hearts."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (c) 9/13",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(b) king of hearts counted twice"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Assumes the standard 52-card pack (4 suits of 13, no jokers)."
+    },
+    {
+      "code": "M10-PRB-002",
+      "topics": [
+        "probability-single-events"
+      ],
+      "answerFormat": "structured",
+      "marks": 5,
+      "difficulty": "medium",
+      "content": {
+        "stem": "A bag contains 6 red balls, 4 green balls and some blue balls. The balls are identical except for their colour. One ball is drawn at random from the bag. The probability that it is blue is \\(\\tfrac{1}{3}\\).",
+        "parts": [
+          {
+            "key": "a",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Find the number of blue balls in the bag.",
+            "numeric": {
+              "answerLabel": "Number of blue balls"
+            }
+          },
+          {
+            "key": "b",
+            "marks": 1,
+            "format": "numerical",
+            "prompt": "Find the probability that the ball drawn is not green. Give your answer as a fraction in its simplest form.",
+            "numeric": {
+              "answerLabel": "P(not green)"
+            }
+          },
+          {
+            "key": "c",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Starting again with the original bag, how many more green balls must be added so that the probability of drawing a green ball becomes \\(\\tfrac{1}{2}\\)?",
+            "numeric": {
+              "answerLabel": "Green balls to add"
+            }
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "parts",
+        "parts": {
+          "a": {
+            "type": "numeric",
+            "value": 5,
+            "tolerance": 0
+          },
+          "b": {
+            "type": "numeric",
+            "value": 0.733333,
+            "tolerance": 0.0005
+          },
+          "c": {
+            "type": "numeric",
+            "value": 7,
+            "tolerance": 0
+          }
+        }
+      },
+      "hints": [
+        "Let the number of blue balls be \\(x\\). Write the total number of balls in terms of \\(x\\).",
+        "For part (c), if \\(g\\) green balls are added, both the number of green balls and the total increase by \\(g\\)."
+      ],
+      "solution": {
+        "modelAnswer": "(a) \\(\\dfrac{x}{10 + x} = \\dfrac{1}{3} \\Rightarrow 3x = 10 + x \\Rightarrow x = 5\\). (b) Total 15, not green \\(= 11\\), so \\(P = \\tfrac{11}{15}\\). (c) \\(\\dfrac{4 + g}{15 + g} = \\dfrac{1}{2} \\Rightarrow 8 + 2g = 15 + g \\Rightarrow g = 7\\).",
+        "finalAnswer": "(a) 5 blue balls (b) \\(\\tfrac{11}{15}\\) (c) 7 green balls",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Set up the equation",
+            "expression": "P(\\text{blue}) = \\frac{x}{6 + 4 + x} = \\frac{1}{3}",
+            "explanation": "Let there be \\(x\\) blue balls, so there are \\(10 + x\\) balls in all, each equally likely to be drawn."
+          },
+          {
+            "n": 2,
+            "partKey": "a",
+            "title": "Solve",
+            "expression": "3x = 10 + x \\Rightarrow 2x = 10",
+            "result": "x = 5",
+            "explanation": "Cross-multiply and solve the linear equation.",
+            "isFinal": true
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Not green",
+            "expression": "P(\\text{not green}) = \\frac{6 + 5}{15}",
+            "result": "\\frac{11}{15}",
+            "explanation": "The bag has \\(6 + 4 + 5 = 15\\) balls, of which \\(15 - 4 = 11\\) are not green.",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "partKey": "c",
+            "title": "Set up the equation",
+            "expression": "\\frac{4 + g}{15 + g} = \\frac{1}{2}",
+            "explanation": "Adding \\(g\\) green balls increases both the green count and the total by \\(g\\)."
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Solve",
+            "expression": "2(4 + g) = 15 + g \\Rightarrow 8 + 2g = 15 + g",
+            "result": "g = 7",
+            "explanation": "Check: \\(\\tfrac{11}{22} = \\tfrac{1}{2}\\).",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "In (a), writing \\(\\tfrac{x}{10} = \\tfrac{1}{3}\\) (forgetting that the blue balls are part of the total).",
+          "In (c), adding \\(g\\) to the green balls but not to the total, which gives \\(\\tfrac{4 + g}{15} = \\tfrac{1}{2}\\) and a non-integer answer.",
+          "In (b), giving \\(\\tfrac{4}{15}\\), the probability of green, instead of not green."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Ratio reasoning for (a)",
+            "description": "If blue is \\(\\tfrac{1}{3}\\) of the bag, red and green together are \\(\\tfrac{2}{3}\\) of it. So \\(10\\) balls are \\(\\tfrac{2}{3}\\) of the total, the total is 15 and there are \\(15 - 10 = 5\\) blue balls."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "a-equation",
+            "partKey": "a",
+            "description": "Forms the correct equation for the number of blue balls",
+            "marks": 1,
+            "expectedEvidence": "x/(10 + x) = 1/3",
+            "acceptedAlternatives": [
+              "Ratio argument: 10 balls are 2/3 of the total"
+            ],
+            "commonErrors": [
+              "x/10 = 1/3"
+            ]
+          },
+          {
+            "key": "a-answer",
+            "partKey": "a",
+            "description": "Correct number of blue balls",
+            "marks": 1,
+            "expectedEvidence": "x = 5",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          },
+          {
+            "key": "b-answer",
+            "partKey": "b",
+            "description": "Correct probability of not green",
+            "marks": 1,
+            "expectedEvidence": "11/15",
+            "acceptedAlternatives": [
+              "1 − 4/15 = 11/15",
+              "0.733 (decimal accepted if correct to 3 d.p.)"
+            ],
+            "partialCreditRules": "Follow-through from a wrong x in (a): (10 + x − 4)/(10 + x).",
+            "commonErrors": [
+              "4/15"
+            ]
+          },
+          {
+            "key": "c-equation",
+            "partKey": "c",
+            "description": "Forms the correct equation after adding green balls",
+            "marks": 1,
+            "expectedEvidence": "(4 + g)/(15 + g) = 1/2",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from a wrong total in (a).",
+            "commonErrors": [
+              "(4 + g)/15 = 1/2"
+            ]
+          },
+          {
+            "key": "c-answer",
+            "partKey": "c",
+            "description": "Correct number of green balls to add",
+            "marks": 1,
+            "expectedEvidence": "g = 7",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          }
+        ]
+      },
+      "authorNotes": "Part (b) key is 11/15 ≈ 0.733333; tolerance 0.0005 accepts the fraction 11/15 typed as a fraction and decimals 0.733 or 0.7333. Part (c) explicitly restarts from the original bag (15 balls)."
+    }
+  ]
+}

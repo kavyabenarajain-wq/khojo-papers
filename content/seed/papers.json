@@ -1,0 +1,24 @@
+{
+  "papers": [
+    {
+      "slug": "practice-set-algebra-1",
+      "title": "Practice Set 1: Algebra",
+      "durationMinutes": 45,
+      "instructions": "This is a KHOJO PAPERS practice set, not a CISCE paper. Section A: answer all questions. Section B: answer any three of the four questions; if you answer more, your best three count. Show your working where marks are given for method.",
+      "sections": [
+        { "label": "Section A", "instructions": "Answer all questions.", "choiceRule": "all", "questions": ["M10-QE-003", "M10-MAT-001", "M10-PRG-003", "M10-RAT-001", "M10-FAC-001"] },
+        { "label": "Section B", "instructions": "Answer any three questions.", "choiceRule": "any_n", "chooseN": 3, "questions": ["M10-FAC-002", "M10-MAT-002", "M10-LIN-001", "M10-SEC-001"] }
+      ]
+    },
+    {
+      "slug": "practice-set-mixed-1",
+      "title": "Practice Set 2: Mixed topics",
+      "durationMinutes": 40,
+      "instructions": "This is a KHOJO PAPERS practice set, not a CISCE paper. Answer all questions. Show your working where marks are given for method.",
+      "sections": [
+        { "label": "Section A", "instructions": "Answer all questions.", "choiceRule": "all", "questions": ["M10-GST-001", "M10-BNK-002", "M10-MEN-003", "M10-TRI-002", "M10-PRB-001", "M10-SHR-001", "M10-SIM-002"] },
+        { "label": "Section B", "instructions": "Answer all questions.", "choiceRule": "all", "questions": ["M10-QE-001", "M10-STA-001", "M10-HD-002"] }
+      ]
+    }
+  ]
+}

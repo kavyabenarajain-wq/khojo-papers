@@ -1,0 +1,46 @@
+{
+ "status": "evaluated",
+ "criteria": [
+  {
+   "key": "theorem",
+   "marksAwarded": 1,
+   "evidence": "opposite angles of a cyclic quadrilateral are supplementary",
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "method",
+   "marksAwarded": 1,
+   "evidence": "110/2",
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "answer",
+   "marksAwarded": 1,
+   "evidence": "55°",
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  }
+ ],
+ "correctElements": [
+  "Used the centre-circumference theorem"
+ ],
+ "missingOrIncorrect": [],
+ "corrections": [],
+ "revisionTopic": "Angle properties of circles",
+ "limitations": [],
+ "overallFeedback": "Clear working.",
+ "humanReviewRecommended": false,
+ "humanReviewReason": null,
+ "rubricProblem": null
+}

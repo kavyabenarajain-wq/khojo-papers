@@ -1,0 +1,46 @@
+{
+ "status": "needs_review",
+ "criteria": [
+  {
+   "key": "theorem",
+   "marksAwarded": 1,
+   "evidence": "angle at centre is double the angle at the circumference",
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "method",
+   "marksAwarded": 1,
+   "evidence": "110/2",
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "answer",
+   "marksAwarded": 0,
+   "evidence": null,
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": true,
+   "mistakeCategory": "transcription_suspected"
+  }
+ ],
+ "correctElements": [
+  "Used the centre-circumference theorem"
+ ],
+ "missingOrIncorrect": [],
+ "corrections": [],
+ "revisionTopic": "Angle properties of circles",
+ "limitations": [],
+ "overallFeedback": "Clear working.",
+ "humanReviewRecommended": true,
+ "humanReviewReason": "Final answer partly unreadable",
+ "rubricProblem": null
+}

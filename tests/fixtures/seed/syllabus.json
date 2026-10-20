@@ -1,0 +1,87 @@
+{
+  "subject": { "slug": "icse-10-mathematics", "name": "Mathematics", "classLevel": 10, "syllabusYear": "2027" },
+  "sourceDocument": {
+    "title": "CISCE Regulations and Syllabuses — ICSE (Class X) Mathematics",
+    "documentType": "syllabus",
+    "sourceUrl": "https://cisce.org/",
+    "permissionStatus": "reference_only",
+    "permissionNotes": "Chapter and topic names are used as references only; the syllabus document itself is not hosted.",
+    "knownLimitations": "The official syllabus PDF could not be retrieved automatically (cisce.org returned HTTP 403 on 2026-10-12). This chapter list was entered from the build team's knowledge of the ICSE Class X Mathematics syllabus and is UNVERIFIED. A reviewer must check every chapter and topic against the official document, then record its exact URL, retrieval date and page numbers.",
+    "retrievalDate": null
+  },
+  "units": [
+    { "unit": "Commercial Mathematics", "chapters": [
+      { "slug": "gst", "name": "Goods and Services Tax (GST)", "topics": [
+        { "slug": "gst-computation", "name": "Computation of GST and tax invoices" },
+        { "slug": "gst-input-tax-credit", "name": "Input tax credit and GST payable" } ] },
+      { "slug": "banking", "name": "Banking (Recurring Deposit Accounts)", "topics": [
+        { "slug": "rd-interest", "name": "Interest and maturity value of a recurring deposit" } ] },
+      { "slug": "shares-dividends", "name": "Shares and Dividends", "topics": [
+        { "slug": "shares-dividend-income", "name": "Dividend, income and rate of return" },
+        { "slug": "shares-buying-selling", "name": "Buying and selling shares at premium or discount" } ] }
+    ]},
+    { "unit": "Algebra", "chapters": [
+      { "slug": "linear-inequations", "name": "Linear Inequations", "topics": [
+        { "slug": "inequations-solution-sets", "name": "Solving inequations and representing solution sets on a number line" } ] },
+      { "slug": "quadratic-equations", "name": "Quadratic Equations in One Variable", "topics": [
+        { "slug": "qe-factorisation", "name": "Solving by factorisation" },
+        { "slug": "qe-formula", "name": "Solving using the quadratic formula" },
+        { "slug": "qe-nature-of-roots", "name": "Nature of roots and the discriminant" },
+        { "slug": "qe-word-problems", "name": "Problems leading to quadratic equations" } ] },
+      { "slug": "ratio-proportion", "name": "Ratio and Proportion", "topics": [
+        { "slug": "ratio-proportion-properties", "name": "Proportion, continued proportion and mean proportional" },
+        { "slug": "componendo-dividendo", "name": "Componendo and dividendo" } ] },
+      { "slug": "factorisation", "name": "Factorisation of Polynomials", "topics": [
+        { "slug": "remainder-theorem", "name": "Remainder theorem" },
+        { "slug": "factor-theorem", "name": "Factor theorem and factorisation" } ] },
+      { "slug": "matrices", "name": "Matrices", "topics": [
+        { "slug": "matrix-operations", "name": "Addition, subtraction and multiplication of matrices" },
+        { "slug": "matrix-equations", "name": "Finding unknown matrices and elements" } ] },
+      { "slug": "progressions", "name": "Arithmetic and Geometric Progression", "topics": [
+        { "slug": "ap-nth-term-sum", "name": "Arithmetic progression: nth term and sum" },
+        { "slug": "gp-nth-term-sum", "name": "Geometric progression: nth term and sum" } ] }
+    ]},
+    { "unit": "Coordinate Geometry", "chapters": [
+      { "slug": "reflection", "name": "Reflection", "topics": [
+        { "slug": "reflection-in-axes-and-lines", "name": "Reflection in the axes, the origin and lines x = a, y = b" } ] },
+      { "slug": "section-midpoint", "name": "Section and Mid-point Formula", "topics": [
+        { "slug": "section-formula", "name": "Section formula" },
+        { "slug": "midpoint-centroid", "name": "Mid-point formula and centroid" } ] },
+      { "slug": "equation-of-line", "name": "Equation of a Line", "topics": [
+        { "slug": "slope-intercept", "name": "Slope, inclination and intercepts" },
+        { "slug": "parallel-perpendicular", "name": "Parallel and perpendicular lines" } ] }
+    ]},
+    { "unit": "Geometry", "chapters": [
+      { "slug": "similarity", "name": "Similarity", "topics": [
+        { "slug": "similar-triangles", "name": "Similar triangles: conditions and properties" },
+        { "slug": "similarity-areas-maps", "name": "Areas of similar triangles; maps and models" } ] },
+      { "slug": "loci", "name": "Loci", "topics": [
+        { "slug": "loci-theorems", "name": "Loci: definitions, theorems and constructions" } ] },
+      { "slug": "circles", "name": "Circles", "topics": [
+        { "slug": "angle-properties", "name": "Angle properties of circles and cyclic quadrilaterals" },
+        { "slug": "tangent-properties", "name": "Tangents, chords and intersecting chords" } ] },
+      { "slug": "constructions", "name": "Constructions", "topics": [
+        { "slug": "construct-tangents-circles", "name": "Tangents, circumscribed and inscribed circles" } ] }
+    ]},
+    { "unit": "Mensuration", "chapters": [
+      { "slug": "mensuration", "name": "Cylinder, Cone and Sphere", "topics": [
+        { "slug": "surface-area-volume", "name": "Surface area and volume" },
+        { "slug": "conversion-of-solids", "name": "Conversion of solids and combinations of solids" } ] }
+    ]},
+    { "unit": "Trigonometry", "chapters": [
+      { "slug": "trigonometric-identities", "name": "Trigonometric Identities", "topics": [
+        { "slug": "proving-identities", "name": "Proving identities" } ] },
+      { "slug": "heights-distances", "name": "Heights and Distances", "topics": [
+        { "slug": "angles-elevation-depression", "name": "Angles of elevation and depression" } ] }
+    ]},
+    { "unit": "Statistics", "chapters": [
+      { "slug": "statistics", "name": "Statistics", "topics": [
+        { "slug": "mean-grouped", "name": "Mean of grouped and ungrouped data" },
+        { "slug": "median-quartiles-mode", "name": "Median, quartiles and mode; histograms and ogives" } ] }
+    ]},
+    { "unit": "Probability", "chapters": [
+      { "slug": "probability", "name": "Probability", "topics": [
+        { "slug": "probability-single-events", "name": "Probability of single events" } ] }
+    ]}
+  ]
+}

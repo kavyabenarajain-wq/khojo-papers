@@ -1,0 +1,84 @@
+{
+  "chapter": "banking",
+  "questions": [
+    {
+      "code": "M10-BNK-001",
+      "topics": ["rd-interest"],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Kabir deposits a fixed sum every month in a recurring deposit account for \\(2\\tfrac{1}{2}\\) years. The bank pays simple interest at 7.2% per annum, and the maturity value of the account is ₹39,348. Find the amount of his monthly instalment."
+      },
+      "answerKey": { "type": "numeric", "value": 1200, "tolerance": 0, "unit": "₹" },
+      "hints": [
+        "Let the monthly instalment be ₹\\(P\\). How many instalments are paid in \\(2\\tfrac{1}{2}\\) years?",
+        "Maturity value = total of the instalments + interest. Write both in terms of \\(P\\)."
+      ],
+      "solution": {
+        "modelAnswer": "Let the instalment be ₹\\(P\\); \\(n = 30\\), \\(r = 7.2\\). Interest \\(= P \\times \\tfrac{30 \\times 31}{2 \\times 12} \\times \\tfrac{7.2}{100} = 2.79P\\). Maturity value \\(= 30P + 2.79P = 32.79P = 39348\\), so \\(P = 1200\\). The monthly instalment is ₹1,200.",
+        "finalAnswer": "Monthly instalment = ₹1,200",
+        "steps": [
+          { "n": 1, "title": "Set up", "expression": "n = 2\\tfrac{1}{2} \\times 12 = 30, \\quad r = 7.2\\%", "explanation": "Let the monthly instalment be ₹\\(P\\). There are 30 monthly instalments." },
+          { "n": 2, "title": "Interest in terms of P", "expression": "I = P \\times \\frac{n(n+1)}{2 \\times 12} \\times \\frac{r}{100} = P \\times \\frac{30 \\times 31}{24} \\times \\frac{7.2}{100} = P \\times 38.75 \\times 0.072", "result": "I = 2.79P", "explanation": "Use the recurring deposit interest formula. The equivalent principal for one month is \\(38.75P\\).", "rule": "\\(I = P \\times \\frac{n(n+1)}{2 \\times 12} \\times \\frac{r}{100}\\)" },
+          { "n": 3, "title": "Maturity value", "expression": "30P + 2.79P = 39348 \\;\\Rightarrow\\; 32.79P = 39348", "explanation": "Maturity value is the total amount deposited (\\(30P\\)) plus the interest.", "rule": "Maturity value = \\(P \\times n + I\\)" },
+          { "n": 4, "title": "Solve", "expression": "P = \\frac{39348}{32.79}", "result": "P = 1200", "explanation": "The monthly instalment is ₹1,200. Check: deposits ₹36,000 + interest ₹3,348 = ₹39,348.", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Taking \\(n = 2.5\\) or \\(n = 2\\) instead of the number of months, 30.",
+          "Equating the interest alone (instead of the maturity value) to ₹39,348.",
+          "Forgetting to divide \\(n(n+1)/2\\) by 12 to convert month-rupees into a principal for one year."
+        ],
+        "alternativeMethods": [
+          { "title": "Equivalent principal", "description": "The account is equivalent to a principal of \\(P \\times \\tfrac{30 \\times 31}{2} = 465P\\) for one month, i.e. \\(\\tfrac{465P}{12}\\) for one year. Simple interest \\(= \\tfrac{465P}{12} \\times \\tfrac{7.2}{100} = 2.79P\\); then proceed as above." }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "interest", "description": "Correct interest expression in terms of P with n = 30", "marks": 1, "expectedEvidence": "I = P × (30 × 31)/(2 × 12) × 7.2/100 = 2.79P", "acceptedAlternatives": ["Equivalent principal 465P for one month or 38.75P for one year"], "commonErrors": ["n = 2.5", "n(n+1)/2 not divided by 12"] },
+          { "key": "equation", "description": "Forms the maturity value equation", "marks": 1, "expectedEvidence": "30P + 2.79P = 39348", "acceptedAlternatives": ["32.79P = 39348"], "partialCreditRules": "Award if the equation is correct in form with an earlier arithmetic slip in the interest.", "commonErrors": ["2.79P = 39348"] },
+          { "key": "answer", "description": "Correct monthly instalment", "marks": 1, "expectedEvidence": "₹1,200", "acceptedAlternatives": ["P = 1200"], "commonErrors": [] }
+        ]
+      },
+      "authorNotes": "Uses the standard simple-interest formula for recurring deposits taught in ICSE Class 10. Numbers chosen so that 32.79P = 39348 gives an exact whole-rupee answer."
+    },
+    {
+      "code": "M10-BNK-002",
+      "topics": ["rd-interest"],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "Meera deposits ₹600 per month in a recurring deposit account for 1 year at 9% per annum simple interest. The interest she earns at maturity is:",
+        "options": [
+          { "key": "a", "text": "₹648" },
+          { "key": "b", "text": "₹297" },
+          { "key": "c", "text": "₹351" },
+          { "key": "d", "text": "₹4,212" }
+        ]
+      },
+      "answerKey": { "type": "mcq", "correct": "c" },
+      "hints": ["Each instalment earns interest for a different number of months: 12, 11, 10, … , 1."],
+      "solution": {
+        "modelAnswer": "\\(I = 600 \\times \\tfrac{12 \\times 13}{2 \\times 12} \\times \\tfrac{9}{100} = 600 \\times 6.5 \\times 0.09 = ₹351\\). Option (c).",
+        "finalAnswer": "(c) ₹351",
+        "steps": [
+          { "n": 1, "title": "Identify values", "expression": "P = 600, \\quad n = 12, \\quad r = 9", "explanation": "One year means 12 monthly instalments." },
+          { "n": 2, "title": "Apply the formula", "expression": "I = 600 \\times \\frac{12 \\times 13}{2 \\times 12} \\times \\frac{9}{100} = 600 \\times 6.5 \\times 0.09", "result": "I = 351", "explanation": "The interest is ₹351, option (c).", "rule": "\\(I = P \\times \\frac{n(n+1)}{2 \\times 12} \\times \\frac{r}{100}\\)", "isFinal": true }
+        ],
+        "commonMistakes": [
+          "Treating the whole ₹7,200 as if it were deposited for the full year: \\(7200 \\times \\tfrac{9}{100} = ₹648\\), option (a).",
+          "Using \\(n(n-1)\\) instead of \\(n(n+1)\\), giving ₹297, option (b).",
+          "Not dividing by 12, so the rate is applied per month: ₹4,212, option (d)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          { "key": "answer", "description": "Selects the correct option", "marks": 1, "expectedEvidence": "Option (c) ₹351", "acceptedAlternatives": [], "commonErrors": ["(a)", "(b)", "(d)"] }
+        ]
+      },
+      "authorNotes": "Distractors correspond to the three errors listed in commonMistakes."
+    }
+  ]
+}

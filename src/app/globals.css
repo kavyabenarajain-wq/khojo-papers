@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------------------------
+   KHOJO PAPERS design tokens. Warm-white paper, near-black ink, one ink-blue accent.
+   Colours are CSS variables so dark mode and high contrast only swap values.
+   --------------------------------------------------------------------------------------------- */
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f4f2ec;
+  --surface-3: #ebe8df;
+  --ink: #191917;
+  --ink-2: #47453f;
+  --ink-3: #69665e;
+  --line: #e3e0d6;
+  --line-strong: #c9c5b9;
+
+  --accent: #2747c7;
+  --accent-hover: #1e39a8;
+  --accent-ink: #ffffff;
+  --accent-soft: #edf0fc;
+  --accent-text: #2140b5;
+
+  --success: #0f7a58;
+  --success-soft: #e6f4ee;
+  --danger: #b42318;
+  --danger-soft: #fdeceb;
+  --warning: #8f5300;
+  --warning-soft: #fff3dc;
+
+  /* Source labels: kept visually distinct so categories are never confused. */
+  --src-pyq: #5a37c0;
+  --src-pyq-soft: #f1ecfd;
+  --src-specimen: #0b6e80;
+  --src-specimen-soft: #e5f4f6;
+  --src-original: #5c574c;
+  --src-original-soft: #f1efe9;
+
+  --board: #fdfcf8;
+  --board-grid: #efece3;
+  --chalk: #191917;
+  --chalk-accent: #2747c7;
+
+  --focus: #2747c7;
+  --shadow-sm: 0 1px 2px rgb(25 25 23 / 0.06);
+  --shadow-md: 0 4px 16px rgb(25 25 23 / 0.08);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151513;
+    --surface: #1c1c1a;
+    --surface-2: #242421;
+    --surface-3: #2e2e2a;
+    --ink: #f1efe8;
+    --ink-2: #c9c6bc;
+    --ink-3: #a29f95;
+    --line: #34332e;
+    --line-strong: #4a4943;
+    --accent: #8ea2ff;
+    --accent-hover: #a9b8ff;
+    --accent-ink: #10162e;
+    --accent-soft: #232a46;
+    --accent-text: #a9b8ff;
+    --success: #4cc79b;
+    --success-soft: #16302a;
+    --danger: #ff8a80;
+    --danger-soft: #3a1d1b;
+    --warning: #f2b45a;
+    --warning-soft: #352816;
+    --src-pyq: #c2adff;
+    --src-pyq-soft: #2a2340;
+    --src-specimen: #6fd2e2;
+    --src-specimen-soft: #15313a;
+    --src-original: #d3cec1;
+    --src-original-soft: #2c2b27;
+    --board: #1a1a18;
+    --board-grid: #26261f;
+    --chalk: #f1efe8;
+    --chalk-accent: #a9b8ff;
+    --focus: #a9b8ff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #151513;
+  --surface: #1c1c1a;
+  --surface-2: #242421;
+  --surface-3: #2e2e2a;
+  --ink: #f1efe8;
+  --ink-2: #c9c6bc;
+  --ink-3: #a29f95;
+  --line: #34332e;
+  --line-strong: #4a4943;
+  --accent: #8ea2ff;
+  --accent-hover: #a9b8ff;
+  --accent-ink: #10162e;
+  --accent-soft: #232a46;
+  --accent-text: #a9b8ff;
+  --success: #4cc79b;
+  --success-soft: #16302a;
+  --danger: #ff8a80;
+  --danger-soft: #3a1d1b;
+  --warning: #f2b45a;
+  --warning-soft: #352816;
+  --src-pyq: #c2adff;
+  --src-pyq-soft: #2a2340;
+  --src-specimen: #6fd2e2;
+  --src-specimen-soft: #15313a;
+  --src-original: #d3cec1;
+  --src-original-soft: #2c2b27;
+  --board: #1a1a18;
+  --board-grid: #26261f;
+  --chalk: #f1efe8;
+  --chalk-accent: #a9b8ff;
+  --focus: #a9b8ff;
+  color-scheme: dark;
+}
+
+/* High-contrast preference: stronger text and borders. */
+:root[data-contrast="high"] {
+  --ink-2: var(--ink);
+  --ink-3: var(--ink-2);
+  --line: var(--line-strong);
+}
+
+:root[data-text-size="large"] {
+  font-size: 112.5%;
+}
+:root[data-text-size="larger"] {
+  font-size: 125%;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-src-pyq: var(--src-pyq);
+  --color-src-pyq-soft: var(--src-pyq-soft);
+  --color-src-specimen: var(--src-specimen);
+  --color-src-specimen-soft: var(--src-specimen-soft);
+  --color-src-original: var(--src-original);
+  --color-src-original-soft: var(--src-original-soft);
+  --color-board: var(--board);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+
+  --breakpoint-xs: 23.4375rem; /* 375px */
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Long words, URLs and maths never force horizontal scrolling. */
+.prose-question,
+.prose-body {
+  overflow-wrap: anywhere;
+}
+
+.prose-question {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.prose-body {
+  line-height: 1.65;
+}
+
+.prose-question p + p,
+.prose-body p + p {
+  margin-top: 0.75em;
+}
+
+/* KaTeX: Tailwind preflight makes SVGs block-level, which breaks square roots and arrows. */
+.katex svg {
+  display: inline-block;
+}
+.katex {
+  font-size: 1.08em;
+}
+/* Display maths scrolls inside its own box on narrow screens instead of widening the page. */
+.math-display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+.math-display .katex-display {
+  margin: 0.35rem 0;
+}
+.math-inline .katex {
+  white-space: nowrap;
+}
+.math-error {
+  color: var(--danger);
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* Whiteboard writing effect: a left-to-right reveal. Disabled under reduced motion. */
+@keyframes write-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes draw-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.wb-write {
+  animation: write-in 900ms cubic-bezier(0.3, 0.1, 0.3, 1) both;
+}
+.wb-fade {
+  animation: fade-up 400ms ease-out both;
+}
+.wb-draw {
+  stroke-dasharray: var(--len, 1000);
+  stroke-dashoffset: var(--len, 1000);
+  animation: draw-stroke 900ms ease-in-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wb-write,
+  .wb-fade,
+  .wb-draw {
+    animation: none !important;
+    clip-path: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
+:root[data-reduced-motion="true"] .wb-write,
+:root[data-reduced-motion="true"] .wb-fade,
+:root[data-reduced-motion="true"] .wb-draw {
+  animation: none !important;
+  clip-path: none !important;
+  stroke-dashoffset: 0 !important;
+}
+
+/* Native dialog used for drawers and modals. */
+dialog::backdrop {
+  background: rgb(15 15 13 / 0.45);
+}
+
+/* Keep content clear of the mobile tab bar and iOS home indicator. */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+}
+
+@media print {
+  header,
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

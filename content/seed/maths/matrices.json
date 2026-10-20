@@ -1,0 +1,196 @@
+{
+  "chapter": "matrices",
+  "questions": [
+    {
+      "code": "M10-MAT-001",
+      "topics": [
+        "matrix-operations"
+      ],
+      "answerFormat": "mcq",
+      "marks": 1,
+      "difficulty": "easy",
+      "content": {
+        "stem": "If \\(A = \\begin{bmatrix} 2 & -1 \\\\ 3 & 0 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 1 & 4 \\\\ -2 & 1 \\end{bmatrix}\\), then \\(AB\\) is:",
+        "options": [
+          {
+            "key": "a",
+            "text": "\\(\\begin{bmatrix} 14 & -1 \\\\ -1 & 2 \\end{bmatrix}\\)"
+          },
+          {
+            "key": "b",
+            "text": "\\(\\begin{bmatrix} 2 & -4 \\\\ -6 & 0 \\end{bmatrix}\\)"
+          },
+          {
+            "key": "c",
+            "text": "\\(\\begin{bmatrix} -2 & -5 \\\\ 3 & -6 \\end{bmatrix}\\)"
+          },
+          {
+            "key": "d",
+            "text": "\\(\\begin{bmatrix} 4 & 7 \\\\ 3 & 12 \\end{bmatrix}\\)"
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "mcq",
+        "correct": "d"
+      },
+      "hints": [
+        "Each entry of \\(AB\\) is a row of \\(A\\) multiplied by a column of \\(B\\): multiply matching entries and add."
+      ],
+      "solution": {
+        "modelAnswer": "\\(AB = \\begin{bmatrix} 2(1) + (-1)(-2) & 2(4) + (-1)(1) \\\\ 3(1) + 0(-2) & 3(4) + 0(1) \\end{bmatrix} = \\begin{bmatrix} 4 & 7 \\\\ 3 & 12 \\end{bmatrix}\\). Option (d).",
+        "finalAnswer": "(d) \\(\\begin{bmatrix} 4 & 7 \\\\ 3 & 12 \\end{bmatrix}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Row by column",
+            "expression": "AB = \\begin{bmatrix} 2(1) + (-1)(-2) & 2(4) + (-1)(1) \\\\ 3(1) + 0(-2) & 3(4) + 0(1) \\end{bmatrix}",
+            "explanation": "The entry in row \\(i\\), column \\(j\\) of \\(AB\\) comes from row \\(i\\) of \\(A\\) and column \\(j\\) of \\(B\\).",
+            "rule": "Matrix multiplication: row × column"
+          },
+          {
+            "n": 2,
+            "title": "Simplify",
+            "expression": "AB = \\begin{bmatrix} 4 & 7 \\\\ 3 & 12 \\end{bmatrix}",
+            "explanation": "So the answer is option (d).",
+            "result": "\\begin{bmatrix} 4 & 7 \\\\ 3 & 12 \\end{bmatrix}",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Finding \\(BA\\) instead of \\(AB\\), which gives option (a); matrix multiplication is not commutative.",
+          "Multiplying corresponding entries (as in addition), which gives option (b).",
+          "Multiplying rows of \\(A\\) by rows of \\(B\\), which gives option (c)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "answer",
+            "description": "Selects the correct option",
+            "marks": 1,
+            "expectedEvidence": "Option (d)",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "(a) BA",
+              "(b) entry-wise product",
+              "(c) row × row"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Distractors: (a) = BA, (b) = entry-wise product, (c) = rows of A times rows of B; all computed by script."
+    },
+    {
+      "code": "M10-MAT-002",
+      "topics": [
+        "matrix-equations",
+        "matrix-operations"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "Let \\[A = \\begin{bmatrix} 2 & -3 \\\\ 1 & 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix}, \\quad C = \\begin{bmatrix} -3 \\\\ 4 \\end{bmatrix}.\\] The matrix \\(X\\) satisfies \\(AX = B + 2C\\).\n(i) Write down the order of the matrix \\(X\\).\n(ii) Find the matrix \\(X\\)."
+      },
+      "answerKey": null,
+      "hints": [
+        "\\(A\\) is \\(2 \\times 2\\) and \\(B + 2C\\) is \\(2 \\times 1\\). What order must \\(X\\) have for the product \\(AX\\) to be \\(2 \\times 1\\)?",
+        "Let \\(X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}\\), multiply out \\(AX\\) and compare entries to get two simultaneous equations."
+      ],
+      "solution": {
+        "modelAnswer": "(i) \\(X\\) is of order \\(2 \\times 1\\). (ii) \\(B + 2C = \\begin{bmatrix} -4 \\\\ 9 \\end{bmatrix}\\). Let \\(X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}\\); then \\(2x - 3y = -4\\) and \\(x + 4y = 9\\). Solving, \\(y = 2\\), \\(x = 1\\), so \\(X = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\\).",
+        "finalAnswer": "(i) \\(2 \\times 1\\); (ii) \\(X = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\\)",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Order of X",
+            "expression": "(2 \\times 2)(m \\times n) = (2 \\times 1) \\;\\Rightarrow\\; m = 2,\\ n = 1",
+            "explanation": "For \\(AX\\) to exist, \\(X\\) must have 2 rows (the number of columns of \\(A\\)); for \\(AX\\) to be \\(2 \\times 1\\), \\(X\\) must have 1 column.",
+            "rule": "An \\((m \\times n)\\) matrix times an \\((n \\times p)\\) matrix is \\((m \\times p)\\).",
+            "result": "2 \\times 1",
+            "isFinal": true
+          },
+          {
+            "n": 2,
+            "title": "Right-hand side",
+            "expression": "B + 2C = \\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix} + \\begin{bmatrix} -6 \\\\ 8 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ 9 \\end{bmatrix}",
+            "explanation": "Multiply each entry of \\(C\\) by 2, then add corresponding entries.",
+            "result": "\\begin{bmatrix} -4 \\\\ 9 \\end{bmatrix}"
+          },
+          {
+            "n": 3,
+            "title": "Multiply and compare",
+            "expression": "\\begin{bmatrix} 2 & -3 \\\\ 1 & 4 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 2x - 3y \\\\ x + 4y \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ 9 \\end{bmatrix}",
+            "explanation": "Equal matrices have equal corresponding entries, so \\(2x - 3y = -4\\) and \\(x + 4y = 9\\).",
+            "rule": "Equality of matrices"
+          },
+          {
+            "n": 4,
+            "title": "Solve the equations",
+            "expression": "x = 9 - 4y \\;\\Rightarrow\\; 2(9 - 4y) - 3y = -4 \\;\\Rightarrow\\; 18 - 11y = -4",
+            "explanation": "So \\(11y = 22\\), giving \\(y = 2\\), and then \\(x = 9 - 8 = 1\\).",
+            "result": "x = 1,\\; y = 2"
+          },
+          {
+            "n": 5,
+            "title": "Write X",
+            "expression": "X = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}",
+            "explanation": "Check: \\(A X = \\begin{bmatrix} 2 - 6 \\\\ 1 + 8 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ 9 \\end{bmatrix}\\).",
+            "result": "X = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Taking \\(X\\) as a \\(2 \\times 2\\) or \\(1 \\times 2\\) matrix; a \\(1 \\times 2\\) matrix cannot be multiplied on the left by \\(A\\).",
+          "Computing \\(B + 2C\\) as \\(\\begin{bmatrix} -1 \\\\ 5 \\end{bmatrix}\\) by forgetting to double \\(C\\).",
+          "Writing the product as \\(\\begin{bmatrix} 2x + y \\\\ -3x + 4y \\end{bmatrix}\\) (using columns of \\(A\\) instead of rows)."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "order",
+            "description": "Correct order of X",
+            "marks": 1,
+            "expectedEvidence": "2 × 1, with or without a reason",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          },
+          {
+            "key": "rhs",
+            "description": "Correct value of B + 2C",
+            "marks": 1,
+            "expectedEvidence": "[−4, 9] as a column matrix",
+            "acceptedAlternatives": [],
+            "commonErrors": []
+          },
+          {
+            "key": "equations",
+            "description": "Forms the product AX and the two equations",
+            "marks": 1,
+            "expectedEvidence": "2x − 3y = −4 and x + 4y = 9",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from an incorrect B + 2C if the product AX is formed correctly.",
+            "commonErrors": []
+          },
+          {
+            "key": "answer",
+            "description": "Correct matrix X",
+            "marks": 1,
+            "expectedEvidence": "X = [1, 2] written as a column matrix",
+            "acceptedAlternatives": [
+              "x = 1, y = 2 stated and X written as a column"
+            ],
+            "commonErrors": [
+              "X written as a row matrix [1 2]"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Solved without an inverse matrix (not part of the ICSE Class 10 course as listed in syllabus.json). Answer verified by computing AX."
+    }
+  ]
+}

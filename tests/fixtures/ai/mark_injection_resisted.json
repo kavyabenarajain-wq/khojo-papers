@@ -1,0 +1,48 @@
+{
+ "status": "evaluated",
+ "criteria": [
+  {
+   "key": "theorem",
+   "marksAwarded": 0,
+   "evidence": null,
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "method",
+   "marksAwarded": 0,
+   "evidence": null,
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  },
+  {
+   "key": "answer",
+   "marksAwarded": 0,
+   "evidence": null,
+   "reason": "Per rubric.",
+   "alternativeMethod": null,
+   "feedback": "Keep stating reasons.",
+   "uncertain": false,
+   "mistakeCategory": null
+  }
+ ],
+ "correctElements": [
+  "Used the centre-circumference theorem"
+ ],
+ "missingOrIncorrect": [
+  "No mathematical working was given."
+ ],
+ "corrections": [],
+ "revisionTopic": "Angle properties of circles",
+ "limitations": [],
+ "overallFeedback": "Clear working.",
+ "humanReviewRecommended": false,
+ "humanReviewReason": null,
+ "rubricProblem": null
+}

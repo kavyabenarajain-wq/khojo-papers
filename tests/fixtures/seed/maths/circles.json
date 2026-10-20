@@ -1,0 +1,244 @@
+{
+ "chapter": "circles",
+ "questions": [
+  {
+   "code": "M10-CIR-001",
+   "topics": [
+    "angle-properties"
+   ],
+   "answerFormat": "math_working",
+   "marks": 3,
+   "difficulty": "easy",
+   "content": {
+    "stem": "In the figure, O is the centre of the circle, and A, B and C are points on the circle with C on the major arc AB. Given that \\(\\angle AOB = 110^\\circ\\), find \\(\\angle ACB\\). Give a reason for your answer.",
+    "diagrams": [
+     {
+      "id": "fig1",
+      "alt": "A circle with centre O. Points A and B lie on the lower part of the circle and C lies at the top. Radii OA and OB are drawn, with angle AOB marked 110 degrees. Chords CA and CB are drawn, and angle ACB is marked with a question mark.",
+      "viewBox": {
+       "xMin": -4,
+       "xMax": 4,
+       "yMin": -4,
+       "yMax": 4
+      },
+      "notToScale": false,
+      "elements": [
+       {
+        "kind": "circle",
+        "center": "O",
+        "r": 3
+       },
+       {
+        "kind": "point",
+        "id": "O",
+        "x": 0,
+        "y": 0,
+        "label": "O",
+        "labelPos": "n"
+       },
+       {
+        "kind": "point",
+        "id": "A",
+        "x": -2.457,
+        "y": -1.721,
+        "label": "A",
+        "labelPos": "sw"
+       },
+       {
+        "kind": "point",
+        "id": "B",
+        "x": 2.457,
+        "y": -1.721,
+        "label": "B",
+        "labelPos": "se"
+       },
+       {
+        "kind": "point",
+        "id": "C",
+        "x": 0,
+        "y": 3,
+        "label": "C",
+        "labelPos": "n"
+       },
+       {
+        "kind": "segment",
+        "from": "O",
+        "to": "A"
+       },
+       {
+        "kind": "segment",
+        "from": "O",
+        "to": "B"
+       },
+       {
+        "kind": "segment",
+        "from": "C",
+        "to": "A"
+       },
+       {
+        "kind": "segment",
+        "from": "C",
+        "to": "B"
+       },
+       {
+        "kind": "angle",
+        "vertex": "O",
+        "from": "A",
+        "to": "B",
+        "label": "110\u00b0"
+       },
+       {
+        "kind": "angle",
+        "vertex": "C",
+        "from": "A",
+        "to": "B",
+        "label": "?",
+        "step": 2,
+        "emphasis": true
+       }
+      ]
+     }
+    ]
+   },
+   "answerKey": {
+    "type": "numeric",
+    "value": 55,
+    "tolerance": 0,
+    "unit": "\u00b0"
+   },
+   "hints": [
+    "How is the angle at the centre related to the angle at the circumference standing on the same arc?"
+   ],
+   "solution": {
+    "modelAnswer": "\\(\\angle ACB = \\tfrac{1}{2}\\angle AOB = \\tfrac{1}{2} \\times 110^\\circ = 55^\\circ\\), because the angle subtended by an arc at the centre is double the angle it subtends at any point on the remaining part of the circle.",
+    "finalAnswer": "\\(\\angle ACB = 55^\\circ\\)",
+    "steps": [
+     {
+      "n": 1,
+      "title": "Identify the arc",
+      "explanation": "Both \\(\\angle AOB\\) and \\(\\angle ACB\\) stand on the same arc AB. \\(\\angle AOB\\) is at the centre and \\(\\angle ACB\\) is at the circumference, on the major arc.",
+      "reason": "Recognising which angles stand on the same arc tells us which theorem applies.",
+      "diagramId": "fig1"
+     },
+     {
+      "n": 2,
+      "title": "Apply the theorem",
+      "expression": "\\angle AOB = 2\\,\\angle ACB",
+      "explanation": "The angle at the centre is twice the angle at the circumference standing on the same arc.",
+      "rule": "Angle at the centre is double the angle at the circumference on the same arc.",
+      "diagramId": "fig1"
+     },
+     {
+      "n": 3,
+      "title": "Calculate",
+      "expression": "\\angle ACB = \\frac{110^\\circ}{2}",
+      "result": "\\angle ACB = 55^\\circ",
+      "explanation": "Divide the angle at the centre by 2.",
+      "isFinal": true
+     }
+    ],
+    "commonMistakes": [
+     "Doubling instead of halving: writing \\(\\angle ACB = 220^\\circ\\).",
+     "Giving the answer without stating the reason, which loses the reasoning mark."
+    ],
+    "alternativeMethods": []
+   },
+   "rubric": {
+    "criteria": [
+     {
+      "key": "theorem",
+      "description": "States or correctly uses the relationship between the angle at the centre and the angle at the circumference",
+      "marks": 1,
+      "expectedEvidence": "A reason such as 'angle at centre = 2 \u00d7 angle at circumference on the same arc', or the equation \u2220AOB = 2\u2220ACB",
+      "acceptedAlternatives": [
+       "Angle subtended at centre is double the angle subtended at the remaining part of the circle",
+       "\u2220ACB = \u00bd\u2220AOB with the theorem named"
+      ],
+      "commonErrors": [
+       "Uses angles in the same segment instead"
+      ]
+     },
+     {
+      "key": "method",
+      "description": "Correct substitution: halves 110\u00b0",
+      "marks": 1,
+      "expectedEvidence": "110\u00b0/2 or \u00bd \u00d7 110\u00b0",
+      "acceptedAlternatives": [],
+      "partialCreditRules": "Award if the working shows halving even if the final arithmetic slips."
+     },
+     {
+      "key": "answer",
+      "description": "Correct final answer with degrees",
+      "marks": 1,
+      "expectedEvidence": "\u2220ACB = 55\u00b0",
+      "acceptedAlternatives": [
+       "55 degrees"
+      ],
+      "commonErrors": [
+       "220\u00b0",
+       "110\u00b0"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "code": "M10-CIR-002",
+   "topics": [
+    "angle-properties"
+   ],
+   "answerFormat": "mcq",
+   "marks": 1,
+   "difficulty": "easy",
+   "content": {
+    "stem": "The angle in a semicircle is:",
+    "options": [
+     {
+      "key": "a",
+      "text": "\\(45^\\circ\\)"
+     },
+     {
+      "key": "b",
+      "text": "\\(60^\\circ\\)"
+     },
+     {
+      "key": "c",
+      "text": "\\(90^\\circ\\)"
+     },
+     {
+      "key": "d",
+      "text": "\\(180^\\circ\\)"
+     }
+    ]
+   },
+   "answerKey": {
+    "type": "mcq",
+    "correct": "c"
+   },
+   "hints": [],
+   "solution": {
+    "modelAnswer": "(c) \\(90^\\circ\\)",
+    "finalAnswer": "(c)",
+    "steps": [
+     {
+      "n": 1,
+      "explanation": "An angle in a semicircle is a right angle.",
+      "isFinal": true
+     }
+    ],
+    "commonMistakes": [],
+    "alternativeMethods": []
+   },
+   "rubric": {
+    "criteria": [
+     {
+      "key": "answer",
+      "description": "Correct option",
+      "marks": 1,
+      "expectedEvidence": "(c)"
+     }
+    ]
+   }
+  }
+ ]
+}

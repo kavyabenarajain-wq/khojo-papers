@@ -1,0 +1,509 @@
+{
+  "chapter": "heights-distances",
+  "questions": [
+    {
+      "code": "M10-HD-001",
+      "topics": [
+        "angles-elevation-depression"
+      ],
+      "answerFormat": "numerical",
+      "marks": 2,
+      "difficulty": "easy",
+      "content": {
+        "stem": "A girl whose eyes are 1.5 m above the ground stands on level ground, 30 m away from the foot of a vertical building AB. From her eyes, the angle of elevation of the top A of the building is \\(60^\\circ\\). Find the height of the building, correct to the nearest metre. (Take \\(\\sqrt{3} = 1.732\\).)",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "A vertical building AB stands on level ground, with A at the top and B at the foot; its height is marked h. A girl PE stands on the ground to the right of the building, with her foot at P and her eyes at E; PE is labelled 1.5 m. The distance along the ground between the building and the girl is labelled 30 m. A dashed horizontal line from E meets the building at C, with a right angle at C. The line of sight EA rises from E to the top of the building, and the angle AEC between the horizontal and the line of sight is marked 60 degrees.",
+            "solutionAlt": "In step 2 the part AC of the building above eye level is highlighted; it is found to be 51.96 m, and adding CB = 1.5 m gives the height AB of about 53 m.",
+            "viewBox": {
+              "xMin": -10,
+              "xMax": 42,
+              "yMin": -6,
+              "yMax": 60
+            },
+            "elements": [
+              {
+                "kind": "segment",
+                "from": [
+                  -9,
+                  0
+                ],
+                "to": [
+                  40,
+                  0
+                ]
+              },
+              {
+                "kind": "rect",
+                "x": -4,
+                "y": 0,
+                "width": 4,
+                "height": 53.4615,
+                "shaded": true
+              },
+              {
+                "kind": "point",
+                "id": "A",
+                "x": 0,
+                "y": 53.4615,
+                "label": "A",
+                "labelPos": "ne"
+              },
+              {
+                "kind": "point",
+                "id": "B",
+                "x": 0,
+                "y": 0,
+                "label": "B",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "C",
+                "x": 0,
+                "y": 1.5,
+                "label": "C",
+                "labelPos": "w"
+              },
+              {
+                "kind": "point",
+                "id": "P",
+                "x": 30,
+                "y": 0,
+                "label": "P",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "E",
+                "x": 30,
+                "y": 1.5,
+                "label": "E",
+                "labelPos": "n"
+              },
+              {
+                "kind": "segment",
+                "from": "P",
+                "to": "E"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  31.5,
+                  0.6
+                ],
+                "text": "1.5 m",
+                "anchor": "start"
+              },
+              {
+                "kind": "segment",
+                "from": "C",
+                "to": "E",
+                "dashed": true
+              },
+              {
+                "kind": "segment",
+                "from": "E",
+                "to": "A"
+              },
+              {
+                "kind": "text",
+                "at": [
+                  15,
+                  -4.6
+                ],
+                "text": "30 m"
+              },
+              {
+                "kind": "angle",
+                "vertex": "E",
+                "from": "C",
+                "to": "A",
+                "label": "60°"
+              },
+              {
+                "kind": "angle",
+                "vertex": "C",
+                "from": "E",
+                "to": "A",
+                "right": true
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -5.5,
+                  27
+                ],
+                "text": "h",
+                "anchor": "end"
+              },
+              {
+                "kind": "segment",
+                "from": "C",
+                "to": "A",
+                "emphasis": true,
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "numeric": {
+          "unit": "m",
+          "answerLabel": "Height of the building"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 53,
+        "tolerance": 0.5,
+        "unit": "m"
+      },
+      "hints": [
+        "The angle of 60° is measured at the girl's eye level, not at ground level. Which right-angled triangle has this angle?",
+        "Don't forget the part of the building below her eye level."
+      ],
+      "solution": {
+        "modelAnswer": "In right \\(\\triangle ACE\\), \\(\\tan 60^\\circ = \\dfrac{AC}{CE}\\), so \\(AC = 30\\sqrt{3} = 30 \\times 1.732 = 51.96\\) m. \\(AB = AC + CB = 51.96 + 1.5 = 53.46\\) m \\(\\approx 53\\) m.",
+        "finalAnswer": "Height of the building \\(\\approx 53\\) m",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Choose the triangle",
+            "expression": "\\tan 60^\\circ = \\frac{AC}{CE} = \\frac{AC}{30}",
+            "explanation": "The horizontal line of sight EC is 30 m long (equal to BP) and meets the building at C, 1.5 m above B. Triangle ACE is right-angled at C.",
+            "rule": "\\(\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}}\\)",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Height above eye level",
+            "expression": "AC = 30\\tan 60^\\circ = 30\\sqrt{3} = 30 \\times 1.732",
+            "result": "AC = 51.96 \\text{ m}",
+            "explanation": "\\(\\tan 60^\\circ = \\sqrt{3}\\).",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 3,
+            "title": "Add the eye height",
+            "expression": "AB = AC + CB = 51.96 + 1.5 = 53.46",
+            "result": "AB \\approx 53 \\text{ m}",
+            "explanation": "CB equals the girl's eye height, 1.5 m. Round 53.46 m to the nearest metre.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Forgetting to add the eye height 1.5 m, giving 52 m.",
+          "Using \\(\\tan 60^\\circ = \\tfrac{1}{\\sqrt{3}}\\) (confusing it with \\(\\tan 30^\\circ\\)), giving about 19 m.",
+          "Using sine or cosine instead of tangent when the adjacent side is known."
+        ],
+        "alternativeMethods": []
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "method",
+            "description": "Forms the correct trigonometric ratio in the triangle at eye level",
+            "marks": 1,
+            "expectedEvidence": "tan 60° = AC/30, giving AC = 30√3 ≈ 51.96 m",
+            "acceptedAlternatives": [
+              "AC = 30 × 1.732"
+            ],
+            "commonErrors": [
+              "tan 60° = AB/30 (eye height ignored)",
+              "Uses tan 30°"
+            ]
+          },
+          {
+            "key": "answer",
+            "description": "Adds the eye height and rounds correctly",
+            "marks": 1,
+            "expectedEvidence": "AB = 51.96 + 1.5 = 53.46 ≈ 53 m",
+            "acceptedAlternatives": [
+              "53.46 m"
+            ],
+            "commonErrors": [
+              "52 m",
+              "51.96 m"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Exact height \\(1.5 + 30\\sqrt{3} \\approx 53.46\\) m. Tolerance 0.5 accepts 53 and the unrounded 53.46, but rejects 52 (eye height forgotten). The figure is drawn to scale (1 unit = 1 m), so the 1.5 m eye height appears small."
+    },
+    {
+      "code": "M10-HD-002",
+      "topics": [
+        "angles-elevation-depression"
+      ],
+      "answerFormat": "math_working",
+      "marks": 4,
+      "difficulty": "medium",
+      "content": {
+        "stem": "T is the top of a lighthouse TF which is 90 m high above sea level, F being its foot. A ship sails directly away from the lighthouse. When the ship is at P, the angle of depression of the ship from T is \\(60^\\circ\\); a little later, when it is at Q, the angle of depression is \\(30^\\circ\\). F, P and Q lie on the same horizontal line. Find the distance PQ travelled by the ship, correct to the nearest metre. (Take \\(\\sqrt{3} = 1.732\\).)",
+        "instructions": "In the figure the angles of depression are shown at the ship positions as the equal alternate angles TPF and TQF.",
+        "diagrams": [
+          {
+            "id": "fig1",
+            "alt": "A vertical lighthouse TF, 90 m high, stands at the left with its top T and foot F at sea level. A dashed horizontal line runs from T to the right. Two ship positions P and Q lie on the sea-level line to the right of F, with P nearer the lighthouse and Q further away. Lines of sight TP and TQ are drawn. Angle TPF at P is marked 60 degrees and angle TQF at Q is marked 30 degrees, matching the given angles of depression from T. There is a right angle at F. An arrow below the sea line shows the ship moving from P to Q, and PQ is the distance to be found.",
+            "solutionAlt": "In step 2 the distance FP is highlighted (found to be 30√3 m), and in step 3 the distance FQ is highlighted (found to be 90√3 m); PQ is the difference FQ − FP.",
+            "viewBox": {
+              "xMin": -18,
+              "xMax": 172,
+              "yMin": -16,
+              "yMax": 102
+            },
+            "elements": [
+              {
+                "kind": "segment",
+                "from": [
+                  -16,
+                  0
+                ],
+                "to": [
+                  170,
+                  0
+                ]
+              },
+              {
+                "kind": "rect",
+                "x": -6,
+                "y": 0,
+                "width": 6,
+                "height": 90,
+                "shaded": true
+              },
+              {
+                "kind": "point",
+                "id": "T",
+                "x": 0,
+                "y": 90,
+                "label": "T",
+                "labelPos": "n"
+              },
+              {
+                "kind": "point",
+                "id": "F",
+                "x": 0,
+                "y": 0,
+                "label": "F",
+                "labelPos": "sw"
+              },
+              {
+                "kind": "point",
+                "id": "P",
+                "x": 51.9615,
+                "y": 0,
+                "label": "P",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "Q",
+                "x": 155.8846,
+                "y": 0,
+                "label": "Q",
+                "labelPos": "s"
+              },
+              {
+                "kind": "point",
+                "id": "H",
+                "x": 168,
+                "y": 90,
+                "hidden": true
+              },
+              {
+                "kind": "segment",
+                "from": "T",
+                "to": "H",
+                "dashed": true
+              },
+              {
+                "kind": "segment",
+                "from": "T",
+                "to": "P"
+              },
+              {
+                "kind": "segment",
+                "from": "T",
+                "to": "Q"
+              },
+              {
+                "kind": "angle",
+                "vertex": "P",
+                "from": "F",
+                "to": "T",
+                "label": "60°"
+              },
+              {
+                "kind": "angle",
+                "vertex": "Q",
+                "from": "F",
+                "to": "T",
+                "label": "30°"
+              },
+              {
+                "kind": "angle",
+                "vertex": "F",
+                "from": "P",
+                "to": "T",
+                "right": true
+              },
+              {
+                "kind": "text",
+                "at": [
+                  -8,
+                  45
+                ],
+                "text": "90 m",
+                "anchor": "end"
+              },
+              {
+                "kind": "segment",
+                "from": [
+                  57.9615,
+                  -12
+                ],
+                "to": [
+                  147.8846,
+                  -12
+                ],
+                "arrow": true
+              },
+              {
+                "kind": "segment",
+                "from": "F",
+                "to": "P",
+                "emphasis": true,
+                "step": 2
+              },
+              {
+                "kind": "segment",
+                "from": "F",
+                "to": "Q",
+                "emphasis": true,
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "numeric": {
+          "unit": "m",
+          "answerLabel": "PQ"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 104,
+        "tolerance": 0.5,
+        "unit": "m"
+      },
+      "hints": [
+        "The angle of depression from T equals the angle of elevation of T from the ship (alternate angles).",
+        "Find FP and FQ separately from two right-angled triangles, then subtract."
+      ],
+      "solution": {
+        "modelAnswer": "\\(\\angle TPF = 60^\\circ\\), \\(\\angle TQF = 30^\\circ\\) (alternate angles). In \\(\\triangle TFP\\): \\(FP = \\dfrac{90}{\\tan 60^\\circ} = \\dfrac{90}{\\sqrt{3}} = 30\\sqrt{3}\\) m. In \\(\\triangle TFQ\\): \\(FQ = \\dfrac{90}{\\tan 30^\\circ} = 90\\sqrt{3}\\) m. \\(PQ = FQ - FP = 60\\sqrt{3} = 60 \\times 1.732 = 103.92 \\approx 104\\) m.",
+        "finalAnswer": "\\(PQ \\approx 104\\) m",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Angles in the triangles",
+            "expression": "\\angle TPF = 60^\\circ, \\quad \\angle TQF = 30^\\circ",
+            "explanation": "The horizontal through T is parallel to the sea line FQ, so each angle of depression equals the alternate angle at the ship.",
+            "rule": "Alternate angles between parallel lines are equal.",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 2,
+            "title": "Find FP",
+            "expression": "\\tan 60^\\circ = \\frac{TF}{FP} \\Rightarrow FP = \\frac{90}{\\sqrt{3}} = \\frac{90\\sqrt{3}}{3}",
+            "result": "FP = 30\\sqrt{3} \\text{ m}",
+            "explanation": "Triangle TFP is right-angled at F. Rationalise the denominator.",
+            "rule": "\\(\\tan 60^\\circ = \\sqrt{3}\\)",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 3,
+            "title": "Find FQ",
+            "expression": "\\tan 30^\\circ = \\frac{TF}{FQ} \\Rightarrow FQ = \\frac{90}{\\tfrac{1}{\\sqrt{3}}}",
+            "result": "FQ = 90\\sqrt{3} \\text{ m}",
+            "explanation": "Triangle TFQ is right-angled at F.",
+            "rule": "\\(\\tan 30^\\circ = \\tfrac{1}{\\sqrt{3}}\\)",
+            "diagramId": "fig1"
+          },
+          {
+            "n": 4,
+            "title": "Distance travelled",
+            "expression": "PQ = FQ - FP = 90\\sqrt{3} - 30\\sqrt{3} = 60\\sqrt{3} = 60 \\times 1.732 = 103.92",
+            "result": "PQ \\approx 104 \\text{ m}",
+            "explanation": "The ship moves away from the lighthouse, so Q is beyond P and PQ = FQ − FP. Round to the nearest metre.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Adding FP and FQ (as if the ship were on opposite sides of the lighthouse), giving about 208 m.",
+          "Putting the angle of depression at the foot F instead of at the ship, which makes the ratio upside down.",
+          "Rounding FP and FQ to whole metres before subtracting (52 and 156 give 104 here by luck, but this habit loses accuracy marks elsewhere)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Isosceles triangle",
+            "description": "\\(\\angle PTQ = 60^\\circ - 30^\\circ = 30^\\circ = \\angle TQP\\), so triangle TPQ is isosceles and \\(PQ = TP\\). In \\(\\triangle TFP\\), \\(TP = \\dfrac{90}{\\sin 60^\\circ} = \\dfrac{180}{\\sqrt{3}} = 60\\sqrt{3} \\approx 103.92\\) m."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "angles",
+            "description": "Identifies the angles of the right triangles using alternate angles",
+            "marks": 1,
+            "expectedEvidence": "∠TPF = 60° and ∠TQF = 30°, or correct ratios set up in triangles TFP and TFQ",
+            "acceptedAlternatives": [
+              "Uses the angles directly at T with the complementary angles (30° and 60° at T between TF and the lines of sight)"
+            ],
+            "commonErrors": [
+              "Places 60° at the foot F"
+            ]
+          },
+          {
+            "key": "fp",
+            "description": "Finds FP",
+            "marks": 1,
+            "expectedEvidence": "FP = 90/√3 = 30√3 ≈ 51.96 m",
+            "acceptedAlternatives": [
+              "51.96 m"
+            ],
+            "commonErrors": []
+          },
+          {
+            "key": "fq",
+            "description": "Finds FQ",
+            "marks": 1,
+            "expectedEvidence": "FQ = 90√3 ≈ 155.88 m",
+            "acceptedAlternatives": [
+              "155.88 m"
+            ],
+            "commonErrors": []
+          },
+          {
+            "key": "answer",
+            "description": "Correct distance PQ",
+            "marks": 1,
+            "expectedEvidence": "PQ = 60√3 ≈ 103.92 ≈ 104 m",
+            "acceptedAlternatives": [
+              "103.92 m",
+              "60√3 m with the decimal value"
+            ],
+            "partialCreditRules": "Follow-through: if FP or FQ is wrong but PQ = FQ − FP is correctly computed from them, award this mark.",
+            "commonErrors": [
+              "208 m (added instead of subtracted)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Exact answer \\(60\\sqrt{3} \\approx 103.92\\) m; with 1.732 it is exactly 103.92 m. Tolerance 0.5 accepts 104 and 103.92. The figure is drawn to scale (FP = 51.96, FQ = 155.88, TF = 90 units). Depression angles are marked at the ship positions (alternate angles) because the two arcs at T would overlap at this size; the instructions line says so. Reviewer may want the 'Isosceles triangle' alternative included in the rubric's acceptedAlternatives explicitly."
+    }
+  ]
+}

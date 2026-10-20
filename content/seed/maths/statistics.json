@@ -1,0 +1,375 @@
+{
+  "chapter": "statistics",
+  "questions": [
+    {
+      "code": "M10-STA-001",
+      "topics": [
+        "mean-grouped"
+      ],
+      "answerFormat": "math_working",
+      "marks": 3,
+      "difficulty": "easy",
+      "content": {
+        "stem": "The table shows the time taken by 50 students to solve a puzzle. Using the step-deviation method, find the mean time taken by a student.",
+        "table": {
+          "caption": "Time taken to solve a puzzle",
+          "headers": [
+            "Time taken (in minutes)",
+            "Number of students"
+          ],
+          "rows": [
+            [
+              "0 – 10",
+              "5"
+            ],
+            [
+              "10 – 20",
+              "9"
+            ],
+            [
+              "20 – 30",
+              "15"
+            ],
+            [
+              "30 – 40",
+              "12"
+            ],
+            [
+              "40 – 50",
+              "9"
+            ]
+          ]
+        },
+        "numeric": {
+          "unit": "minutes",
+          "answerLabel": "Mean time"
+        }
+      },
+      "answerKey": {
+        "type": "numeric",
+        "value": 27.2,
+        "tolerance": 0.01,
+        "unit": "minutes",
+        "acceptedUnits": [
+          "min",
+          "mins",
+          "minute"
+        ]
+      },
+      "hints": [
+        "Start by finding the class mark (mid-point) of each class.",
+        "Choose an assumed mean A from the class marks and use \\(u = \\dfrac{x - A}{h}\\) with class width h = 10."
+      ],
+      "solution": {
+        "modelAnswer": "Class marks 5, 15, 25, 35, 45; take \\(A = 25\\), \\(h = 10\\), so \\(u = -2, -1, 0, 1, 2\\). \\(fu = -10, -9, 0, 12, 18\\); \\(\\Sigma f = 50\\), \\(\\Sigma fu = 11\\). Mean \\(= 25 + \\dfrac{11}{50} \\times 10 = 27.2\\) minutes.",
+        "finalAnswer": "Mean time \\(= 27.2\\) minutes",
+        "steps": [
+          {
+            "n": 1,
+            "title": "Class marks and step deviations",
+            "expression": "x = 5, 15, 25, 35, 45; \\quad A = 25, \\; h = 10; \\quad u = \\frac{x - 25}{10} = -2, -1, 0, 1, 2",
+            "explanation": "The class mark is the mid-point of each class. Taking the middle class mark as the assumed mean keeps the numbers small.",
+            "rule": "\\(u = \\dfrac{x - A}{h}\\)"
+          },
+          {
+            "n": 2,
+            "title": "Products fu",
+            "expression": "fu = -10, -9, 0, 12, 18; \\quad \\Sigma f = 50, \\; \\Sigma fu = -19 + 30",
+            "result": "\\Sigma fu = 11",
+            "explanation": "Multiply each frequency by its u-value and add, taking care with the negative values."
+          },
+          {
+            "n": 3,
+            "title": "Mean",
+            "expression": "\\bar{x} = A + \\frac{\\Sigma fu}{\\Sigma f} \\times h = 25 + \\frac{11}{50} \\times 10 = 25 + 2.2",
+            "result": "\\bar{x} = 27.2 \\text{ minutes}",
+            "explanation": "Substitute into the step-deviation formula.",
+            "rule": "\\(\\bar{x} = A + \\dfrac{\\Sigma fu}{\\Sigma f} \\times h\\)",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Forgetting to multiply \\(\\tfrac{\\Sigma fu}{\\Sigma f}\\) by the class width \\(h = 10\\), giving 25.22.",
+          "Using the class limits (e.g. 10 or 20) instead of the class marks.",
+          "Dividing by the number of classes (5) instead of \\(\\Sigma f = 50\\)."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Direct method (for checking)",
+            "description": "\\(\\Sigma fx = 25 + 135 + 375 + 420 + 405 = 1360\\), so \\(\\bar{x} = \\tfrac{1360}{50} = 27.2\\) minutes. Since the question asks for the step-deviation method, use this only as a check."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "deviations",
+            "description": "Correct class marks and step deviations",
+            "marks": 1,
+            "expectedEvidence": "x = 5, 15, 25, 35, 45 and u = (x − A)/10 for a stated A",
+            "acceptedAlternatives": [
+              "Any assumed mean A, with consistent u-values"
+            ],
+            "commonErrors": [
+              "Uses class limits"
+            ]
+          },
+          {
+            "key": "sum",
+            "description": "Correct Σf and Σfu",
+            "marks": 1,
+            "expectedEvidence": "Σf = 50 and Σfu = 11 (for A = 25)",
+            "acceptedAlternatives": [
+              "Σfu consistent with the chosen A, e.g. A = 35 gives Σfu = −39"
+            ],
+            "partialCreditRules": "Award if the fu column is correct and only the final addition slips by one term.",
+            "commonErrors": []
+          },
+          {
+            "key": "mean",
+            "description": "Correct mean with unit",
+            "marks": 1,
+            "expectedEvidence": "Mean = 27.2 minutes",
+            "acceptedAlternatives": [
+              "27.2 min"
+            ],
+            "partialCreditRules": "Follow-through from a wrong Σfu if the formula is applied correctly.",
+            "commonErrors": [
+              "25.22 (h omitted)"
+            ]
+          }
+        ]
+      },
+      "authorNotes": "Mean is exactly 27.2. The question asks for the step-deviation method; a reviewer should decide whether the direct method earns full marks under the app's policy (rubric currently accepts any assumed mean). Class intervals use the usual 'lower limit included, upper limit excluded' convention, which does not affect the mean."
+    },
+    {
+      "code": "M10-STA-002",
+      "topics": [
+        "median-quartiles-mode"
+      ],
+      "answerFormat": "structured",
+      "marks": 5,
+      "difficulty": "medium",
+      "content": {
+        "stem": "The number of library books borrowed during a term by each of 40 students is shown in the table.",
+        "table": {
+          "caption": "Library books borrowed in a term",
+          "headers": [
+            "Number of books (x)",
+            "Number of students (f)"
+          ],
+          "rows": [
+            [
+              "1",
+              "3"
+            ],
+            [
+              "2",
+              "8"
+            ],
+            [
+              "3",
+              "10"
+            ],
+            [
+              "4",
+              "11"
+            ],
+            [
+              "5",
+              "5"
+            ],
+            [
+              "6",
+              "3"
+            ]
+          ]
+        },
+        "parts": [
+          {
+            "key": "a",
+            "marks": 1,
+            "format": "numerical",
+            "prompt": "Write down the mode of the distribution.",
+            "numeric": {
+              "answerLabel": "Mode"
+            }
+          },
+          {
+            "key": "b",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Find the median of the distribution.",
+            "numeric": {
+              "answerLabel": "Median"
+            }
+          },
+          {
+            "key": "c",
+            "marks": 2,
+            "format": "math_working",
+            "prompt": "Find the lower quartile, the upper quartile and the interquartile range.",
+            "numeric": {
+              "answerLabel": "Interquartile range"
+            }
+          }
+        ]
+      },
+      "answerKey": {
+        "type": "parts",
+        "parts": {
+          "a": {
+            "type": "numeric",
+            "value": 4,
+            "tolerance": 0
+          },
+          "b": {
+            "type": "numeric",
+            "value": 3,
+            "tolerance": 0
+          },
+          "c": {
+            "type": "numeric",
+            "value": 2,
+            "tolerance": 0
+          }
+        }
+      },
+      "hints": [
+        "Make a cumulative frequency column first; it tells you which value each position falls on.",
+        "With \\(n = 40\\) observations, the median is the mean of the 20th and 21st observations; the quartiles are near the 10th and 30th."
+      ],
+      "solution": {
+        "modelAnswer": "(a) Highest frequency 11 is for \\(x = 4\\), so mode \\(= 4\\). (b) Cumulative frequencies 3, 11, 21, 32, 37, 40; \\(n = 40\\). The 20th and 21st observations are both 3, so median \\(= 3\\). (c) \\(Q_1 =\\) 10th observation \\(= 2\\); \\(Q_3 =\\) 30th observation \\(= 4\\); interquartile range \\(= 4 - 2 = 2\\).",
+        "finalAnswer": "(a) Mode \\(= 4\\) (b) Median \\(= 3\\) (c) \\(Q_1 = 2\\), \\(Q_3 = 4\\), IQR \\(= 2\\)",
+        "steps": [
+          {
+            "n": 1,
+            "partKey": "a",
+            "title": "Mode",
+            "expression": "\\text{highest } f = 11 \\text{ at } x = 4",
+            "result": "\\text{Mode} = 4",
+            "explanation": "For a discrete frequency distribution, the mode is the value with the highest frequency.",
+            "isFinal": true
+          },
+          {
+            "n": 2,
+            "partKey": "b",
+            "title": "Cumulative frequencies",
+            "expression": "cf: 3, 11, 21, 32, 37, 40; \\quad n = 40",
+            "explanation": "Add the frequencies progressively. For example, observations 12 to 21 all have the value 3, and observations 22 to 32 all have the value 4."
+          },
+          {
+            "n": 3,
+            "partKey": "b",
+            "title": "Median",
+            "expression": "\\text{Median} = \\frac{1}{2}\\left[\\left(\\tfrac{n}{2}\\right)^{\\text{th}} + \\left(\\tfrac{n}{2} + 1\\right)^{\\text{th}}\\right] = \\frac{1}{2}\\left[20^{\\text{th}} + 21^{\\text{th}}\\right] = \\frac{3 + 3}{2}",
+            "result": "\\text{Median} = 3",
+            "explanation": "n is even, so the median is the mean of the two middle observations. Both the 20th and 21st lie in the block cf 12–21, where x = 3.",
+            "isFinal": true
+          },
+          {
+            "n": 4,
+            "partKey": "c",
+            "title": "Lower quartile",
+            "expression": "Q_1 = \\left(\\tfrac{n}{4}\\right)^{\\text{th}} = 10^{\\text{th}} \\text{ observation}",
+            "result": "Q_1 = 2",
+            "explanation": "Observations 4 to 11 have the value 2, so the 10th observation is 2."
+          },
+          {
+            "n": 5,
+            "partKey": "c",
+            "title": "Upper quartile",
+            "expression": "Q_3 = \\left(\\tfrac{3n}{4}\\right)^{\\text{th}} = 30^{\\text{th}} \\text{ observation}",
+            "result": "Q_3 = 4",
+            "explanation": "Observations 22 to 32 have the value 4, so the 30th observation is 4."
+          },
+          {
+            "n": 6,
+            "partKey": "c",
+            "title": "Interquartile range",
+            "expression": "Q_3 - Q_1 = 4 - 2",
+            "result": "\\text{IQR} = 2",
+            "explanation": "The interquartile range is the upper quartile minus the lower quartile.",
+            "isFinal": true
+          }
+        ],
+        "commonMistakes": [
+          "Giving the highest frequency (11) as the mode instead of the value x = 4 that has it.",
+          "Taking the median as the middle value of the x column (3.5) or the middle frequency, ignoring how many students have each value.",
+          "Finding the 10th and 30th positions but reading off the cumulative frequency instead of the value of x."
+        ],
+        "alternativeMethods": [
+          {
+            "title": "Using (n + 1)/4 positions",
+            "description": "Some textbooks use the \\(\\tfrac{n+1}{4}\\)th = 10.25th and \\(\\tfrac{3(n+1)}{4}\\)th = 30.75th observations, and the \\(\\tfrac{n+1}{2}\\)th = 20.5th for the median. Here the 10th and 11th observations are both 2, the 30th and 31st are both 4, and the 20th and 21st are both 3, so every convention gives the same answers."
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "key": "mode",
+            "partKey": "a",
+            "description": "Correct mode",
+            "marks": 1,
+            "expectedEvidence": "Mode = 4",
+            "acceptedAlternatives": [],
+            "commonErrors": [
+              "11 (the frequency)"
+            ]
+          },
+          {
+            "key": "cf",
+            "partKey": "b",
+            "description": "Correct cumulative frequency column and median position(s)",
+            "marks": 1,
+            "expectedEvidence": "cf 3, 11, 21, 32, 37, 40 and identifies the 20th and 21st (or 20.5th) observation",
+            "acceptedAlternatives": [
+              "Lists observations in order instead of a cf column"
+            ],
+            "commonErrors": []
+          },
+          {
+            "key": "median",
+            "partKey": "b",
+            "description": "Correct median",
+            "marks": 1,
+            "expectedEvidence": "Median = 3",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from a cf column with one slip if the position is read correctly.",
+            "commonErrors": [
+              "3.5",
+              "21"
+            ]
+          },
+          {
+            "key": "quartiles",
+            "partKey": "c",
+            "description": "Correct lower and upper quartiles with positions",
+            "marks": 1,
+            "expectedEvidence": "Q₁ = 10th observation = 2, Q₃ = 30th observation = 4",
+            "acceptedAlternatives": [
+              "Positions 10.25 and 30.75 with the same values"
+            ],
+            "partialCreditRules": "Both quartiles must be correct for this mark.",
+            "commonErrors": [
+              "Reads off cf values instead of x"
+            ]
+          },
+          {
+            "key": "iqr",
+            "partKey": "c",
+            "description": "Correct interquartile range",
+            "marks": 1,
+            "expectedEvidence": "IQR = 4 − 2 = 2",
+            "acceptedAlternatives": [],
+            "partialCreditRules": "Follow-through from the student's own Q₁ and Q₃.",
+            "commonErrors": []
+          }
+        ]
+      },
+      "authorNotes": "Data chosen so that the n/4 and (n+1)/4 quartile conventions (and the even-n median rule) all give the same values, so the answer does not depend on which ICSE textbook convention the student learnt. Note the median's 21st observation is the last observation with x = 3, so a cf slip of one changes it; reviewer may wish to confirm this is acceptable. Mode (4) differs from median (3) deliberately."
+    }
+  ]
+}
